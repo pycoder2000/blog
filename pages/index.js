@@ -6,6 +6,7 @@ import { getAllFilesFrontMatter } from '@/lib/mdx'
 import formatDate from '@/lib/utils/formatDate'
 
 import NewsletterForm from '@/components/NewsletterForm'
+import Image from '@/components/Image'
 
 const MAX_DISPLAY = 5
 
@@ -19,15 +20,36 @@ export default function Home({ posts }) {
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
-      <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="space-y-2 pt-6 pb-8 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            Latest
-          </h1>
-          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            {siteMetadata.description}
-          </p>
+      <div>
+        <div className="mb-12 flex flex-col items-center gap-x-12 xl:flex-row">
+          <div className="pt-6">
+            <h1 className="pb-6 font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+              Hi, I am Parth Desai.
+            </h1>
+            <h2 className="prose text-lg text-gray-600 dark:text-gray-300">
+              {`Welcome to my - ${siteMetadata.description}. I am a Data Engineer who is passionate about Data Science and Automation. In my free time, I like developing `}
+              <Link href="/projects">side projects</Link>
+              {' and '}
+              <Link href="/blog">blogging</Link>
+              {' about them. Have a good read!'}
+            </h2>
+          </div>
+          <div className="flex items-center justify-center">
+            <div className="my-2 flex flex-col items-center space-x-2 pt-8">
+              <Image
+                src={siteMetadata.image}
+                alt="avatar"
+                width="250px"
+                height="250px"
+                className="h-48 w-48 rounded-full"
+              />
+            </div>
+          </div>
         </div>
+        <h2 className="flex pb-6 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl md:text-5xl">
+          Latest
+        </h2>
+        <hr className="border-gray-200 dark:border-gray-700" />
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {!posts.length && 'No posts found.'}
           {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
