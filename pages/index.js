@@ -35,7 +35,7 @@ export default function Home({ posts }) {
             </h2>
           </div>
           <div className="flex items-center justify-center">
-            <div className="my-2 flex flex-col items-center space-x-2 pt-8">
+            <div className="my-2 flex flex-col items-center space-x-2 rounded-full border-2 border-gray-200 border-opacity-60 pt-8 hover:border-primary-600 dark:border-gray-800 dark:hover:border-primary-400">
               <Image
                 src={siteMetadata.image}
                 alt="avatar"
