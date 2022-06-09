@@ -28,6 +28,7 @@ module.exports = {
         sans: ['InterVariable', ...defaultTheme.fontFamily.sans],
       },
       colors: {
+        'background-color': '#111827',
         primary: colors.cyan,
         gray: colors.neutral,
       },
@@ -161,7 +162,6 @@ module.exports = {
             },
           },
         },
-        borderStyle: ['hover'],
       }),
     },
   },

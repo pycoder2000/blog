@@ -23,11 +23,11 @@ export default function Home({ posts }) {
       <div>
         <div className="mb-12 flex flex-col items-center gap-x-12 xl:flex-row">
           <div className="pt-6">
-            <h1 className="pb-6 font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+            <h1 className="pb-6 text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
               Hi, I am Parth Desai.
             </h1>
             <h2 className="prose text-lg text-gray-600 dark:text-gray-300">
-              {`Welcome to my - ${siteMetadata.description}. I am a Data Engineer who is passionate about Data Science and Automation. In my free time, I like developing `}
+              {`Welcome to ${siteMetadata.description}. I am a Data Engineer who is passionate about Data Science and Automation. In my free time, I like developing `}
               <Link href="/projects">side projects</Link>
               {' and '}
               <Link href="/blog">blogging</Link>
