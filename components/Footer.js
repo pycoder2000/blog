@@ -13,6 +13,7 @@ export default function Footer() {
           <SocialIcon kind="youtube" href={siteMetadata.youtube} size="6" />
           <SocialIcon kind="linkedin" href={siteMetadata.linkedin} size="6" />
           <SocialIcon kind="twitter" href={siteMetadata.twitter} size="6" />
+          <SocialIcon kind="website" href={siteMetadata.website} size="6" />
         </div>
         <br />
         <div className="mb-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">

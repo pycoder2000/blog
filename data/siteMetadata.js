@@ -14,6 +14,7 @@ const siteMetadata = {
   github: 'https://github.com/pycoder2000',
   twitter: 'https://twitter.com/lone_Musk',
   linkedin: 'https://www.linkedin.com/in/parth-desai-2bb1b0160/',
+  website: 'https://parthdesai.vercel.app',
   locale: 'en-US',
   analytics: {
     // If you want to use an analytics provider you have to add it to the
