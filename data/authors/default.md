@@ -1,16 +1,16 @@
 ---
-name: Tails Azimuth
+name: Parth Desai
 avatar: /static/images/avatar.png
-occupation: Professor of Atmospheric Science
-company: Stanford University
-email: address@yoursite.com
-twitter: https://twitter.com/Twitter
-linkedin: https://www.linkedin.com
-github: https://github.com
+occupation: Data Engineer
+company: Accenture
+email: desaiparth2000@gmail.com
+twitter: https://twitter.com/lone_Musk
+linkedin: https://www.linkedin.com/in/parth-desai-2bb1b0160/
+github: https://github.com/pycoder2000
 ---
 
-Tails Azimuth is a professor of atmospheric sciences at the Stanford AI Lab. His research interests includes complexity modelling of tailwinds, headwinds and crosswinds.
+I am an India based Data Engineer with a bachelors in Computer Science. I am passionate about Data Science and Automation. I am also fascinated with Mathematics and wish to make a career out of it someday. Currently, I’m focused on building data pipelines and automating them at [Accenture](https://www.accenture.com/gr-en/about/consulting-index).
 
-He leads the clean energy group which develops 3D air pollution-climate models, writes differential equation solvers, and manufactures titanium plated air ballons. In his free time he bakes raspberry pi.
+I am always looking to learn new things. I am currently working on a few projects related to Natural Language Processing and Machine Learning. At the same time I am actively on the lookout for remote internships which I can pursue in field of Data Science.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+I am a strong advocate for open source and I am always interested in working on new projects with new people. Do check out my [repositories](https://github.com/pycoder2000?tab=repositories) and feel free to reach out on [Whatsapp](https://api.whatsapp.com/send?phone=916358190818&text=hi) or [email](mailto:desaiparth2000@gmail.com) if you would like to collaborate on any project.
