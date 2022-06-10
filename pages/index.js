@@ -9,7 +9,7 @@ import { RoughNotation } from 'react-rough-notation'
 import NewsletterForm from '@/components/NewsletterForm'
 import Image from '@/components/Image'
 
-const MAX_DISPLAY = 5
+const MAX_DISPLAY = 3
 
 export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter('blog')
@@ -30,9 +30,19 @@ export default function Home({ posts }) {
             </h1>
             <h2 className="prose text-lg text-gray-600 dark:text-gray-300">
               {`Welcome to ${siteMetadata.description}. I am a Data Engineer who is passionate about Data Science and Automation. In my free time, I like developing `}
-              <Link href="/projects">side projects</Link>
+              <Link
+                href="/projects"
+                className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
+              >
+                side projects
+              </Link>
               {' and '}
-              <Link href="/blog">blogging</Link>
+              <Link
+                href="/blog"
+                className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
+              >
+                blogging
+              </Link>
               {' about them.'}
             </h2>
             <p className="pt-3 text-lg leading-7 text-slate-600 dark:text-slate-300">
@@ -40,7 +50,7 @@ export default function Home({ posts }) {
               <RoughNotation
                 type="box"
                 show={true}
-                color="cyan"
+                color="#FFEA00"
                 animationDelay={800}
                 animationDuration={1200}
               >

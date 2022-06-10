@@ -22,6 +22,7 @@ class MyDocument extends Document {
           <meta name="msapplication-TileColor" content="#2b5797" />
           <meta name="theme-color" content="#ffffff" />
           <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
           <link
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
             rel="stylesheet"
@@ -32,6 +33,7 @@ class MyDocument extends Document {
             integrity="sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc"
             crossOrigin="anonymous"
           />
+          <link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml" />
         </Head>
         <body className="bg-white text-black antialiased dark:bg-background-color dark:text-white">
           <Main />

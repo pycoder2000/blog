@@ -18,6 +18,17 @@
   @apply my-5;
 }
 
+@layer utilities {
+  .special-underline {
+    @apply bg-gradient-to-r from-primary-color to-primary-color bg-no-repeat [background-position:0_100%]
+      [background-size:100%_0.2em] hover:[background-size:100%_100%]
+      focus:[background-size:100%_100%]
+      motion-safe:transition-all motion-safe:duration-200
+      dark:from-primary-color-dark
+      dark:to-primary-color-dark;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }

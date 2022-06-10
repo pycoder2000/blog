@@ -41,7 +41,7 @@ module.exports = {
             a: {
               color: theme('colors.primary.500'),
               '&:hover': {
-                color: `${theme('colors.primary.600')} !important`,
+                color: `${theme('colors.primary.600')}`,
               },
               code: { color: theme('colors.primary.400') },
             },
@@ -109,7 +109,7 @@ module.exports = {
             a: {
               color: theme('colors.primary.500'),
               '&:hover': {
-                color: `${theme('colors.primary.400')} !important`,
+                color: `${theme('colors.primary.400')} `,
               },
               code: { color: theme('colors.primary.400') },
             },

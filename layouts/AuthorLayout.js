@@ -1,21 +1,37 @@
 import SocialIcon from '@/components/social-icons'
 import Image from '@/components/Image'
 import { PageSEO } from '@/components/SEO'
+import Link from '@/components/Link'
+import Experience from '@/components/Experience'
+import experienceData from '@/data/experienceData'
+import { RoughNotation } from 'react-rough-notation'
 
 export default function AuthorLayout({ children, frontMatter }) {
-  const { name, avatar, occupation, company, email, twitter, linkedin, github } = frontMatter
+  const {
+    name,
+    avatar,
+    occupation,
+    company,
+    email,
+    twitter,
+    linkedin,
+    github,
+    text1,
+    text2,
+    text3,
+  } = frontMatter
 
   return (
     <>
       <PageSEO title={`About - ${name}`} description={`About me - ${name}`} />
-      <div className="divide-y">
+      <div className="">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             About
           </h1>
         </div>
         <div className="items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0">
-          <div className="flex flex-col items-center pt-8">
+          <div className="flex flex-col items-center space-x-2 pt-8">
             <Image
               src={avatar}
               alt="avatar"
@@ -33,7 +49,102 @@ export default function AuthorLayout({ children, frontMatter }) {
               <SocialIcon kind="twitter" href={twitter} />
             </div>
           </div>
-          <div className="prose max-w-none pt-8 pb-8 dark:prose-dark xl:col-span-2">{children}</div>
+          <div className="prose max-w-none pt-8 pb-8 dark:prose-dark xl:col-span-2">
+            <p>
+              <RoughNotation
+                type="bracket"
+                brackets={['left', 'right']}
+                show={true}
+                color="#FF0000"
+                animationDelay={200}
+                animationDuration={1200}
+              >
+                {text1} Currently, I am focused on building data pipelines and automating them at{' '}
+                <Link
+                  href={'/now'}
+                  className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
+                >
+                  Accenture
+                </Link>
+                .
+              </RoughNotation>
+            </p>
+            <br />
+            <p>
+              I am always looking to learn new things. I am currently working on a few projects
+              related to
+              <RoughNotation type="highlight" show={true} color="#FBCFE8" animationDuration={1200}>
+                <span className="dark:text-black">
+                  Natural Language Processing and Machine Learning.
+                </span>
+              </RoughNotation>
+              At the same time I am{' '}
+              <RoughNotation
+                type="underline"
+                show={true}
+                color="#FFEA00"
+                animationDelay={800}
+                animationDuration={1200}
+                multiline={true}
+              >
+                actively on the lookout for remote internships which I can pursue in field of Data
+                Science.
+              </RoughNotation>
+            </p>
+            <br />
+            <p>
+              I am a strong advocate for open source and I am always interested in working on new
+              projects with new people. Feel free to reach out if you have anything to talk about,
+              you can reach me on{' '}
+              <RoughNotation type="box" show={true} color="#FF7F50" animationDelay={800}>
+                <Link
+                  href={'mailto:desaiparth2000@gmail.com'}
+                  className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
+                >
+                  email{' '}
+                </Link>
+                or{' '}
+                <Link
+                  href={'https://api.whatsapp.com/send?phone=916358190818&text=hi'}
+                  className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
+                >
+                  Whatsapp{' '}
+                </Link>
+              </RoughNotation>
+            </p>
+            <br />
+            <p>
+              <Link
+                href={'/uses'}
+                className="special-underline no-underline dark:text-gray-100 hover:dark:text-gray-800"
+              >
+                Here{' '}
+              </Link>
+              you can see what I use on daily basis.
+            </p>
+          </div>
+        </div>
+        <div className="mt-10">
+          <div className="space-y-2 pt-6 pb-8 md:space-y-5">
+            <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+              Experience
+            </h1>
+          </div>
+          <div className="max-w-none pt-8 pb-8 xl:col-span-2">
+            {experienceData.map((d) => (
+              <Experience
+                key={d.company}
+                title={d.title}
+                company={d.company}
+                location={d.location}
+                range={d.range}
+                url={d.url}
+                text1={d.text1}
+                text2={d.text2}
+                text3={d.text3}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </>
