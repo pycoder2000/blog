@@ -26,7 +26,7 @@ export default function Home({ posts }) {
           <div className="pt-6">
             <h1 className="pb-6 text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
               Hi, I am{' '}
-              <span className="text-primary-color dark:text-primary-color-dark">Parth</span>
+              <span className="text-primary-color-500 dark:text-primary-color-dark-500">Parth</span>
             </h1>
             <h2 className="prose text-lg text-gray-600 dark:text-gray-300">
               {`Welcome to ${siteMetadata.description}. I am a Data Engineer who is passionate about Data Science and Automation. In my free time, I like developing `}
@@ -50,13 +50,14 @@ export default function Home({ posts }) {
               <RoughNotation
                 type="box"
                 show={true}
-                color="#FFEA00"
+                color="#DE1D8D"
                 animationDelay={800}
-                animationDuration={1200}
+                animationDuration={2500}
               >
                 thoughts, reflections & everything&nbsp;
               </RoughNotation>
               in between. Have a good read!
+              {/* This is my place for thoughts, reflections & everything in between. Have a good read! */}
             </p>
           </div>
           <div className="flex items-center justify-center">

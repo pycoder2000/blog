@@ -20,22 +20,22 @@
 
 @layer utilities {
   .special-underline {
-    @apply bg-gradient-to-r from-primary-color to-primary-color bg-no-repeat [background-position:0_100%]
+    @apply bg-gradient-to-r from-primary-color-500 to-primary-color-500 bg-no-repeat [background-position:0_100%]
       [background-size:100%_0.2em] hover:[background-size:100%_100%]
       focus:[background-size:100%_100%]
       motion-safe:transition-all motion-safe:duration-200
-      dark:from-primary-color-dark
-      dark:to-primary-color-dark;
+      dark:from-primary-color-dark-500
+      dark:to-primary-color-dark-500;
   }
   .company {
-    box-shadow: inset 0 0 0 0 #54b3d6;
-    color: #54b3d6;
+    box-shadow: inset 0 0 0 0 #de1d8d;
+    color: #de1d8d;
     margin: 0 -0.25rem;
     padding: 0 0.25rem;
     transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   }
   .company:hover {
-    box-shadow: inset 200px 0 0 0 #54b3d6;
+    box-shadow: inset 200px 0 0 0 #de1d8d;
     color: white;
   }
 }

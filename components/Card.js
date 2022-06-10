@@ -5,7 +5,7 @@ import FolderIcon from './icon'
 
 const Card = ({ title, description, imgSrc, href, github, tech1, tech2, tech3 }) => (
   <div className="md p-4 md:w-1/2" style={{ maxWidth: '544px' }}>
-    <div className="h-full overflow-hidden rounded-md border-2 border-gray-200 border-opacity-60 dark:border-gray-700">
+    <div className="h-full transform overflow-hidden rounded-md border-2 border-solid border-gray-200 hover:border-primary-600 dark:border-gray-700 dark:hover:border-primary-400">
       <div className="p-6">
         <div className="flex flex-row items-center justify-between">
           <div className="my-2">

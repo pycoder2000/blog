@@ -9,7 +9,7 @@ const UsesTech = ({ name, link, description }) => {
             <li key={name} className="mr-1 ">
               <Link
                 href={link}
-                className="text-lg text-slate-500 hover:text-primary-color dark:text-slate-400 dark:hover:text-primary-color-dark"
+                className="text-lg text-slate-500 hover:text-primary-color-500 dark:text-slate-400 dark:hover:text-primary-color-dark-500"
               >
                 {name}
               </Link>

@@ -82,7 +82,7 @@ export default function AuthorLayout({ children, frontMatter }) {
               <RoughNotation
                 type="underline"
                 show={true}
-                color="#FFEA00"
+                color="#00FFFF"
                 animationDelay={800}
                 animationDuration={1200}
                 multiline={true}
@@ -96,7 +96,7 @@ export default function AuthorLayout({ children, frontMatter }) {
               I am a strong advocate for open source and I am always interested in working on new
               projects with new people. Feel free to reach out if you have anything to talk about,
               you can reach me on{' '}
-              <RoughNotation type="box" show={true} color="#FF7F50" animationDelay={800}>
+              <RoughNotation type="box" show={true} color="#FF5733" animationDelay={800}>
                 <Link
                   href={'mailto:desaiparth2000@gmail.com'}
                   className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
