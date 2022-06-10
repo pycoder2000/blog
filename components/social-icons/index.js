@@ -15,6 +15,7 @@ const components = {
   linkedin: Linkedin,
   twitter: Twitter,
   website: Globe,
+  external: External,
 }
 
 const SocialIcon = ({ kind, href, size = 8 }) => {
