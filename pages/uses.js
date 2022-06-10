@@ -24,7 +24,7 @@ export default function Uses() {
           Note: This page contains links to buy or download the products. If you click through and
           purchase, I do not receive any compensation for that purchase.
         </div>
-        <span className="text-lg font-semibold">Software&nbsp;&&nbsp;gear</span>
+        <span className="text-2xl font-semibold">Software&nbsp;&&nbsp;gear</span>
         <div className="mt-3">
           {USES.map((d) => (
             <UsesTech key={d.name} name={d.name} description={d.description} link={d.link} />
@@ -41,9 +41,9 @@ export default function Uses() {
             ></embed>
           </figure> */}
           <div className="pt-10">
-            <span className="text-sm">
-              I am planning on remaking this site in the future, so stay around to see what I come
-              up with.
+            <span className="text-base text-gray-500 dark:text-gray-400">
+              P.S. I am planning on remaking this site in the future, so stay around to see what I
+              come up with ;)
             </span>
           </div>
         </div>

@@ -7,7 +7,7 @@ const Experience = ({ title, company, location, range, url, text1, text2, text3 
         <span className="text-gray-500 dark:text-gray-400">{title}</span>{' '}
         <span className="text-gray-500 dark:text-gray-400">&nbsp;@&nbsp;</span>{' '}
         <span className="text-primary-color dark:text-primary-color-dark">
-          <Link href={url} className="no-underline">
+          <Link href={url} className="company">
             {company}
           </Link>
         </span>
