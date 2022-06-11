@@ -163,7 +163,7 @@ export default function Home({ posts }) {
               <Link
                 href={`/blog/${slug}`}
                 key={slug}
-                className="group flex bg-transparent bg-opacity-20 px-2 transition duration-200 hover:rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800"
+                className="group flex bg-transparent bg-opacity-20 px-2 transition duration-100 hover:rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800"
               >
                 <li className="py-6 px-4">
                   <article>
