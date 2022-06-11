@@ -198,7 +198,7 @@ export default function Home({ posts }) {
                         <div className="text-base font-medium leading-6">
                           <Link
                             href={`/blog/${slug}`}
-                            className="mr-3 rounded-lg border border-primary-500 py-1 px-3 text-sm font-medium uppercase text-primary-500 transition duration-500 ease-in-out hover:bg-primary-500 hover:text-gray-100 group-hover:bg-primary-500 group-hover:text-gray-100 dark:group-hover:text-gray-900"
+                            className="mr-3 rounded-lg border border-primary-500 py-1 px-3 text-sm font-medium uppercase text-primary-500 transition duration-500 ease-in-out hover:bg-primary-500 hover:text-gray-100 dark:hover:text-gray-900"
                             aria-label={`Read "${title}"`}
                           >
                             Read more &rarr;
