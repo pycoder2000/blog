@@ -6,15 +6,19 @@ import SectionContainer from './SectionContainer'
 import Footer from './Footer'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
+import Typewriter from 'typewriter-effect'
+import { useRouter } from 'next/router'
 
 const LayoutWrapper = ({ children }) => {
+  const router = useRouter()
+
   return (
     <SectionContainer>
       <div className="flex h-screen flex-col justify-between">
         <header className="flex items-center justify-between py-10">
           <div>
             <Link href="/" aria-label={siteMetadata.headerTitle}>
-              <div className="flex items-center justify-between">
+              {/* <div className="flex items-center justify-between">
                 <div className="mr-1">
                   <Logo />
                 </div>
@@ -25,6 +29,16 @@ const LayoutWrapper = ({ children }) => {
                 ) : (
                   siteMetadata.headerTitle
                 )}
+              </div> */}
+              <div className="text-primary-color dark:text-primary-color-dark flex items-center justify-between text-xl font-semibold">
+                {`~${router.asPath}`}{' '}
+                <Typewriter
+                  options={{
+                    strings: [],
+                    autoStart: true,
+                    loop: true,
+                  }}
+                />
               </div>
             </Link>
           </div>
