@@ -14,8 +14,8 @@ const LayoutWrapper = ({ children }) => {
         <header className="flex items-center justify-between py-10">
           <div>
             <Link href="/" aria-label={siteMetadata.headerTitle}>
-              <div className="flex items-center justify-between">
-                <div className="mr-3">
+              <div className="hover:bg-overlay flex items-center justify-between rounded-md p-2 duration-200 ease-in-out hover:bg-gray-400 hover:bg-opacity-80 hover:dark:bg-gray-700">
+                <div className="mr-1">
                   <Logo />
                 </div>
                 {typeof siteMetadata.headerTitle === 'string' ? (
@@ -34,7 +34,7 @@ const LayoutWrapper = ({ children }) => {
                 <Link
                   key={link.title}
                   href={link.href}
-                  className="p-1 font-medium text-gray-900 hover:text-primary-color-500 dark:text-gray-100 hover:dark:text-primary-color-dark-500 sm:p-4"
+                  className="hover:bg-overlay rounded-md p-2 font-medium text-gray-900 duration-200 ease-in-out hover:bg-gray-400 hover:bg-opacity-80 dark:text-gray-100 hover:dark:bg-gray-700 sm:p-4"
                 >
                   {link.title}
                 </Link>
