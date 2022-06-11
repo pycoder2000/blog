@@ -1,51 +1,68 @@
-import { PageSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
-import { USES } from '../data/usesData'
-import UsesTech from '@/components/Uses'
+import { PageSEO } from '@/components/SEO'
+import usesData from '@/data/usesData'
+import Link from '@/components/Link'
 
 export default function Uses() {
   return (
     <>
-      <PageSEO
-        title={`Uses - ${siteMetadata.author}`}
-        description={`Uses - ${siteMetadata.author}`}
-        url={`${siteMetadata.siteUrl}/uses`}
-      />
-      <div className="mb-4">
-        <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-          What I use
-        </h1>
-        <div className="mt-5 text-gray-500 dark:text-gray-400">
-          I've seen similar lists flying around and I like the idea.
-          <br />
-          This is also a nice way to see how my setup changes over time.
-        </div>
-        <div className="mt-5 mb-3 text-xs text-gray-500 dark:text-gray-400">
-          Note: This page contains links to buy or download the products. If you click through and
-          purchase, I do not receive any compensation for that purchase.
-        </div>
-        <span className="text-2xl font-semibold">Software&nbsp;&&nbsp;gear</span>
-        <div className="mt-3">
-          {USES.map((d) => (
-            <UsesTech key={d.name} name={d.name} description={d.description} link={d.link} />
-          ))}
-        </div>
-        <div className="mt-3">
-          {/* <span className="text-sm">
-            Note: this is since I started using wakatime in june 2021.
-          </span>
-          <figure>
-            <embed
-              className="h-3/5 w-3/5"
-              src="https://wakatime.com/share/@082e14f7-c718-4327-85f4-28e803bdaa80/05162f53-5527-4b7d-979d-c8c3a56814df.svg"
-            ></embed>
-          </figure> */}
-          <div className="pt-10">
-            <span className="text-base text-gray-500 dark:text-gray-400">
-              P.S. I am planning on remaking this site in the future, so stay around to see what I
-              come up with ;)
-            </span>
+      <PageSEO title={`Uses - ${siteMetadata.author}`} description={siteMetadata.description} />
+      <div className="mx-auto max-w-6xl divide-y divide-gray-200 dark:divide-gray-700">
+        <div className="space-y-2 pt-6 pb-8 md:space-y-5">
+          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+            Uses
+          </h1>
+          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
+            Software and hardware collection of things I'm using daily.
+          </p>
+          <div className="mt-5 mb-3 text-xs text-gray-500 dark:text-gray-400">
+            Note: This page contains links to buy or download the products. If you click through and
+            purchase, I do not receive any compensation for that purchase.
           </div>
+        </div>
+        <div className="container py-12">
+          <div className="flex flex-row flex-wrap">
+            {usesData.map((d) => (
+              <Link
+                key={d.href}
+                href={d.href}
+                className="group mb-4 w-full cursor-pointer p-6 backdrop-filter transition duration-200 hover:rounded-xl hover:bg-gray-100 hover:bg-opacity-40 dark:hover:bg-gray-500 dark:hover:bg-opacity-40 md:w-1/2"
+              >
+                <div className="flex items-center justify-start">
+                  <div className="flex-shrink-0 p-3 font-sans text-gray-700 dark:text-gray-50 ">
+                    <svg
+                      width={36}
+                      height={36}
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="h-12 w-12 stroke-current text-center align-middle leading-6 text-gray-700 dark:text-gray-50"
+                    >
+                      <path d="M4 17L10 11 4 5" />
+                      <path d="M12 19L20 19" />
+                    </svg>
+                  </div>
+                  <div className="flex flex-col p-3">
+                    <h3 className="truncate text-sm font-bold leading-5 text-gray-800 dark:text-white sm:text-base lg:text-base">
+                      {d.title}
+                    </h3>
+                    <p className="mt-2 text-sm text-gray-600 dark:text-gray-400 sm:text-base lg:text-sm xl:text-base">
+                      {d.description}
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+        <div className="pt-10">
+          <span className="text-base text-gray-500 dark:text-gray-400">
+            P.S. I am planning on remaking this site in the future, so stay around to see what I
+            come up with ;)
+          </span>
         </div>
       </div>
     </>

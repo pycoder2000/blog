@@ -1,109 +1,94 @@
-export const USES = [
+const usesData = [
   {
-    name: 'Macbook Pro 13" 2020',
-    description: 'M1 - 8 core CPU, 8 core GPU. 16 GB RAM',
-    link: 'https://www.amazon.in/Apple-MacBook-Chip-13-inch-256GB/dp/B08N5VSQNG',
+    title: 'Macbook Pro 13"',
+    description: `M1 - 8 core CPU, 8 core GPU, 16 GB RAM`,
+    href: 'https://www.amazon.in/Apple-MacBook-Chip-13-inch-256GB/dp/B08N5VSQNG',
   },
   {
-    name: 'Visual Studio Code',
-    description: 'Nothing shocking here',
-    link: 'https://code.visualstudio.com/',
+    title: 'Alfred',
+    description: `Productivity on Mac`,
+    href: 'https://www.alfredapp.com/',
   },
   {
-    name: 'Level Up',
-    description: 'I regularly change themes in VS Code for fun, this is my current theme.',
-    link: 'https://marketplace.visualstudio.com/items?itemName=leveluptutorials.theme-levelup',
+    title: 'Superhuman',
+    description: `Email client with keybindings`,
+    href: 'https://superhuman.com',
   },
   {
-    name: 'Material Theme Icons',
-    description: 'I just selecet the most popular icon theme at some point',
-    link: 'https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme',
+    title: 'VSCode',
+    description: `Nothing shocking here. Click here to find my plugins & config`,
+    href: 'https://gist.github.com/DLevai94/c1b69f72a7deb472506ee3cf5f559f81',
   },
   {
-    name: 'warp',
-    description: 'Trying out the beta version of this shell, looks promising',
-    link: 'https://www.warp.dev/',
+    title: 'warp',
+    description: `Trying out the beta version of this shell, looks promising`,
+    href: 'https://www.warp.dev/',
   },
   {
-    name: 'iTerm2',
-    description: 'This one works well, like the customizability',
-    link: 'https://iterm2.com/',
+    title: 'iTerm2',
+    description: `This one works well, like the customisability`,
+    href: 'https://ohmyz.sh/',
   },
   {
-    name: 'zsh',
-    description: 'Recently started using this shell, like the customizability',
-    link: 'https://ohmyz.sh/',
+    title: 'zsh',
+    description: `Recently started using this shell, like the customisability`,
+    href: 'https://iterm2.com/',
   },
   {
-    name: 'Microsoft Edge',
-    description: 'Good for developing and efficiently using the RAM',
-    link: 'https://www.google.com/chrome/',
-  },
-  // {
-  //   name: 'Logitech Mx Master 3',
-  //   description: 'Very comfortable and great to use.',
-  //   link: 'https://amzn.to/3ww4Qu3',
-  // },
-  // {
-  //   name: 'Keychron K4 v2',
-  //   description: 'My first Mechenical keyboard. Gateron brown switches',
-  //   link: 'https://www.keychron.com/products/keychron-k4-wireless-mechanical-keyboard-version-2',
-  // },
-  // {
-  //   name: `24" Dell Monitor`,
-  //   description: `I use a 24" Dell monitor at work.`,
-  //   link: 'https://www.dell.com/en-us/shop/dell-24-monitor-s2421hs/apd/210-axhh/monitors-monitor-accessories',
-  // },
-  // {
-  //   name: `Asus 24,5" FHD Monitor`,
-  //   description: 'I use this one at home.',
-  //   link: 'https://amzn.to/3NB9WfN',
-  // },
-  // {
-  //   name: 'Keychron K3 v2',
-  //   description:
-  //     'Slim and wireless mechanical keyboard, super nice to use and easy to travel with.',
-  //   link: 'https://www.keychron.com/products/keychron-k3-wireless-mechanical-keyboard',
-  // },
-  // {
-  //   name: 'Sony WH-1000',
-  //   description: 'Probably my most used item over the last 4 years.',
-  //   link: 'https://amzn.to/3yBCSQq',
-  // },
-  // {
-  //   name: 'Nothing ear (1)',
-  //   description:
-  //     'I lost my budget in-ear headphones, these were a good value, with noise canceling.',
-  //   link: 'https://amzn.to/3wmudjo',
-  // },
-  // {
-  //   name: 'Garmin Venu',
-  //   description: 'Good battery life and nice health metrics.',
-  //   link: 'https://amzn.to/3Pu8k95',
-  // },
-  {
-    name: '1Password',
-    description: 'Easy to use both work and personal account',
-    link: 'https://1password.com/',
+    title: 'Microsoft Edge',
+    description: `Good for developing and efficiently using the RAM`,
+    href: 'https://www.microsoft.com/en-us/edge?r=1',
   },
   {
-    name: 'Obsidian',
-    description: 'My tool for thinking, helps my store and connect knowledge',
-    link: 'https://obsidian.md/',
+    title: 'Level Up',
+    description: `I regularly change themes in VS Code for fun, this is my current theme`,
+    href: 'https://marketplace.visualstudio.com/items?itemName=leveluptutorials.theme-levelup',
   },
   {
-    name: 'Anki',
-    description: 'Easy way to use spaced-repetition',
-    link: 'https://ankiweb.net/',
+    title: 'Material Theme Icons',
+    description: `I just select the most popular icon theme at some point`,
+    href: 'https://marketplace.visualstudio.com/items?itemName=leveluptutorials.theme-levelup',
   },
-  // {
-  //   name: 'Asus Zenbook Deluxe 3',
-  //   description: '1.8 GHz Quad-Core Intel Core i7. 16gb RAM',
-  //   link: 'https://amzn.to/3PpThxj',
-  // },
   {
-    name: 'wsl2',
-    description: 'Great development environment when you get it set up - Used on my Asus Zenbook',
-    link: 'https://docs.microsoft.com/en-us/windows/wsl/',
+    title: 'Linear',
+    description: `The best project management app out there. Believe me.`,
+    href: 'https://linear.app',
+  },
+  {
+    title: 'Hyper & Oh My Zsh',
+    description: `Click here to find my plugins & config`,
+    href: 'https://gist.github.com/DLevai94/af307fb45d525ffebf38750970f98ed2',
+  },
+  {
+    title: 'Daily.dev',
+    description: `Homepage to stay up to date in the dev world`,
+    href: 'https://api.daily.dev/',
+  },
+  {
+    title: 'EmailOctopus',
+    description: `For newsletter and automations`,
+    href: 'https://emailoctopus.com/',
+  },
+  {
+    title: 'Canva',
+    description: `Sometimes I use Canva to edit some images quickly.`,
+    href: 'https://www.canva.com/',
+  },
+  {
+    title: 'Obsidian',
+    description: `My tool for thinking, helps my store and connect knowledge`,
+    href: 'https://obsidian.md/',
+  },
+  {
+    title: 'Figma',
+    description: `Designs and graphics`,
+    href: 'https://figma.com',
+  },
+  {
+    title: 'Notion',
+    description: `Permanent docs, organizing my life.`,
+    href: 'https://www.notion.so/',
   },
 ]
+
+export default usesData
