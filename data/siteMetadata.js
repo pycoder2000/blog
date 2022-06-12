@@ -5,7 +5,7 @@ const siteMetadata = {
   description: 'my personal blog where I share my musings',
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: 'musings.vercel.app',
+  siteUrl: 'https://musing.vercel.app',
   siteRepo: 'https://github.com/pycoder2000/blog',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.png',

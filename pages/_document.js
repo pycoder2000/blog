@@ -98,7 +98,10 @@ class MyDocument extends Document {
           <meta name="msapplication-TileColor" content="#2b5797" />
           <meta name="msapplication-TileColor" content="#FFFFFF" />
           <meta name="theme-color" content="#ffffff" />
-          <meta name="description" content="Parth Desai's Blog" />
+          <meta
+            name="description"
+            content="Welcome to my personal blog where I share my musings. I am a Data Engineer passionate about Data Science, building pipelines and Automation."
+          />
           <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
           <link
