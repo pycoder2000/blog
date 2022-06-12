@@ -63,7 +63,7 @@ export default function Home({ posts }) {
                 <div className="group relative">
                   <div className="animate-tilt absolute -inset-0.5 rounded-lg bg-gradient-to-r from-green-600 to-amber-500 opacity-50 blur transition duration-1000 group-hover:opacity-100 group-hover:duration-200"></div>
                   <Link href="/projects">
-                    <a className="relative flex items-center divide-x divide-gray-600 rounded-lg bg-white px-7 py-4 leading-none dark:bg-black">
+                    <span className="relative flex items-center divide-x divide-gray-600 rounded-lg bg-white px-7 py-4 leading-none dark:bg-black">
                       <span className="flex items-center space-x-5">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -84,7 +84,7 @@ export default function Home({ posts }) {
                       <span className="pl-6 text-amber-400 transition duration-200 group-hover:text-gray-900 dark:group-hover:text-gray-100">
                         Projects&nbsp;&rarr;
                       </span>
-                    </a>
+                    </span>
                   </Link>
                 </div>
               </div>
@@ -92,7 +92,7 @@ export default function Home({ posts }) {
                 <div className="group relative">
                   <div className="animate-tilt absolute -inset-0.5 rounded-lg bg-gradient-to-r from-pink-600 to-purple-600 opacity-50 blur transition duration-1000 group-hover:opacity-100 group-hover:duration-200"></div>
                   <Link href="https://parthdesai.vercel.app/">
-                    <a className="relative flex items-center divide-x divide-gray-600 rounded-lg bg-white px-7 py-4 leading-none dark:bg-black">
+                    <span className="relative flex items-center divide-x divide-gray-600 rounded-lg bg-white px-7 py-4 leading-none dark:bg-black">
                       <span className="flex items-center space-x-5">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -113,7 +113,7 @@ export default function Home({ posts }) {
                       <span className="pl-6 text-indigo-400 transition duration-200 group-hover:text-gray-900 dark:group-hover:text-gray-100">
                         Website&nbsp;&rarr;
                       </span>
-                    </a>
+                    </span>
                   </Link>
                 </div>
               </div>
@@ -121,7 +121,7 @@ export default function Home({ posts }) {
                 <div className="group relative">
                   <div className="animate-tilt absolute -inset-0.5 rounded-lg bg-gradient-to-r  from-fuchsia-600 to-emerald-600 opacity-50 blur transition duration-1000 group-hover:opacity-100 group-hover:duration-200"></div>
                   <Link href="https://parthdesai.vercel.app/resume.pdf">
-                    <a className="relative flex items-center divide-x divide-gray-600 rounded-lg bg-white px-7 py-4 leading-none dark:bg-black">
+                    <span className="relative flex items-center divide-x divide-gray-600 rounded-lg bg-white px-7 py-4 leading-none dark:bg-black">
                       <span className="flex items-center space-x-5">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -144,7 +144,7 @@ export default function Home({ posts }) {
                       <span className="pl-6 text-primary-400 transition duration-200 group-hover:text-gray-900 dark:group-hover:text-gray-100">
                         Resume&nbsp;&rarr;
                       </span>
-                    </a>
+                    </span>
                   </Link>
                 </div>
               </div>
