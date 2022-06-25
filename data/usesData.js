@@ -17,7 +17,7 @@ const usesData = [
   {
     title: 'VSCode',
     description: `Nothing shocking here. Click here to find my plugins & config`,
-    href: 'https://gist.github.com/DLevai94/c1b69f72a7deb472506ee3cf5f559f81',
+    href: 'https://gist.github.com/pycoder2000/36812bb44f24e96ce09359cefd9e7198',
   },
   {
     title: 'warp',
