@@ -171,9 +171,9 @@ Follow the interactive prompt to generate a post with pre-filled front matter.
 │ ├── 🗂️ static               # Holds images, favicons, and other assets
 │ │ ├── 🗂️ favicon            # Favicon files
 │ │ └── 🗂️ images             # Image Files
-│ ├── 📜 feed.xml             # RSS feed
-│ ├── 📜 robots.txt           # Helps crawlers to crawl your site
-│ └── 📜 sitemap.xml          # Sitemap
+│ ├── 📝 feed.xml             # RSS feed
+│ ├── 📝 robots.txt           # Helps crawlers to crawl your site
+│ └── 📝 sitemap.xml          # Sitemap
 ├── 🗂️ scripts                # Scripts to run for different tasks
 ├── 📝 tailwind.config.js     # Contains tailwind stylesheet to change the look
 └── 📝 next.config.js         # configuration related to Next.js
