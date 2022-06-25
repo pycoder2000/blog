@@ -6,6 +6,7 @@ import { getAllFilesFrontMatter } from '@/lib/mdx'
 import formatDate from '@/lib/utils/formatDate'
 import { RoughNotation } from 'react-rough-notation'
 import NewsletterForm from '@/components/NewsletterForm'
+import { motion } from 'framer-motion'
 
 const MAX_DISPLAY = 3
 
@@ -57,6 +58,34 @@ export default function Home({ posts }) {
               in between. Have a good read!
             </p>
           </div>
+          {/* <div className="h-content sm:h-content-sm flex flex-col justify-around">
+            <h1 className="sm:text-8.5xl tracking-tightest my-28 select-none text-center text-6xl font-extrabold leading-none sm:my-10">
+              <span
+                data-content="Blog."
+                className="relative block before:absolute before:top-0 before:bottom-0 before:left-0 before:block before:w-full before:animate-gradient-background-1 before:px-2 before:text-center before:text-black before:content-[attr(data-content)] dark:before:text-white dark:before:content-[attr(data-content)]"
+              >
+                <span className="animate-gradient-foreground-1 bg-gradient-to-br from-gradient-1-start to-gradient-1-end bg-clip-text px-2 text-transparent">
+                  Blog.
+                </span>
+              </span>
+              <span
+                data-content="Coding."
+                className="relative block before:absolute before:top-0 before:bottom-0 before:left-0 before:block before:w-full before:animate-gradient-background-2 before:px-2 before:text-center before:text-black before:content-[attr(data-content)] dark:before:text-white dark:before:content-[attr(data-content)]"
+              >
+                <span className="animate-gradient-foreground-2 bg-gradient-to-br from-gradient-2-start to-gradient-2-end bg-clip-text px-2 text-transparent">
+                  Coding.
+                </span>
+              </span>
+              <span
+                data-content="Portfolio."
+                className="relative block before:absolute before:top-0 before:bottom-0 before:left-0 before:block before:w-full before:animate-gradient-background-3 before:px-2 before:text-center before:text-black before:content-[attr(data-content)] dark:before:text-white dark:before:content-[attr(data-content)]"
+              >
+                <span className="animate-gradient-foreground-3 bg-gradient-to-br from-gradient-3-start to-gradient-3-end bg-clip-text px-2 text-transparent">
+                  Portfolio.
+                </span>
+              </span>
+            </h1>
+          </div> */}
           <div className="flex items-center justify-center">
             <div className="grid grid-cols-1 grid-rows-3 gap-8 py-12">
               <div className="my-2 grid items-start gap-8">
@@ -155,60 +184,62 @@ export default function Home({ posts }) {
           Latest
         </h2>
         <hr className="border-gray-200 dark:border-gray-700" />
-        <ul className="">
+        <ul>
           {!posts.length && 'No posts found.'}
           {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
             const { slug, date, title, summary, tags } = frontMatter
             return (
-              <Link
-                href={`/blog/${slug}`}
-                key={slug}
-                className="group flex bg-transparent bg-opacity-20 px-2 transition duration-100 hover:rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800"
-              >
-                <li className="py-6 px-4">
-                  <article>
-                    <div className="space-y-2 bg-transparent bg-opacity-20 p-2 transition duration-200 hover:rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
-                      <dl>
-                        <dt className="sr-only">Published on</dt>
-                        <dd className="text-base font-medium leading-6 text-gray-500 group-hover:text-primary-500 dark:text-gray-400">
-                          <time dateTime={date}>{formatDate(date)}</time>
-                        </dd>
-                      </dl>
-                      <div className="space-y-5 xl:col-span-3">
-                        <div className="space-y-6">
-                          <div>
-                            <h2 className="text-2xl font-bold leading-8 tracking-tight">
-                              <Link
-                                href={`/blog/${slug}`}
-                                className="text-gray-900 transition duration-500 ease-in-out hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-500"
-                              >
-                                {title}
-                              </Link>
-                            </h2>
-                            <div className="flex flex-wrap">
-                              {tags.map((tag) => (
-                                <Tag key={tag} text={tag} />
-                              ))}
+              <motion.li key={slug} whileHover={{ scale: 1.03 }}>
+                <Link
+                  href={`/blog/${slug}`}
+                  key={slug}
+                  className="group flex bg-transparent bg-opacity-20 px-2 transition duration-100 hover:rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800"
+                >
+                  <li className="py-6 px-4">
+                    <article>
+                      <div className="space-y-2 bg-transparent bg-opacity-20 p-2 transition duration-200 hover:rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
+                        <dl>
+                          <dt className="sr-only">Published on</dt>
+                          <dd className="text-base font-medium leading-6 text-gray-500 group-hover:text-primary-500 dark:text-gray-400">
+                            <time dateTime={date}>{formatDate(date)}</time>
+                          </dd>
+                        </dl>
+                        <div className="space-y-5 xl:col-span-3">
+                          <div className="space-y-6">
+                            <div>
+                              <h2 className="text-2xl font-bold leading-8 tracking-tight">
+                                <Link
+                                  href={`/blog/${slug}`}
+                                  className="text-gray-900 transition duration-500 ease-in-out hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-500"
+                                >
+                                  {title}
+                                </Link>
+                              </h2>
+                              <div className="flex flex-wrap">
+                                {tags.map((tag) => (
+                                  <Tag key={tag} text={tag} />
+                                ))}
+                              </div>
+                            </div>
+                            <div className="prose max-w-none text-gray-500 dark:text-gray-400">
+                              {summary}
                             </div>
                           </div>
-                          <div className="prose max-w-none text-gray-500 dark:text-gray-400">
-                            {summary}
+                          <div className="text-base font-medium leading-6">
+                            <Link
+                              href={`/blog/${slug}`}
+                              className="mr-3 rounded-lg border border-primary-500 py-1 px-3 text-sm font-medium uppercase text-primary-500 transition duration-500 ease-in-out hover:bg-primary-500 hover:text-gray-100 dark:hover:text-gray-900"
+                              aria-label={`Read "${title}"`}
+                            >
+                              Read more &rarr;
+                            </Link>
                           </div>
                         </div>
-                        <div className="text-base font-medium leading-6">
-                          <Link
-                            href={`/blog/${slug}`}
-                            className="mr-3 rounded-lg border border-primary-500 py-1 px-3 text-sm font-medium uppercase text-primary-500 transition duration-500 ease-in-out hover:bg-primary-500 hover:text-gray-100 dark:hover:text-gray-900"
-                            aria-label={`Read "${title}"`}
-                          >
-                            Read more &rarr;
-                          </Link>
-                        </div>
                       </div>
-                    </div>
-                  </article>
-                </li>
-              </Link>
+                    </article>
+                  </li>
+                </Link>
+              </motion.li>
             )
           })}
         </ul>

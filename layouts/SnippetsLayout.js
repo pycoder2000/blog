@@ -4,7 +4,6 @@ import siteMetadata from '@/data/siteMetadata'
 import { useState } from 'react'
 import Pagination from '@/components/Pagination'
 import formatDate from '@/lib/utils/formatDate'
-import { motion } from 'framer-motion'
 
 export default function ListLayout({ posts, title, initialDisplayPosts = [], pagination }) {
   const [searchValue, setSearchValue] = useState('')
@@ -26,10 +25,10 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
           </h1>
           <div className="relative max-w-lg">
             <input
-              aria-label="Search articles"
+              aria-label="Search snippets"
               type="text"
               onChange={(e) => setSearchValue(e.target.value)}
-              placeholder="Search articles"
+              placeholder="Search snippets"
               className="block w-full rounded-md border border-gray-400 bg-white px-4 py-2 text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-900 dark:bg-gray-800 dark:text-gray-100"
             />
             <svg
@@ -48,52 +47,47 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
             </svg>
           </div>
         </div>
-        <ul>
+        <div className="grid grid-cols-1 gap-8 py-12 md:grid-cols-2 lg:grid-cols-3">
           {!filteredBlogPosts.length && 'No posts found.'}
           {displayPosts.map((frontMatter) => {
             const { slug, date, title, summary, tags } = frontMatter
             return (
-              <motion.li key={slug} whileHover={{ scale: 1.03 }}>
-                <Link
-                  href={`/blog/${slug}`}
-                  key={slug}
-                  className="group flex bg-transparent bg-opacity-20 px-2 transition duration-100 hover:rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800"
-                >
-                  <li key={slug} className="py-6 px-4">
-                    <article className="space-y-2 bg-transparent bg-opacity-20 p-2 transition duration-200 hover:rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
-                      <dl>
-                        <dt className="sr-only">Published on</dt>
-                        <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                          <time dateTime={date}>{formatDate(date)}</time>
-                        </dd>
-                      </dl>
-                      <div className="space-y-3 xl:col-span-3">
-                        <div>
-                          <h3 className="pb-3 text-2xl font-bold leading-8 tracking-tight">
-                            <Link
-                              href={`/blog/${slug}`}
-                              className="text-gray-900 transition   duration-500 ease-in-out hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-500"
-                            >
-                              {title}
-                            </Link>
-                          </h3>
-                          <div className="flex flex-wrap">
-                            {tags.map((tag) => (
-                              <Tag key={tag} text={tag} />
-                            ))}
-                          </div>
-                        </div>
-                        <div className="prose max-w-none text-gray-500 dark:text-gray-400">
-                          {summary}
-                        </div>
+              <Link
+                key={slug}
+                href={`/snippets/${slug}`}
+                className="group bg-day dark:bg-night group relative z-50 flex transform cursor-pointer flex-wrap rounded-md border border-gray-200 bg-opacity-50 p-px py-px transition duration-500 hover:scale-105 dark:border-gray-700 dark:bg-opacity-50"
+              >
+                <div className="absolute bottom-0 left-0 h-1 w-full origin-left scale-x-0 transform bg-primary-500 duration-300 group-hover:scale-x-100" />
+                <div className="absolute bottom-0 left-0 h-full w-1 origin-bottom scale-y-0 transform bg-primary-500 duration-300 group-hover:scale-y-100" />
+                <div className="absolute top-0 left-0 h-1 w-full origin-right scale-x-0 transform bg-primary-500 duration-300 group-hover:scale-x-100" />
+                <div className="absolute bottom-0 right-0 h-full w-1 origin-top scale-y-0 transform bg-primary-500 duration-300 group-hover:scale-y-100" />
+                <div className="bg-day dark:bg-night relative space-y-2 rounded-2xl p-4">
+                  <article>
+                    <div>
+                      <h2 className="text-2xl font-bold leading-8 tracking-tight ">
+                        <Link
+                          href={`/snippets/${slug}`}
+                          className="text-gray-900 transition  duration-500 ease-in-out hover:text-primary-500 dark:text-gray-100 dark:hover:text-primary-500"
+                        >
+                          {title}
+                        </Link>
+                      </h2>
+                      <div className="prose prose-base max-w-none text-gray-500 dark:text-gray-400 sm:prose-lg">
+                        {summary}
                       </div>
-                    </article>
-                  </li>
-                </Link>
-              </motion.li>
+
+                      <div className="flex flex-wrap pt-2">
+                        {tags.map((tag) => (
+                          <Tag key={tag} text={tag} />
+                        ))}
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </Link>
             )
           })}
-        </ul>
+        </div>
       </div>
       {pagination && pagination.totalPages > 1 && !searchValue && (
         <Pagination currentPage={pagination.currentPage} totalPages={pagination.totalPages} />

@@ -21,7 +21,9 @@ export default function Footer() {
           <div>{` | `}</div>
           <div>{`© ${new Date().getFullYear()}`}</div>
           <div>{` | `}</div>
-          &nbsp;Have a good {currentDayName()}!
+          <div className="background-author-animate bg-gradient-to-r from-orange-500 via-purple-500 to-blue-500 bg-clip-text text-sm text-transparent">
+            Have a good {currentDayName()}!
+          </div>
         </div>
       </div>
     </footer>

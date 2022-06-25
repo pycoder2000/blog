@@ -40,6 +40,10 @@
   }
 }
 
+.prose a {
+  @apply special-underline;
+}
+
 html {
   scroll-behavior: smooth;
 }

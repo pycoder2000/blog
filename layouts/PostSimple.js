@@ -8,11 +8,11 @@ import Comments from '@/components/comments'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 
 export default function PostLayout({ frontMatter, authorDetails, next, prev, children }) {
-  const { date, title } = frontMatter
+  const { slug, date, title, summary } = frontMatter
 
   return (
     <SectionContainer>
-      <BlogSEO url={`${siteMetadata.siteUrl}/blog/${frontMatter.slug}`} {...frontMatter} />
+      <BlogSEO url={`${siteMetadata.siteUrl}/snippets/${frontMatter.slug}`} {...frontMatter} />
       <ScrollTopAndComment />
       <article>
         <div>
@@ -44,7 +44,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                 {prev && (
                   <div className="pt-4 xl:pt-8">
                     <Link
-                      href={`/blog/${prev.slug}`}
+                      href={`/snippets/${prev.slug}`}
                       className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                     >
                       &larr; {prev.title}
@@ -54,7 +54,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                 {next && (
                   <div className="pt-4 xl:pt-8">
                     <Link
-                      href={`/blog/${next.slug}`}
+                      href={`/snippets/${next.slug}`}
                       className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                     >
                       {next.title} &rarr;
