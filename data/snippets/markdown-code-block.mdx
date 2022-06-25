@@ -1,0 +1,127 @@
+---
+title: 'Code block syntax notes'
+date: '2021-09-09'
+tags: [javascript, react]
+type: 'markdown'
+draft: false
+summary: "Markdown Code block's basic and advanced syntax"
+layout: PostSimple
+---
+
+## Basic syntax
+
+Use triple backticks to create a code block in markdown
+
+````
+```language
+your code goes here
+```
+````
+
+Example
+
+````
+```javascript
+function debounce(func, timeout = 300) {
+  let timer;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => { func.apply(this, args); }, timeout);
+  };
+}
+```
+````
+
+will appear as:
+
+```javascript
+function debounce(func, timeout = 300) {
+  let timer
+  return (...args) => {
+    clearTimeout(timer)
+    timer = setTimeout(() => {
+      func.apply(this, args)
+    }, timeout)
+  }
+}
+```
+
+## Filename
+
+Add `:filename.ext` after `language` to render with filename label on the top of block
+
+Example:
+
+````
+```java:GetRowValue.java
+private String[] getRowValue(Integer i, List<BillDetail> billDetail) {
+  String[] rowValue = new String[5];
+  rowValue[0] = (i).toString();
+  i = i - 1;
+
+  rowValue[1] = billDetail.get(i).getTenSanPham();
+  rowValue[2] = billDetail.get(i).getSoLuong().toString();
+  rowValue[3] = new DecimalFormat("#,###").format(Integer.parseInt(billDetail.get(i).getDonGiaSanPham()));
+  rowValue[4] = new DecimalFormat("#,###").format(billDetail.get(i).getThanhTien());
+  return rowValue;
+}
+```
+````
+
+will appear as:
+
+```java:GetRowValue.java
+private String[] getRowValue(Integer i, List<BillDetail> billDetail) {
+  String[] rowValue = new String[5];
+  rowValue[0] = (i).toString();
+  i = i - 1;
+
+  rowValue[1] = billDetail.get(i).getProductName();
+  rowValue[2] = billDetail.get(i).getQuantity().toString();
+  rowValue[3] = new DecimalFormat("#,###").format(Integer.parseInt(billDetail.get(i).getProductPrice()));
+  rowValue[4] = new DecimalFormat("#,###").format(billDetail.get(i).getSubTotal());
+
+  return rowValue;
+}
+```
+
+## Line highlighting and line-numbers
+
+- Add `{numbers}` property after `language` to highlight line
+- Add `showLineNumbers` property after `language` to render with line numbers
+
+Example:
+
+````
+```html {1,4-6,10} showLineNumbers
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hello world</title>
+  </head>
+  <body>
+    <h1>Hello world</h1>
+  </body>
+</html>
+```
+````
+
+will appear as:
+
+```html {1,4-6,10} showLineNumbers
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Hello world</title>
+  </head>
+  <body>
+    <h1>Hello world</h1>
+  </body>
+</html>
+```
