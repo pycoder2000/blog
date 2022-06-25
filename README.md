@@ -162,7 +162,8 @@ Follow the interactive prompt to generate a post with pre-filled front matter.
 ├── 🗂️ css                    # Tailwind and Prisma CSS files
 ├── 🗂️ data                   # Files to change the content of pages
 │ ├── 🗂️ authors              # Markdown files for authors of blog
-│ └── 🗂️ blog                 # Markdown files for blog posts
+│ ├── 🗂️ blog                 # Markdown files for blog posts
+│ └── 🗂️ snippets             # Markdown files for code snippets
 ├── 🗂️ layouts                # Templates for pages
 ├── 🗂️ lib                    # Non-react modules
 ├── 🗂️ pages                  # Page files for website
