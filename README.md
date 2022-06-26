@@ -154,7 +154,7 @@ Follow the interactive prompt to generate a post with pre-filled front matter.
 
 <img src="https://img.shields.io/website?down_color=red&down_message=offline&style=for-the-badge&up_color=green&up_message=online&url=https%3A%2F%2Fmusings.vercel.app"> <img src="https://img.shields.io/github/repo-size/pycoder2000/blog?style=for-the-badge&color=darkgreen" /> <img src="https://img.shields.io/github/languages/top/pycoder2000/blog?style=for-the-badge" /> <img src="https://img.shields.io/github/commit-activity/m/pycoder2000/blog?style=for-the-badge&color=orange" /> <img src="https://img.shields.io/github/deployments/pycoder2000/blog/Preview%20–%20blog?style=for-the-badge" /> <img src="https://img.shields.io/github/stars/pycoder2000/blog?color=yellow&style=for-the-badge"> <a href="https://makeapullrequest.com" target="blank" >![PRs Welcome](https://img.shields.io/badge/PR-Welcome-brightgreen?style=for-the-badge)</a>
 
-## Project structure
+## 🪜 Project structure
 
 ```bash
 📦 root
