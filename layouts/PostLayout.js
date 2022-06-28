@@ -7,18 +7,23 @@ import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import Comments from '@/components/comments'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
+import {
+  FacebookShareButton,
+  TwitterShareButton,
+  EmailShareButton,
+  LinkedinShareButton,
+  RedditShareButton,
+  WhatsappShareButton,
+} from 'react-share'
+import { SocialIcon } from 'react-social-icons'
 
 const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/master/data/blog/${fileName}`
-const discussUrl = (slug) =>
-  `https://mobile.twitter.com/search?q=${encodeURIComponent(
-    `${siteMetadata.siteUrl}/blog/${slug}`
-  )}`
 
 const postDateTemplate = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
 
 export default function PostLayout({ frontMatter, authorDetails, next, prev, children }) {
   const { slug, fileName, date, title, images, tags, readingTime } = frontMatter
-
+  const postUrl = `${siteMetadata.siteUrl}/blog/${slug}`
   return (
     <SectionContainer>
       <BlogSEO
@@ -124,11 +129,102 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
             <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0">
               <div className="prose max-w-none pt-10 pb-8 dark:prose-dark">{children}</div>
               <div className="pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300">
-                <Link href={discussUrl(slug)} rel="nofollow">
+                {/* <Link href={discussUrl(slug)} rel="nofollow">
                   {'Discuss on Twitter'}
                 </Link>
                 {` • `}
-                <Link href={editUrl(fileName)}>{'View on GitHub'}</Link>
+                <Link href={editUrl(fileName)}>{'View on GitHub'}</Link> */}
+                <div className="flex items-center">
+                  <TwitterShareButton
+                    url={postUrl}
+                    title={title}
+                    via={siteMetadata.socialAccount.twitter}
+                    className="mr-2 flex items-center overflow-hidden rounded-full !bg-[#1da1f2] !p-1.5 hover:scale-110"
+                  >
+                    <SocialIcon
+                      network="twitter"
+                      style={{ height: 25, width: 25 }}
+                      fgColor="#1da1f2"
+                      bgColor="#fff"
+                    />
+                  </TwitterShareButton>
+                  <FacebookShareButton
+                    url={postUrl}
+                    quote={title}
+                    className="mr-2 flex items-center overflow-hidden rounded-full !bg-[#1877f2] !p-1.5 hover:scale-110"
+                  >
+                    <SocialIcon
+                      network="facebook"
+                      style={{ height: 25, width: 25 }}
+                      fgColor="#1877f2"
+                      bgColor="#fff"
+                    />
+                  </FacebookShareButton>
+                  <EmailShareButton
+                    body={'Check out this blog'}
+                    subject={title}
+                    separator=" : "
+                    url={postUrl}
+                    className="mr-2 flex items-center overflow-hidden rounded-full !bg-[#7f7f7f] !p-1.5 hover:scale-110"
+                  >
+                    <SocialIcon
+                      network="email"
+                      style={{ height: 25, width: 25 }}
+                      fgColor="#7f7f7f"
+                      bgColor="#fff"
+                    />
+                  </EmailShareButton>
+                  <LinkedinShareButton
+                    summary={'Check out this blog'}
+                    title={title}
+                    source={siteMetadata.siteUrl}
+                    url={postUrl}
+                    className="mr-2 flex items-center overflow-hidden rounded-full !bg-[#027fb1] !p-1.5 hover:scale-110"
+                  >
+                    <SocialIcon
+                      network="linkedin"
+                      style={{ height: 25, width: 25 }}
+                      fgColor="#027fb1"
+                      bgColor="#fff"
+                    />
+                  </LinkedinShareButton>
+                  <RedditShareButton
+                    title={title}
+                    url={postUrl}
+                    className="mr-2 flex items-center overflow-hidden rounded-full !bg-[#ff4500] !p-1.5 hover:scale-110"
+                  >
+                    <SocialIcon
+                      network="reddit"
+                      style={{ height: 25, width: 25 }}
+                      fgColor="#ff4500"
+                      bgColor="#fff"
+                    />
+                  </RedditShareButton>
+                  <WhatsappShareButton
+                    title={title}
+                    separator={' : '}
+                    url={postUrl}
+                    className="mr-2 flex items-center overflow-hidden rounded-full !bg-[#25D366] !p-1.5 hover:scale-110"
+                  >
+                    <SocialIcon
+                      network="whatsapp"
+                      style={{ height: 25, width: 25 }}
+                      fgColor="#25D366"
+                      bgColor="#fff"
+                    />
+                  </WhatsappShareButton>
+                  <Link
+                    href={editUrl(fileName)}
+                    className="mr-2 flex items-center overflow-hidden rounded-full !bg-[#24292e] !p-1.5 hover:scale-110"
+                  >
+                    <SocialIcon
+                      network="github"
+                      style={{ height: 25, width: 25 }}
+                      fgColor="#24292e"
+                      bgColor="#fff"
+                    />
+                  </Link>
+                </div>
               </div>
               <Comments frontMatter={frontMatter} />
             </div>

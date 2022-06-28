@@ -48,6 +48,9 @@ const siteMetadata = {
       themeURL: '',
     },
   },
+  socialAccount: {
+    twitter: 'lone_Musk',
+  },
 }
 
 module.exports = siteMetadata
