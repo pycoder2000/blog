@@ -1,7 +1,7 @@
 import { PageSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
-import ListLayout from '@/layouts/ListLayout'
+import SnippetsLayout from '@/layouts/SnippetsLayout'
 import { POSTS_PER_PAGE } from '../../snippets'
 
 export async function getStaticPaths() {
@@ -45,7 +45,7 @@ export default function PostPage({ posts, initialDisplayPosts, pagination }) {
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
-      <ListLayout
+      <SnippetsLayout
         posts={posts}
         initialDisplayPosts={initialDisplayPosts}
         pagination={pagination}
