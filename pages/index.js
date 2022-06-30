@@ -7,6 +7,7 @@ import formatDate from '@/lib/utils/formatDate'
 import { RoughNotation } from 'react-rough-notation'
 import NewsletterForm from '@/components/NewsletterForm'
 import { motion } from 'framer-motion'
+import ScrollTop from '@/components/ScrollTop'
 
 const MAX_DISPLAY = 3
 
@@ -20,6 +21,7 @@ export default function Home({ posts }) {
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
+      <ScrollTop />
       <div>
         <div className="mb-12 flex flex-col items-center gap-x-12 xl:flex-row">
           <div className="pt-6">
