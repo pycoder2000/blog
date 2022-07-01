@@ -53,6 +53,7 @@ export default function Home({ posts }) {
                 color="#DE1D8D"
                 animationDelay={1000}
                 animationDuration={4000}
+                className="text-slate-200"
               >
                 thoughts, reflections & everything&nbsp;
               </RoughNotation>
