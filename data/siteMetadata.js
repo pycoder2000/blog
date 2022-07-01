@@ -3,6 +3,7 @@ const siteMetadata = {
   author: 'Parth Desai',
   headerTitle: 'Mere Musings',
   description: 'my personal blog where I share my musings',
+  snippets: 'Reuseable code snippets collected by Parth',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://musing.vercel.app',
