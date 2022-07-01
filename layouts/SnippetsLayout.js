@@ -55,7 +55,7 @@ export default function SnippetsLayout({ posts, title, initialDisplayPosts = [],
               <Link
                 key={slug}
                 href={`/snippets/${slug}`}
-                className="group bg-day dark:bg-night group relative z-50 flex transform cursor-pointer flex-wrap rounded-md border border-gray-200 bg-opacity-50 p-px py-px transition duration-300 hover:scale-105 dark:border-gray-700 dark:bg-opacity-50"
+                className="bg-day·dark:bg-night·group group relative z-50 flex transform cursor-pointer flex-wrap rounded-md border border-gray-200 bg-opacity-50 p-px py-px transition duration-300 hover:scale-105 dark:border-gray-700 dark:bg-opacity-50"
               >
                 <div className="absolute bottom-0 left-0 h-1 w-full origin-left scale-x-0 transform bg-primary-500 duration-300 group-hover:scale-x-100" />
                 <div className="absolute bottom-0 left-0 h-full w-1 origin-bottom scale-y-0 transform bg-primary-500 duration-300 group-hover:scale-y-100" />
