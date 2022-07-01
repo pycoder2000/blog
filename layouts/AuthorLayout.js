@@ -43,10 +43,11 @@ export default function AuthorLayout({ children, frontMatter }) {
             <div className="text-gray-500 dark:text-gray-400">{occupation}</div>
             <div className="text-gray-500 dark:text-gray-400">{company}</div>
             <div className="flex space-x-3 pt-6">
-              <SocialIcon kind="mail" href={`mailto:${email}`} />
-              <SocialIcon kind="github" href={github} />
-              <SocialIcon kind="linkedin" href={linkedin} />
-              <SocialIcon kind="twitter" href={twitter} />
+              <SocialIcon kind="mail" href={`mailto:${email}`} size="6" />
+              <SocialIcon kind="github" href={github} size="6" />
+              <SocialIcon kind="linkedin" href={linkedin} size="6" />
+              <SocialIcon kind="twitter" href={twitter} size="6" />
+              <SocialIcon kind="website" href={`https://parthdesai.vercel.app`} size="6" />
             </div>
           </div>
           <div className="prose max-w-none pt-8 pb-8 dark:prose-dark xl:col-span-2">

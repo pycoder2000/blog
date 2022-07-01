@@ -1,21 +1,21 @@
-import Mail from './mail.svg'
-import Github from './github.svg'
-import Facebook from './facebook.svg'
-import Linkedin from './linkedin.svg'
-import Twitter from './twitter.svg'
-import External from './external.svg'
-import Globe from './globe.svg'
+import {
+  AiOutlineMail,
+  AiOutlineGithub,
+  AiOutlineFacebook,
+  AiOutlineLinkedin,
+  AiOutlineTwitter,
+  AiOutlineGlobal,
+} from 'react-icons/ai'
 
 // Icons taken from: https://simpleicons.org/
 
 const components = {
-  mail: External,
-  github: Github,
-  facebook: Facebook,
-  linkedin: Linkedin,
-  twitter: Twitter,
-  website: Globe,
-  external: External,
+  mail: AiOutlineMail,
+  github: AiOutlineGithub,
+  facebook: AiOutlineFacebook,
+  linkedin: AiOutlineLinkedin,
+  twitter: AiOutlineTwitter,
+  website: AiOutlineGlobal,
 }
 
 const SocialIcon = ({ kind, href, size = 8 }) => {

@@ -17,7 +17,7 @@ import {
   WhatsappShareButton,
 } from 'react-share'
 import { SocialIcon } from 'react-social-icons'
-import { BsPencil, BsClock, BsEye } from 'react-icons/bs'
+import { HiOutlinePencil, HiOutlineClock, HiOutlineEye } from 'react-icons/hi'
 
 const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/master/data/blog/${fileName}`
 
@@ -51,20 +51,20 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
               <div>
                 <PageTitle>{title}</PageTitle>
               </div>
-              <div className="flex justify-center gap-6 py-4">
+              <div className="flex justify-center gap-5 py-4">
                 <span className="flex items-center gap-1.5">
-                  <BsPencil className="h-4.5 w-4.5" />
+                  <HiOutlinePencil className="h-5 w-5" />
                   {readingTime.words} words
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <BsClock className="h-4.5 w-4.5" />
+                  <HiOutlineClock className="h-5 w-5" />
                   {readingTime.text}
                 </span>
-                <span className="flex items-center gap-1.5">
+                {/* <span className="flex items-center gap-1.5">
                   <BsEye className="h-4.5 w-4.5" />
-                  {/* <ViewCounter className="ml-1.5 md:ml-2" slug={slug} /> */}
-                  ---
-                </span>
+                  <ViewCounter className="ml-1.5 md:ml-2" slug={slug} />
+                  169
+                </span> */}
               </div>
             </div>
           </header>

@@ -6,6 +6,7 @@ import siteMetadata from '@/data/siteMetadata'
 import formatDate from '@/lib/utils/formatDate'
 import Comments from '@/components/comments'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
+import { HiOutlinePencil, HiOutlineClock, HiOutlineEye } from 'react-icons/hi'
 
 export default function PostLayout({ frontMatter, authorDetails, next, prev, children }) {
   const { slug, date, title, summary, readingTime } = frontMatter
@@ -30,38 +31,12 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                 <PageTitle>{title}</PageTitle>
               </div>
               <div className="flex justify-center gap-5 py-4">
-                <span className="flex items-center gap-1">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
-                    />
-                  </svg>
+                <span className="flex items-center gap-1.5">
+                  <HiOutlinePencil className="h-5 w-5" />
                   {readingTime.words} words
                 </span>
-                <span className="flex items-center gap-1">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
+                <span className="flex items-center gap-1.5">
+                  <HiOutlineClock className="h-5 w-5" />
                   {readingTime.text}
                 </span>
               </div>
