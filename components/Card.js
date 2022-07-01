@@ -12,11 +12,11 @@ const Card = ({ title, description, imgSrc, href, github, tech1, tech2, tech3 })
             <FolderIcon />
           </div>
           <div className="flex flex-row justify-between">
-            <div className="mx-1">
-              {href ? <SocialIcon kind="external" href={href} size="5" /> : null}
+            <div className="mx-1.5">
+              {href ? <SocialIcon kind="external" href={href} size="6" /> : null}
             </div>
-            <div className="mx-1">
-              {github ? <SocialIcon kind="github" href={github} size="5" /> : null}
+            <div className="mx-1.5">
+              {github ? <SocialIcon kind="github" href={github} size="6" /> : null}
             </div>
           </div>
         </div>

@@ -7,6 +7,7 @@ import {
   AiOutlineGlobal,
 } from 'react-icons/ai'
 
+import { FiExternalLink } from 'react-icons/fi'
 // Icons taken from: https://simpleicons.org/
 
 const components = {
@@ -16,6 +17,7 @@ const components = {
   linkedin: AiOutlineLinkedin,
   twitter: AiOutlineTwitter,
   website: AiOutlineGlobal,
+  external: FiExternalLink,
 }
 
 const SocialIcon = ({ kind, href, size = 8 }) => {
