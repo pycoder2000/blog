@@ -3,7 +3,7 @@ import PageTitle from '@/components/PageTitle'
 import SectionContainer from '@/components/SectionContainer'
 import { BlogSEO } from '@/components/SEO'
 import Image from '@/components/Image'
-import ViewCounter from '@/components/ViewCounter'
+// import ViewCounter from '@/components/ViewCounter'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import Comments from '@/components/comments'
@@ -85,7 +85,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                   </svg>
                   {readingTime.text}
                 </span>
-                <span className="flex items-center gap-1">
+                {/* <span className="flex items-center gap-1">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5"
@@ -100,8 +100,8 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                       d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
                     />
                   </svg>
-                  <ViewCounter className="text-sm" slug={slug} />
-                </span>
+                  <ViewCounter className="ml-1.5 md:ml-2" slug={slug} />
+                </span> */}
               </div>
             </div>
           </header>
