@@ -3,7 +3,7 @@ import PageTitle from '@/components/PageTitle'
 import SectionContainer from '@/components/SectionContainer'
 import { BlogSEO } from '@/components/SEO'
 import Image from '@/components/Image'
-// import ViewCounter from '@/components/ViewCounter'
+import ViewCounter from '@/components/ViewCounter'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import Comments from '@/components/comments'
@@ -60,11 +60,10 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                   <HiOutlineClock className="h-5 w-5" />
                   {readingTime.text}
                 </span>
-                {/* <span className="flex items-center gap-1.5">
-                  <BsEye className="h-4.5 w-4.5" />
-                  <ViewCounter className="ml-1.5 md:ml-2" slug={slug} />
-                  169
-                </span> */}
+                <span className="flex items-center gap-1.5">
+                  <HiOutlineEye className="h-5 w-5" />
+                  <ViewCounter className="ml-0" slug={slug} />
+                </span>
               </div>
             </div>
           </header>
