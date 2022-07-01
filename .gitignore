@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+.env
 
 # testing
 /coverage
@@ -18,7 +19,7 @@ public/sitemap.xml
 /build
 *.xml
 # rss feed
-/public/feed.xml 
+/public/feed.xml
 
 # misc
 .DS_Store
