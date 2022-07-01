@@ -17,6 +17,7 @@ import {
   WhatsappShareButton,
 } from 'react-share'
 import { SocialIcon } from 'react-social-icons'
+import { BsPencil, BsClock, BsEye } from 'react-icons/bs'
 
 const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/master/data/blog/${fileName}`
 
@@ -35,7 +36,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
       <ScrollTopAndComment />
       <article>
         <div className="xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700">
-          <header className="pt-6 xl:pb-6">
+          <header className="pt-6 xl:pb-5">
             <div className="space-y-1 text-center">
               <dl className="space-y-10">
                 <div>
@@ -50,58 +51,20 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
               <div>
                 <PageTitle>{title}</PageTitle>
               </div>
-              <div className="flex justify-center gap-5 py-4">
-                <span className="flex items-center gap-1">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
-                    />
-                  </svg>
+              <div className="flex justify-center gap-6 py-4">
+                <span className="flex items-center gap-1.5">
+                  <BsPencil className="h-4.5 w-4.5" />
                   {readingTime.words} words
                 </span>
-                <span className="flex items-center gap-1">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
+                <span className="flex items-center gap-1.5">
+                  <BsClock className="h-4.5 w-4.5" />
                   {readingTime.text}
                 </span>
-                {/* <span className="flex items-center gap-1">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
-                  <ViewCounter className="ml-1.5 md:ml-2" slug={slug} />
-                </span> */}
+                <span className="flex items-center gap-1.5">
+                  <BsEye className="h-4.5 w-4.5" />
+                  {/* <ViewCounter className="ml-1.5 md:ml-2" slug={slug} /> */}
+                  ---
+                </span>
               </div>
             </div>
           </header>
