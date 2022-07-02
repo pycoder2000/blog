@@ -221,7 +221,7 @@ export default function Home({ posts }) {
                         <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
                           <time dateTime={date}>{formatDate(date)}</time>
                         </dd>
-                        <dd className="flex flex-row pt-3 text-base font-medium leading-6 text-gray-500 dark:text-gray-500">
+                        <dd className="flex flex-row pt-1 text-base font-medium leading-6 text-gray-500 dark:text-gray-500">
                           <ViewCounter className="ml-0" slug={slug} />
                         </dd>
                       </dl>
