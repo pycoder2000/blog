@@ -1,6 +1,7 @@
 import { currentDayName } from '@/lib/utils/dateUtils'
 import siteMetadata from '@/data/siteMetadata'
 import SocialIcon from '@/components/social-icons'
+import Link from './Link'
 
 export default function Footer() {
   return (
@@ -17,13 +18,82 @@ export default function Footer() {
         </div>
         <br />
         <div className="mb-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
-          <div>{siteMetadata.author}</div>
-          <div>{` | `}</div>
-          <div>{`© ${new Date().getFullYear()}`}</div>
-          <div>{` | `}</div>
-          <div className="background-author-animate bg-gradient-to-r from-orange-500 via-purple-500 to-blue-500 bg-clip-text text-sm text-transparent">
-            Have a good {currentDayName()}!
+          <div>
+            <Link href="https://parthdesai.vercel.app">{siteMetadata.author}</Link>
           </div>
+          <div>{` • `}</div>
+          <div>{`© ${new Date().getFullYear()}`}</div>
+          <div>{` • `}</div>
+          <div className="background-author-animate bg-gradient-to-r from-orange-500 via-purple-500 to-blue-500 bg-clip-text text-sm text-transparent">
+            <Link
+              href="https://qod.shakiltech.com/"
+              className="link-underline link-underline-black"
+            >
+              Have a good {currentDayName()}!
+            </Link>
+          </div>
+        </div>
+        <div className="mb-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400 md:flex-row">
+          <Link
+            className="link-underline link-underline-black hover:text-primary-600 dark:hover:text-primary-600"
+            href="/"
+          >
+            Home
+          </Link>
+          <Link
+            className="link-underline link-underline-black hover:text-primary-600 dark:hover:text-primary-600"
+            href="/blog"
+          >
+            Blog
+          </Link>
+          <Link
+            className="link-underline link-underline-black hover:text-primary-600 dark:hover:text-primary-600"
+            href="/tags"
+          >
+            Tags
+          </Link>
+          <Link
+            className="link-underline link-underline-black hover:text-primary-600 dark:hover:text-primary-600"
+            href="/about"
+          >
+            About
+          </Link>
+          <Link
+            className="link-underline link-underline-black hover:text-primary-600 dark:hover:text-primary-600"
+            href="/snippets"
+          >
+            Snippets
+          </Link>
+          <Link
+            className="link-underline link-underline-black hover:text-primary-600 dark:hover:text-primary-600"
+            href="/projects"
+          >
+            Projects
+          </Link>
+          <Link
+            className="link-underline link-underline-black hover:text-primary-600 dark:hover:text-primary-600"
+            href="/now"
+          >
+            Now
+          </Link>
+          <Link
+            className="link-underline link-underline-black hover:text-primary-600 dark:hover:text-primary-600"
+            href="/feed.xml"
+          >
+            RSS
+          </Link>
+          <Link
+            className="link-underline link-underline-black hover:text-primary-600 dark:hover:text-primary-600"
+            href="/uses"
+          >
+            Uses
+          </Link>
+          <Link
+            className="link-underline link-underline-black hover:text-primary-600 dark:hover:text-primary-600"
+            href="https://parthdesai.vercel.app"
+          >
+            Website
+          </Link>
         </div>
       </div>
     </footer>

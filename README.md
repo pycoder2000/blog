@@ -142,6 +142,7 @@ Follow the interactive prompt to generate a post with pre-filled front matter.
 | -------------- | --------------------------------------------------------- |
 | Framework      | [Next.js](https://nextjs.org/)                            |
 | ORM            | [Prisma](https://prisma.io/)                              |
+| Database       | [PlanetScale](https://planetscale.com)                    |
 | Authentication | [NextAuth.js](https://next-auth.js.org/)                  |
 | Deployment     | [Vercel](https://vercel.com)                              |
 | Styling        | [Tailwindcss](https://tailwindcss.com/)                   |
