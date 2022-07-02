@@ -16,7 +16,7 @@
 
 <div align="center">
 
-<a href="https://musing.vercel.app/" target="blank" >![View Demo](https://img.shields.io/badge/-View%20Demo%20-orange?color=%23DE1D8D&style=for-the-badge)</a> <a href="https://github.com/pycoder2000/blog/issues/new?assignees=&labels=bug&template=bug_report.md&title=">![Report Bug](https://img.shields.io/badge/-Report%20Bug%20-orange?color=%23ee0701&style=for-the-badge)</a> <a href="https://github.com/pycoder2000/blog/issues/new?assignees=&labels=&template=feature_request.md&title=">![Request Feature](https://img.shields.io/badge/-Request%20Feature%20-orange?color=%230e8a16&style=for-the-badge)</a> <a href="https://github.com/pycoder2000/blog/fork">![Fork](https://img.shields.io/github/forks/pycoder2000/blog?color=%23bfe5bf&style=for-the-badge)</a>
+<a href="https://musing.vercel.app/" target="blank" >![View Demo](https://img.shields.io/badge/-View%20Demo%20-orange?color=%23DE1D8D&style=for-the-badge)</a> <a href="https://github.com/pycoder2000/blog/issues/new?assignees=&labels=bug&template=bug_report.md&title=">![Report Bug](https://img.shields.io/badge/-Report%20Bug%20-orange?color=%23ee0701&style=for-the-badge)</a> <a href="https://github.com/pycoder2000/blog/issues/new?assignees=&labels=&template=feature_request.md&title=">![Request Feature](https://img.shields.io/badge/-Request%20Feature%20-orange?color=%230e8a16&style=for-the-badge)</a> <a href="https://github.com/pycoder2000/blog/fork">![Fork](https://img.shields.io/github/forks/pycoder2000/blog?color=%23bfe5bf&style=for-the-badge)</a> <img src="https://img.shields.io/github/stars/pycoder2000/blog?color=green&style=for-the-badge">
 
 </div>
 
@@ -152,7 +152,7 @@ Follow the interactive prompt to generate a post with pre-filled front matter.
 
 ## 📈 Stats
 
-<img src="https://img.shields.io/website?down_color=red&down_message=offline&style=for-the-badge&up_color=green&up_message=online&url=https%3A%2F%2Fmusings.vercel.app"> <img src="https://img.shields.io/github/repo-size/pycoder2000/blog?style=for-the-badge&color=darkgreen" /> <img src="https://img.shields.io/github/languages/top/pycoder2000/blog?style=for-the-badge" /> <img src="https://img.shields.io/github/commit-activity/m/pycoder2000/blog?style=for-the-badge&color=orange" /> <img src="https://img.shields.io/github/deployments/pycoder2000/blog/Preview%20–%20blog?style=for-the-badge" /> <img src="https://img.shields.io/github/stars/pycoder2000/blog?color=yellow&style=for-the-badge"> <a href="https://makeapullrequest.com" target="blank" >![PRs Welcome](https://img.shields.io/badge/PR-Welcome-brightgreen?style=for-the-badge)</a>
+<img src="https://img.shields.io/website?down_color=red&down_message=offline&style=for-the-badge&up_color=green&up_message=online&url=https%3A%2F%2Fmusings.vercel.app"> <img src="https://img.shields.io/github/repo-size/pycoder2000/blog?style=for-the-badge&color=darkgreen" /> <img src="https://img.shields.io/github/languages/top/pycoder2000/blog?style=for-the-badge" /> <img src="https://img.shields.io/github/commit-activity/m/pycoder2000/blog?style=for-the-badge&color=orange" /> <img src="https://img.shields.io/github/deployments/pycoder2000/blog/Preview%20–%20blog?style=for-the-badge" /> <a href="https://makeapullrequest.com" target="blank" >![PRs Welcome](https://img.shields.io/badge/PR-Welcome-brightgreen?style=for-the-badge)</a>
 
 ## 🪜 Project structure
 
