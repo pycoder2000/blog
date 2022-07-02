@@ -66,10 +66,10 @@ const MobileNav = () => {
         </div>
         <nav className="fixed mt-8 h-full">
           {headerNavLinks.map((link) => (
-            <div key={link.title} className="px-12 py-4">
+            <div key={link.title} className="flex justify-between px-12 py-4">
               <Link
                 href={link.href}
-                className="text-2xl font-bold tracking-widest text-gray-900 dark:text-gray-100"
+                className="border-b border-gray-400 pb-1 text-2xl font-semibold leading-8 tracking-wide text-gray-700 hover:text-black dark:border-gray-300 dark:text-gray-300 dark:hover:text-white"
                 onClick={onToggleNav}
               >
                 {link.title}

@@ -44,7 +44,22 @@ export default function Home({ posts }) {
               </Link>
               {' about them.'}
             </h2>
-            <p className="pt-3 text-lg leading-7 text-slate-600 dark:text-slate-300">
+            <p className="pt-3 text-lg leading-7 text-slate-600 dark:text-slate-300 sm:block md:hidden lg:hidden">
+              This is my place for{' '}
+              <RoughNotation
+                animate="true"
+                type="box"
+                show={true}
+                color="#DE1D8D"
+                animationDelay={1000}
+                animationDuration={4000}
+                className="text-slate-200"
+              >
+                thoughts, reflections & everything&nbsp;
+              </RoughNotation>
+              in between. Have a good read!
+            </p>
+            <p className="hidden pt-3 text-lg leading-7 text-slate-600 dark:text-slate-300 md:block">
               This is my place for{' '}
               <RoughNotation
                 animate="true"
@@ -206,7 +221,7 @@ export default function Home({ posts }) {
                         <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
                           <time dateTime={date}>{formatDate(date)}</time>
                         </dd>
-                        <dd className="flex flex-row pt-3 text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                        <dd className="flex flex-row pt-3 text-base font-medium leading-6 text-gray-500 dark:text-gray-500">
                           <ViewCounter className="ml-0" slug={slug} />
                         </dd>
                       </dl>
