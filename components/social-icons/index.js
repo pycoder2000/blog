@@ -2,18 +2,17 @@ import {
   AiOutlineMail,
   AiOutlineGithub,
   AiOutlineFacebook,
-  AiOutlineLinkedin,
   AiOutlineTwitter,
   AiOutlineGlobal,
 } from 'react-icons/ai'
-
-import { FiExternalLink } from 'react-icons/fi'
+import { FaLinkedinIn } from 'react-icons/fa'
+import { FiExternalLink, FiMail } from 'react-icons/fi'
 
 const components = {
-  mail: AiOutlineMail,
+  mail: FiMail,
   github: AiOutlineGithub,
   facebook: AiOutlineFacebook,
-  linkedin: AiOutlineLinkedin,
+  linkedin: FaLinkedinIn,
   twitter: AiOutlineTwitter,
   website: AiOutlineGlobal,
   external: FiExternalLink,
