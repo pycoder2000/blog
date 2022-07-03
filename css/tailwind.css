@@ -20,14 +20,14 @@
 
 @layer utilities {
   .special-underline {
-    @apply bg-gradient-to-r from-primary-color-500 to-primary-color-500 bg-no-repeat [background-position:0_100%]
-      [background-size:100%_0.2em] hover:text-white
-      hover:[background-size:100%_100%]
-      focus:[background-size:100%_100%] motion-safe:transition-all
+    @apply bg-gradient-to-r from-primary-color-500 to-primary-color-500 bg-no-repeat font-normal
+      [background-position:0_100%] [background-size:100%_0.2em]
+      hover:text-white
+      hover:[background-size:100%_100%] focus:[background-size:100%_100%]
+      motion-safe:transition-all
       motion-safe:duration-200
       dark:from-primary-color-dark-500
-      dark:to-primary-color-dark-500
-      dark:hover:text-white;
+      dark:to-primary-color-dark-500 dark:hover:text-white;
   }
   .company {
     box-shadow: inset 0 0 0 0 #de1d8d;

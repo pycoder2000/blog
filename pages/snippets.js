@@ -1,6 +1,5 @@
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import siteMetadata from '@/data/siteMetadata'
-import ListLayout from '@/layouts/ListLayout'
 import SnippetsLayout from '@/layouts/SnippetsLayout'
 import { PageSEO } from '@/components/SEO'
 
@@ -20,7 +19,10 @@ export async function getStaticProps() {
 export default function Blog({ posts, initialDisplayPosts, pagination }) {
   return (
     <>
-      <PageSEO title={`Snippets - ${siteMetadata.author}`} description={siteMetadata.description} />
+      <PageSEO
+        title={`Snippets - ${siteMetadata.author}`}
+        description="Reuseable code snippets collected by Parth"
+      />
       <SnippetsLayout
         posts={posts}
         initialDisplayPosts={initialDisplayPosts}
