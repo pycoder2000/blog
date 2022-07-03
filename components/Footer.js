@@ -25,74 +25,71 @@ export default function Footer() {
           <div>{`© ${new Date().getFullYear()}`}</div>
           <div>{` • `}</div>
           <div className="background-author-animate bg-gradient-to-r from-orange-500 via-purple-500 to-blue-500 bg-clip-text text-sm text-transparent">
-            <Link
-              href="https://qod.shakiltech.com/"
-              className="link-underline link-underline-black"
-            >
+            <Link href="https://qod.shakiltech.com/" className="link-underline">
               Have a good {currentDayName()}!
             </Link>
           </div>
         </div>
         <div className="mb-2 flex flex-row space-x-2 text-sm text-gray-500 dark:text-gray-400 md:flex-row">
           <Link
-            className="link-underline link-underline-black hover:text-primary-600 dark:hover:text-primary-600"
+            className="link-underline hover:text-primary-600 dark:hover:text-primary-600"
             href="/"
           >
             Home
           </Link>
           <Link
-            className="link-underline link-underline-black hover:text-primary-600 dark:hover:text-primary-600"
+            className="link-underline hover:text-primary-600 dark:hover:text-primary-600"
             href="/blog"
           >
             Blog
           </Link>
           <Link
-            className="link-underline link-underline-black hover:text-primary-600 dark:hover:text-primary-600"
+            className="link-underline hover:text-primary-600 dark:hover:text-primary-600"
             href="/tags"
           >
             Tags
           </Link>
           <Link
-            className="link-underline link-underline-black hover:text-primary-600 dark:hover:text-primary-600"
+            className="link-underline hover:text-primary-600 dark:hover:text-primary-600"
             href="/about"
           >
             About
           </Link>
           <Link
-            className="link-underline link-underline-black hover:text-primary-600 dark:hover:text-primary-600"
+            className="link-underline hover:text-primary-600 dark:hover:text-primary-600"
             href="/snippets"
           >
             Snippets
           </Link>
           <Link
-            className="link-underline link-underline-black hover:text-primary-600 dark:hover:text-primary-600"
+            className="link-underline hover:text-primary-600 dark:hover:text-primary-600"
             href="/projects"
           >
             Projects
           </Link>
           <Link
-            className="link-underline link-underline-black hover:text-primary-600 dark:hover:text-primary-600"
+            className="link-underline hover:text-primary-600 dark:hover:text-primary-600"
             href="/now"
           >
             Now
           </Link>
           <Link
-            className="link-underline link-underline-black hover:text-primary-600 dark:hover:text-primary-600"
+            className="link-underline hover:text-primary-600 dark:hover:text-primary-600"
             href="/feed.xml"
           >
             RSS
           </Link>
           <Link
-            className="link-underline link-underline-black hover:text-primary-600 dark:hover:text-primary-600"
+            className="link-underline hover:text-primary-600 dark:hover:text-primary-600"
             href="/uses"
           >
             Uses
           </Link>
           <Link
-            className="link-underline link-underline-black hover:text-primary-600 dark:hover:text-primary-600"
-            href="https://parthdesai.vercel.app"
+            className="link-underline hover:text-primary-600 dark:hover:text-primary-600"
+            href="/recommends"
           >
-            Website
+            Recommends
           </Link>
         </div>
       </div>

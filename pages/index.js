@@ -27,24 +27,18 @@ export default function Home({ posts }) {
               Hi, I am{' '}
               <span className="text-primary-color-500 dark:text-primary-color-dark-500">Parth</span>
             </h1>
-            <h2 className="prose text-lg text-gray-600 dark:text-gray-300">
+            <h2 className="prose pt-5 text-lg text-gray-600 dark:text-gray-300">
               {`Welcome to ${siteMetadata.description}. I am a Data Engineer who is passionate about Data Science and Automation. In my free time, I like developing `}
-              <Link
-                href="/projects"
-                className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
-              >
+              <Link href="/projects" className="special-underline no-underline">
                 side projects
               </Link>
               {' and '}
-              <Link
-                href="/blog"
-                className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
-              >
+              <Link href="/blog" className="special-underline no-underline">
                 blogging
               </Link>
               {' about them.'}
             </h2>
-            <p className="pt-3 text-lg leading-7 text-slate-600 dark:text-slate-300 sm:block md:hidden lg:hidden">
+            <p className="pt-5 text-lg leading-7 text-slate-600 dark:text-slate-300 sm:block md:hidden lg:hidden">
               This is my place for{' '}
               <RoughNotation
                 animate="true"
@@ -59,14 +53,14 @@ export default function Home({ posts }) {
               </RoughNotation>
               in between. Have a good read!
             </p>
-            <p className="hidden pt-3 text-lg leading-7 text-slate-600 dark:text-slate-300 md:block">
+            <p className="hidden pt-10 text-lg leading-7 text-slate-600 dark:text-slate-300 md:block">
               This is my place for{' '}
               <RoughNotation
                 animate="true"
                 type="highlight"
                 show={true}
                 color="#DE1D8D"
-                animationDelay={1000}
+                animationDelay={1500}
                 animationDuration={4000}
                 className="text-slate-200"
               >
@@ -246,7 +240,7 @@ export default function Home({ posts }) {
                             {summary}
                           </div>
                         </div>
-                        <div className="text-base font-medium leading-6">
+                        {/* <div className="text-base font-medium leading-6">
                           <Link
                             href={`/blog/${slug}`}
                             className="mt-2 mr-3 rounded-lg border border-primary-500 py-1 px-3 text-sm font-medium uppercase text-primary-500 transition duration-500 ease-in-out hover:bg-primary-500 hover:text-gray-100 dark:hover:text-gray-900"
@@ -254,7 +248,7 @@ export default function Home({ posts }) {
                           >
                             Read more &rarr;
                           </Link>
-                        </div>
+                        </div> */}
                       </div>
                     </div>
                   </article>
