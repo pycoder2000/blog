@@ -33,7 +33,7 @@ export default function Footer() {
             </Link>
           </div>
         </div>
-        <div className="mb-2 flex flex-col items-start justify-center space-x-2 text-sm text-gray-500 dark:text-gray-400 md:flex-row">
+        <div className="mb-2 flex flex-row space-x-2 text-sm text-gray-500 dark:text-gray-400 md:flex-row">
           <Link
             className="link-underline link-underline-black hover:text-primary-600 dark:hover:text-primary-600"
             href="/"
