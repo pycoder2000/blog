@@ -1,15 +1,17 @@
 import siteMetadata from '@/data/siteMetadata'
+import { motion, AnimateSharedLayout } from 'framer-motion'
 import headerNavLinks from '@/data/headerNavLinks'
 import Logo from '@/data/logo.svg'
 import Link from './Link'
 import SectionContainer from './SectionContainer'
 import Footer from './Footer'
-import MobileNav from './MobileNav'
+// import MobileNav from './MobileNav'
 import { navigation } from '@/data/nav'
 import CommandPalette from './CommandPalette'
 import ThemeSwitch from './ThemeSwitch'
 import Typewriter from 'typewriter-effect'
 import { useRouter } from 'next/router'
+import DropMenu from './DropMenu.js'
 
 const LayoutWrapper = ({ children }) => {
   const router = useRouter()
@@ -58,7 +60,8 @@ const LayoutWrapper = ({ children }) => {
             </div>
             <CommandPalette navigation={navigation} />
             <ThemeSwitch />
-            <MobileNav />
+            <DropMenu />
+            {/* <MobileNav /> */}
           </div>
         </header>
         <main className="mb-auto">{children}</main>
