@@ -5,6 +5,7 @@ import GithubPersonal from '@/components/metrics/GithubPersonal'
 import GitHub from '@/components/metrics/Github'
 import siteMetadata from '@/data/siteMetadata'
 import { PageSEO } from '@/components/SEO'
+import TopTracks from '@/components/TopTracks'
 
 export default function Dashboard() {
   return (
@@ -19,21 +20,32 @@ export default function Dashboard() {
             Stats
           </h1>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            I use this dashboard to track various metrics across platforms like Twitter, GitHub and
-            more.
+            I use this dashboard to track various metrics across platforms like Spotify, Twitter,
+            GitHub, and more.
           </p>
         </div>
         <hr />
-        <div className="space-y-2 pt-12 md:space-y-2">
+        <div className="pt-12">
           <div className="flex w-full flex-col">
             <GithubPersonal />
             <GitHub />
           </div>
-          <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2">
+          <div className="grid w-full grid-cols-1 gap-4 py-2  sm:grid-cols-2">
+            <Twitter type="followers" />
+            <Twitter type="following" />
+          </div>
+          <div className="grid w-full grid-cols-1 gap-4 py-2 sm:grid-cols-2">
+            <Twitter type="total_tweets" />
             <Analytics />
-            <Twitter />
           </div>
         </div>
+        <h2 className="mb-4 mt-16 text-3xl font-bold tracking-tight text-black dark:text-white">
+          Top Tracks
+        </h2>
+        <p className="mb-4 text-gray-600 dark:text-gray-400">
+          Curious what I'm currently jamming to? Here's my top tracks on Spotify updated daily.
+        </p>
+        <TopTracks />
       </div>
     </>
   )
