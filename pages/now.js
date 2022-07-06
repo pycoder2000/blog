@@ -3,6 +3,20 @@ import { PageSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
 
 export default function Now() {
+  var year = new Date().getFullYear()
+  var month = new Date().getMonth()
+  var date = new Date().getDate()
+  var time = new Date().getTime()
+  var hour = new Date().getHours()
+  var minute = new Date().getMinutes()
+  var second = new Date().getSeconds()
+
+  var ParthBirthDate = '2000-04-16'
+  var birthDate = new Date(ParthBirthDate)
+  var ParthAge = year - birthDate.getFullYear()
+  var ParthMonth = Math.abs(birthDate.getMonth() - month)
+  var ParthDay = Math.abs(birthDate.getDate() - date)
+
   return (
     <>
       <PageSEO
@@ -13,22 +27,26 @@ export default function Now() {
       <div>
         <div className="my-2">
           <h3>Where am I and what am I doing?</h3>
-          <div className="mt-3 mb-4 text-sm">Last updated: 14 June 2022</div>
+          <div className=" mt-4 mb-8 text-xs text-neutral-700 dark:text-neutral-400">
+            This page was automatically updated @ {date}-{month}-{year} {hour}:{minute}:{second}
+          </div>
         </div>
         {/* Misc */}
         <div className="flex justify-between">
           <div className="mt-2 mb-10 w-1/4 rounded-md border border-gray-600 p-1 text-sm dark:border-gray-200">
-            <span className="ml-2 font-semibold">Location:</span> <span>Reykjavík</span>
+            <span className="ml-2 font-semibold">Location:</span> <span>Ahmedabad</span>
             <br />
-            <span className="ml-2 font-semibold">Weather:</span> <span>9°C, mostly cloudy</span>
+            <span className="ml-2 font-semibold">Weather:</span> <span>31°C, extreme rain</span>
           </div>
 
           <div className="mt-2 mb-10 w-2/5 rounded-md border border-gray-600 p-1 text-sm dark:border-gray-200">
             <span className="ml-2 font-semibold">Reading:</span>{' '}
             <span>Tools & Weapons - Brad Smith</span>
             <br />
-            <span className="ml-2 font-semibold">Podcast:</span>{' '}
-            <span>Where it Happens: Ryan Hoover</span>
+            <span className="ml-2 font-semibold">Age:</span>{' '}
+            <span>
+              {ParthAge} years, {ParthMonth} months and {ParthDay} days
+            </span>
           </div>
 
           <div className="mt-2 mb-10 w-1/4 rounded-md border border-gray-600 p-1 text-sm dark:border-gray-200">

@@ -45,9 +45,9 @@ const RecommendCard = ({ title, description, href, tags, showLink = true }) =>
           <p className="prose mb-3 max-w-none text-gray-500 dark:text-gray-400">
             (Coming soon) {description}
           </p>
-          {tags && (
+          {/* {tags && (
             <div className="mt-4 text-xs text-gray-700 dark:text-gray-300">{tags.join(' | ')}</div>
-          )}
+          )} */}
         </div>
       </div>
     </div>

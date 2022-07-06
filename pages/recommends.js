@@ -2,9 +2,19 @@ import siteMetadata from '@/data/siteMetadata'
 import booksData from '@/data/booksData'
 import movieData from '@/data/movieData'
 import RecommendCard from '@/components/RecommendCard'
+import BookRecommendCard from '@/components/BookRecommendCard'
 import { PageSEO } from '@/components/SEO'
+import { getCurrentlyReading, getReviews } from '@/lib/goodreads'
 
-export default function Recommends() {
+export async function getStaticProps() {
+  const reviews = await getReviews({ limit: 10 })
+  const currentlyReading = await getCurrentlyReading({ limit: 2 })
+
+  return { props: { reviews } }
+}
+
+export default function Recommends(reviews) {
+  let reviewsData = reviews['reviews']
   return (
     <>
       <PageSEO
@@ -24,21 +34,23 @@ export default function Recommends() {
         <div className="space-y-2 pt-20 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
             <span role="img" className="mr-4" aria-label="wave">
-              🍿
+              📚
             </span>
-            Movies
+            Books
           </h1>
-          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">Life's a Movie.</p>
+          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
+            Take a look into my Goodreads library
+          </p>
         </div>
         <div className="container py-12">
           <div className="-m-4 flex flex-wrap">
-            {movieData.map((d) => (
-              <RecommendCard
-                key={d.title}
-                title={d.title}
-                description={d.description}
-                tags={d.tags}
-                href={d.href}
+            {reviewsData.map((r) => (
+              <BookRecommendCard
+                key={r.url}
+                title={r.title}
+                description={r.author}
+                href={r.url}
+                rating={r.rating}
               />
             ))}
           </div>
@@ -47,27 +59,23 @@ export default function Recommends() {
           <div className="space-y-2 pt-6 pb-8 md:space-y-5 ">
             <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
               <span role="img" className="mr-4" aria-label="wave">
-                📚
+                🍿
               </span>
-              Books
+              Movies
             </h1>
-            <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-              Take a look into my library
-            </p>
+            <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">Life's a Movie.</p>
           </div>
           <div className="container py-4">
             <div className="-m-4 flex flex-wrap">
-              {booksData.map((d) => {
-                return (
-                  <RecommendCard
-                    key={d.title}
-                    title={d.title}
-                    description={d.description}
-                    tags={d.tags}
-                    href={d.href}
-                  />
-                )
-              })}
+              {movieData.map((d) => (
+                <RecommendCard
+                  key={d.title}
+                  title={d.title}
+                  description={d.description}
+                  tags={d.tags}
+                  href={d.href}
+                />
+              ))}
             </div>
           </div>
         </div>
