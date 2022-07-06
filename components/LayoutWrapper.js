@@ -5,6 +5,8 @@ import Link from './Link'
 import SectionContainer from './SectionContainer'
 import Footer from './Footer'
 import MobileNav from './MobileNav'
+import { navigation } from '@/data/nav'
+import CommandPalette from './CommandPalette'
 import ThemeSwitch from './ThemeSwitch'
 import Typewriter from 'typewriter-effect'
 import { useRouter } from 'next/router'
@@ -54,6 +56,7 @@ const LayoutWrapper = ({ children }) => {
                 </Link>
               ))}
             </div>
+            <CommandPalette navigation={navigation} />
             <ThemeSwitch />
             <MobileNav />
           </div>
