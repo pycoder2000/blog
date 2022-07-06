@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import useSWR from 'swr'
+import useSWR from 'swr-old'
 import fetcher from 'lib/fetcher'
 
 export default function ViewCounter({ slug, className, blogPage = false }) {

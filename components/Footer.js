@@ -30,68 +30,6 @@ export default function Footer() {
             </Link>
           </div>
         </div>
-        <div className="mb-2 hidden flex-row space-x-2 text-sm text-gray-500 dark:text-gray-400 md:flex md:flex-row">
-          <Link
-            className="link-underline hover:text-primary-600 dark:hover:text-primary-600"
-            href="/"
-          >
-            Home
-          </Link>
-          <Link
-            className="link-underline hover:text-primary-600 dark:hover:text-primary-600"
-            href="/blog"
-          >
-            Blog
-          </Link>
-          <Link
-            className="link-underline hover:text-primary-600 dark:hover:text-primary-600"
-            href="/tags"
-          >
-            Tags
-          </Link>
-          <Link
-            className="link-underline hover:text-primary-600 dark:hover:text-primary-600"
-            href="/about"
-          >
-            About
-          </Link>
-          <Link
-            className="link-underline hover:text-primary-600 dark:hover:text-primary-600"
-            href="/snippets"
-          >
-            Snippets
-          </Link>
-          <Link
-            className="link-underline hover:text-primary-600 dark:hover:text-primary-600"
-            href="/projects"
-          >
-            Projects
-          </Link>
-          <Link
-            className="link-underline hover:text-primary-600 dark:hover:text-primary-600"
-            href="/now"
-          >
-            Now
-          </Link>
-          <Link
-            className="link-underline hover:text-primary-600 dark:hover:text-primary-600"
-            href="/feed.xml"
-          >
-            RSS
-          </Link>
-          <Link
-            className="link-underline hover:text-primary-600 dark:hover:text-primary-600"
-            href="/uses"
-          >
-            Uses
-          </Link>
-          <Link
-            className="link-underline hover:text-primary-600 dark:hover:text-primary-600"
-            href="/recommends"
-          >
-            Recommends
-          </Link>
-        </div>
       </div>
     </footer>
   )

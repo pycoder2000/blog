@@ -1,16 +1,16 @@
 import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
-import Logo from '@/data/logo.svg'
 import Link from './Link'
 import SectionContainer from './SectionContainer'
 import Footer from './Footer'
-import MobileNav from './MobileNav'
 import { navigation } from '@/data/nav'
 import CommandPalette from './CommandPalette'
 import ThemeSwitch from './ThemeSwitch'
 import Typewriter from 'typewriter-effect'
 import { useRouter } from 'next/router'
 import DropMenu from './DropMenu.js'
+// import Logo from '@/data/logo.svg'
+// import MobileNav from './MobileNav'
 
 const LayoutWrapper = ({ children }) => {
   const router = useRouter()
