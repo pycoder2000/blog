@@ -14,7 +14,7 @@ export const navigation = {
     { name: 'Contact', href: '/contact' },
     { name: 'Todo', href: '/todo' },
     { name: 'Music', href: '/music' },
-    { name: 'Movies', href: '/movies' },
+    { name: 'Recommends', href: '/recommends' },
   ],
   footerLinks: [
     { name: 'Guestbook', href: 'guestbook' },
