@@ -1,7 +1,8 @@
 import { Fragment, useState } from 'react'
 import { Menu, Transition, Disclosure } from '@headlessui/react'
 import { motion } from 'framer-motion'
-import classNames from '../lib/classNames'
+import classNames from 'lib/classNames'
+
 //import { useSession, signIn, signOut } from 'next-auth/react'
 import Link from './Link'
 import {
