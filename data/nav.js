@@ -11,6 +11,7 @@ export const navigation = {
     { name: 'Now', href: '/now' },
     { name: 'Stats', href: '/stats' },
     { name: 'Recommends', href: '/recommends' },
+    { name: 'Quotes', href: '/quotes' },
     { name: 'Activity', href: '/activity' },
     { name: 'RSS', href: '/feed.xml' },
     // { name: 'Guestbook', href: '/guestbook' },
