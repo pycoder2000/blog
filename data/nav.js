@@ -11,7 +11,7 @@ export const navigation = {
     { name: 'Recommends', href: '/recommends' },
     { name: 'Activity', href: '/activity' },
     { name: 'RSS', href: '/feed.xml' },
-    // { name: 'Stats', href: '/stats' },
+    { name: 'Stats', href: '/stats' },
     // { name: 'Guestbook', href: '/guestbook' },
     // { name: 'Bookmarks', href: '/bookmarks' },
     // { name: 'Quotes', href: '/quotes' },
@@ -19,32 +19,5 @@ export const navigation = {
     // { name: 'Todo', href: '/todo' },
     // { name: 'Music', href: '/music' },
     // { name: 'Movies', href: '/movies' },
-  ],
-  footerLinks: [
-    { name: 'Guestbook', href: 'guestbook' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Snippets', href: '/snippets' },
-  ],
-  navData: [
-    {
-      path: '/',
-      label: 'home',
-    },
-    {
-      path: '/about',
-      label: 'about',
-    },
-    {
-      path: '/now',
-      label: 'now',
-    },
-    {
-      path: '/blog',
-      label: 'blog',
-    },
-    {
-      path: '/guestbook',
-      label: 'guestbook',
-    },
   ],
 }
