@@ -1,6 +1,6 @@
 export default function MetricCard({ header, link, metric, isCurrency }) {
   return (
-    <div className="metric-card max-w-72 w-full rounded-lg border border-gray-200 bg-white p-4 dark:border-gray-800 dark:bg-gray-900">
+    <div className="metric-card max-w-72 w-full rounded-lg border border-gray-200 bg-white p-4 hover:border-primary-500 dark:border-gray-800 dark:bg-gray-900 dark:hover:border-primary-500">
       <a aria-label={header} target="_blank" rel="noopener noreferrer" href={link}>
         <div className="flex items-center text-gray-900 dark:text-gray-100">
           {header}

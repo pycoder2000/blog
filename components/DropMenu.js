@@ -8,28 +8,18 @@ import {
   CodeIcon,
   HomeIcon,
   Pencil1Icon,
-  StopwatchIcon,
-  PersonIcon,
   DiscIcon,
-  BackpackIcon,
-  LightningBoltIcon,
-  Half2Icon,
   HamburgerMenuIcon,
   Cross1Icon,
-  TwitterLogoIcon,
-  GitHubLogoIcon,
-  NotionLogoIcon,
-  EnvelopeClosedIcon,
-  ChatBubbleIcon,
-  RocketIcon,
+  FrameIcon,
+  LaptopIcon,
+  BarChartIcon,
+  DrawingPinIcon,
+  Link2Icon,
+  PilcrowIcon,
+  CalendarIcon,
+  PersonIcon,
   ArchiveIcon,
-  FaceIcon,
-  IdCardIcon,
-  AvatarIcon,
-  BlendingModeIcon,
-  SpeakerLoudIcon,
-  CubeIcon,
-  BookmarkIcon,
 } from '@radix-ui/react-icons'
 
 export default function DropMenu() {
@@ -95,7 +85,6 @@ export default function DropMenu() {
                 </Link>
               )}
             </Menu.Item>
-
             <Menu.Item>
               {({ active }) => (
                 <Link href="/blog">
@@ -109,24 +98,6 @@ export default function DropMenu() {
                   >
                     <div className="flex flex-row">
                       <Pencil1Icon className="mr-4 mt-0.5" /> Blog
-                    </div>
-                  </a>
-                </Link>
-              )}
-            </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <Link href="/about">
-                  <a
-                    className={classNames(
-                      active
-                        ? 'bg-green-100 text-red-900 dark:bg-cyan-600 dark:text-gray-300'
-                        : 'bg-white text-zinc-700 hover:bg-gray-300 dark:bg-zinc-800 dark:text-gray-200 dark:hover:bg-zinc-700',
-                      'block px-4 py-2 text-sm'
-                    )}
-                  >
-                    <div className="flex flex-row">
-                      <IdCardIcon className="mr-4 mt-0.5" /> About
                     </div>
                   </a>
                 </Link>
@@ -162,17 +133,15 @@ export default function DropMenu() {
                     )}
                   >
                     <div className="flex flex-row">
-                      <BackpackIcon className="mr-4 mt-0.5" /> Projects
+                      <ArchiveIcon className="mr-4 mt-0.5" /> Projects
                     </div>
                   </a>
                 </Link>
               )}
             </Menu.Item>
-          </div>
-          <div className="py-1">
             <Menu.Item>
               {({ active }) => (
-                <Link href="/guestbook">
+                <Link href="/about">
                   <a
                     className={classNames(
                       active
@@ -182,7 +151,63 @@ export default function DropMenu() {
                     )}
                   >
                     <div className="flex flex-row">
-                      <ChatBubbleIcon className="mr-4 mt-0.5" /> Guestbook
+                      <PersonIcon className="mr-4 mt-0.5" /> About
+                    </div>
+                  </a>
+                </Link>
+              )}
+            </Menu.Item>
+          </div>
+          <div className="py-1">
+            <Menu.Item>
+              {({ active }) => (
+                <Link href="/contact">
+                  <a
+                    className={classNames(
+                      active
+                        ? 'bg-green-100 text-red-900 dark:bg-cyan-600 dark:text-gray-300'
+                        : 'bg-white text-zinc-700 hover:bg-gray-300 dark:bg-zinc-800 dark:text-gray-200 dark:hover:bg-zinc-700',
+                      'block px-4 py-2 text-sm'
+                    )}
+                  >
+                    <div className="flex flex-row">
+                      <Link2Icon className="mr-4 mt-0.5" /> Contact
+                    </div>
+                  </a>
+                </Link>
+              )}
+            </Menu.Item>
+            <Menu.Item>
+              {({ active }) => (
+                <Link href="/tags">
+                  <a
+                    className={classNames(
+                      active
+                        ? 'bg-green-100 text-red-900 dark:bg-cyan-600 dark:text-gray-300'
+                        : 'bg-white text-zinc-700 hover:bg-gray-300 dark:bg-zinc-800 dark:text-gray-200 dark:hover:bg-zinc-700',
+                      'block px-4 py-2 text-sm'
+                    )}
+                  >
+                    <div className="flex flex-row">
+                      <FrameIcon className="mr-4 mt-0.5" /> Tags
+                    </div>
+                  </a>
+                </Link>
+              )}
+            </Menu.Item>
+            <Menu.Item>
+              {({ active }) => (
+                <Link href="/uses">
+                  <a
+                    className={classNames(
+                      active
+                        ? 'bg-green-100 text-red-900 dark:bg-cyan-600 dark:text-gray-300'
+                        : 'bg-white text-zinc-700 hover:bg-gray-300 dark:bg-zinc-800 dark:text-gray-200 dark:hover:bg-zinc-700',
+                      'block px-4 py-2 text-sm'
+                    )}
+                  >
+                    <div className="flex flex-row">
+                      <LaptopIcon className="mr-4 mt-0.5" /> Uses
                     </div>
                   </a>
                 </Link>
@@ -208,7 +233,7 @@ export default function DropMenu() {
             </Menu.Item>
             <Menu.Item>
               {({ active }) => (
-                <Link href="/bookmarks">
+                <Link href="/stats">
                   <a
                     className={classNames(
                       active
@@ -218,7 +243,25 @@ export default function DropMenu() {
                     )}
                   >
                     <div className="flex flex-row">
-                      <BookmarkIcon className="mr-4 mt-0.5" /> Bookmarks
+                      <BarChartIcon className="mr-4 mt-0.5" /> Stats
+                    </div>
+                  </a>
+                </Link>
+              )}
+            </Menu.Item>
+            <Menu.Item>
+              {({ active }) => (
+                <Link href="/recommends">
+                  <a
+                    className={classNames(
+                      active
+                        ? 'bg-green-100 text-red-900 dark:bg-cyan-600 dark:text-gray-300'
+                        : 'bg-white text-zinc-700 hover:bg-gray-300 dark:bg-zinc-800 dark:text-gray-200 dark:hover:bg-zinc-700',
+                      'block px-4 py-2 text-sm'
+                    )}
+                  >
+                    <div className="flex flex-row">
+                      <DrawingPinIcon className="mr-4 mt-0.5" /> Recommends
                     </div>
                   </a>
                 </Link>
@@ -236,7 +279,7 @@ export default function DropMenu() {
                     )}
                   >
                     <div className="flex flex-row">
-                      <Half2Icon className="mr-4 mt-0.5" /> Quotes
+                      <PilcrowIcon className="mr-4 mt-0.5" /> Quotes
                     </div>
                   </a>
                 </Link>
@@ -244,7 +287,7 @@ export default function DropMenu() {
             </Menu.Item>
             <Menu.Item>
               {({ active }) => (
-                <Link href="/todo">
+                <Link href="/activity">
                   <a
                     className={classNames(
                       active
@@ -254,32 +297,31 @@ export default function DropMenu() {
                     )}
                   >
                     <div className="flex flex-row">
-                      <RocketIcon className="mr-4 mt-0.5" /> Todo
-                    </div>
-                  </a>
-                </Link>
-              )}
-            </Menu.Item>
-
-            <Menu.Item>
-              {({ active }) => (
-                <Link href="/stats">
-                  <a
-                    className={classNames(
-                      active
-                        ? 'bg-green-100 text-red-900 dark:bg-cyan-600 dark:text-gray-300'
-                        : 'bg-white text-zinc-700 hover:bg-gray-300 dark:bg-zinc-800 dark:text-gray-200 dark:hover:bg-zinc-700',
-                      'block px-4 py-2 text-sm'
-                    )}
-                  >
-                    <div className="flex flex-row">
-                      <LightningBoltIcon className="mr-4 mt-0.5" /> Stats
+                      <CalendarIcon className="mr-4 mt-0.5" /> Activity
                     </div>
                   </a>
                 </Link>
               )}
             </Menu.Item>
             {/* <Menu.Item>
+              {({ active }) => (
+                <Link href="/guestbook">
+                  <a
+                    className={classNames(
+                      active
+                        ? 'bg-green-100 text-red-900 dark:bg-cyan-600 dark:text-gray-300'
+                        : 'bg-white text-zinc-700 hover:bg-gray-300 dark:bg-zinc-800 dark:text-gray-200 dark:hover:bg-zinc-700',
+                      'block px-4 py-2 text-sm'
+                    )}
+                  >
+                    <div className="flex flex-row">
+                      <ChatBubbleIcon className="mr-4 mt-0.5" /> Guestbook
+                    </div>
+                  </a>
+                </Link>
+              )}
+            </Menu.Item>
+            <Menu.Item>
               {({ active }) => (
                 <>
                   <a
