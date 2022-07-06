@@ -1,7 +1,7 @@
 import siteMetadata from '@/data/siteMetadata'
 import { motion, AnimateSharedLayout } from 'framer-motion'
 import headerNavLinks from '@/data/headerNavLinks'
-import Logo from '@/data/logo.svg'
+//import Logo from '@/data/logo.svg'
 import Link from './Link'
 import SectionContainer from './SectionContainer'
 import Footer from './Footer'
