@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
 import { motion } from 'framer-motion'
-import { FaMoon, FaSun } from 'react-icons/fa'
+import { HiSun, HiMoon } from 'react-icons/hi'
 
 const ThemeSwitch = () => {
   const [mounted, setMounted] = useState(false)
@@ -11,27 +11,28 @@ const ThemeSwitch = () => {
   useEffect(() => setMounted(true), [])
 
   return (
-    <motion.button
-      className="ml-1 flex h-11 w-11 items-center justify-center bg-transparent p-0 text-lg sm:ml-4"
-      whileHover={{
-        scale: 1.2,
-        transition: { duration: 0.2 },
-      }}
-      whileTap={{
-        scale: 0.7,
-        rotate: 360,
-        transition: { duration: 0.2 },
-      }}
-      aria-label="Toggle Dark Mode"
-      type="button"
-      onClick={() => setTheme(theme === 'dark' || resolvedTheme === 'dark' ? 'light' : 'dark')}
-    >
-      {mounted && (theme === 'dark' || resolvedTheme === 'dark') ? (
-        <FaSun size={20} />
-      ) : (
-        <FaMoon size={20} />
-      )}
-    </motion.button>
+    <div className="ml-1 cursor-pointer rounded-md bg-zinc-300 ring-neutral-400 hover:bg-zinc-300 hover:ring-2 dark:bg-zinc-700 dark:hover:bg-zinc-800">
+      <motion.button
+        className="flex h-8 w-8 items-center justify-center p-2"
+        whileHover={{
+          transition: { duration: 0.2 },
+        }}
+        whileTap={{
+          scale: 0.7,
+          rotate: 360,
+          transition: { duration: 0.2 },
+        }}
+        aria-label="Toggle Dark Mode"
+        type="button"
+        onClick={() => setTheme(theme === 'dark' || resolvedTheme === 'dark' ? 'light' : 'dark')}
+      >
+        {mounted && (theme === 'dark' || resolvedTheme === 'dark') ? (
+          <HiSun className="h-4 w-4" />
+        ) : (
+          <HiMoon className="h-4 w-4" />
+        )}
+      </motion.button>
+    </div>
   )
 }
 
