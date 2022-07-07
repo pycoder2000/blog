@@ -1,12 +1,15 @@
 import { currentDayName } from '@/lib/utils/dateUtils'
 import siteMetadata from '@/data/siteMetadata'
-import SocialIcon from '@/components/social-icons'
 import Link from './Link'
+import NowPlayingFooter from './NowPlayingFooter'
 
 export default function Footer() {
   return (
     <footer>
-      <div className="mt-16 flex flex-col items-center">
+      <div className="mt-10 flex flex-col items-center">
+        <div className="">
+          <NowPlayingFooter />
+        </div>
         <div className="mb-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
           <div>
             <Link href="https://parthdesai.vercel.app">{siteMetadata.author}</Link>
