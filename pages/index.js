@@ -29,11 +29,11 @@ export default function Home({ posts }) {
             </h1>
             <h2 className="prose pt-5 text-lg text-gray-600 dark:text-gray-300">
               {`Welcome to ${siteMetadata.description}. I am a Data Engineer who is passionate about Data Science and Automation. In my free time, I like developing `}
-              <Link href="/projects" className="special-underline no-underline">
+              <Link href="/projects" className="company font-normal no-underline">
                 side projects
               </Link>
               {' and '}
-              <Link href="/blog" className="special-underline no-underline">
+              <Link href="/blog" className="company font-normal no-underline">
                 blogging
               </Link>
               {' about them.'}

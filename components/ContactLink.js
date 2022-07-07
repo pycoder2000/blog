@@ -7,8 +7,7 @@ const ContactLink = ({ title, href, icon }) => {
         <span className="duration-250 transition-colors ease-in hover:text-primary-500 dark:hover:text-primary-400">
           {icon}
         </span>
-        <span className="font-light  opacity-50  ">@</span>
-
+        <span className="font-light opacity-50">@</span>
         <a className="duration-250 font-mono  transition-colors ease-in hover:text-gray-500 ">
           {title}
         </a>
