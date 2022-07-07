@@ -1,7 +1,7 @@
 import useSWR from 'swr'
 import { useEffect } from 'react'
 import { animate } from 'motion'
-import { fetcher } from '@/lib/fetcher'
+import fetcher from 'lib/fetcher'
 
 function AnimatedBars() {
   useEffect(() => {
