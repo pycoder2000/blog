@@ -4,16 +4,19 @@ import RecommendCard from '@/components/RecommendCard'
 import BookRecommendCard from '@/components/BookRecommendCard'
 import { PageSEO } from '@/components/SEO'
 import { getCurrentlyReading, getReviews } from '@/lib/goodreads'
+import NowReading from '@/components/NowReading'
 
 export async function getStaticProps() {
   const reviews = await getReviews({ limit: 10 })
   const currentlyReading = await getCurrentlyReading({ limit: 2 })
 
-  return { props: { reviews } }
+  return { props: { reviews, currentlyReading } }
 }
 
 export default function Recommends(reviews) {
   let reviewsData = reviews['reviews']
+  let reviewsData1 = reviews['currentlyReading']
+
   return (
     <>
       <PageSEO
@@ -42,6 +45,17 @@ export default function Recommends(reviews) {
           </p>
         </div>
         <div className="container py-12">
+          <div className="-m-2">
+            {reviewsData1.map((r) => (
+              <NowReading
+                key={r.url}
+                title={r.title}
+                description={r.author}
+                href={r.url}
+                rating={r.rating}
+              />
+            ))}
+          </div>
           <div className="-m-4 flex flex-wrap">
             {reviewsData.map((r) => (
               <BookRecommendCard

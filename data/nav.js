@@ -16,8 +16,6 @@ export const navigation = {
     { name: 'RSS', href: '/feed.xml' },
     // { name: 'Guestbook', href: '/guestbook' },
     // { name: 'Bookmarks', href: '/bookmarks' },
-    // { name: 'Quotes', href: '/quotes' },
-    // { name: 'Contact', href: '/contact' },
     // { name: 'Todo', href: '/todo' },
     // { name: 'Music', href: '/music' },
     // { name: 'Movies', href: '/movies' },
