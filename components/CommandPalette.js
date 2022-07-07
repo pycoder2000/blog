@@ -73,6 +73,7 @@ export default function CommandPalette({ navigation }) {
                   }}
                   className="h-12 border-0 bg-transparent  text-sm text-gray-800 placeholder-gray-400 focus:ring-0 dark:text-neutral-400"
                   placeholder="Search..."
+                  autoComplete="off"
                 />
               </div>
               {filterednavigation.length > 0 && (
