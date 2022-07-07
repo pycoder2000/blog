@@ -74,7 +74,7 @@ export default function AuthorLayout({ children, frontMatter }) {
               This is what I am doing right{' '}
               <Link
                 href={'/now'}
-                className="special-underline no-underline dark:text-gray-100 hover:dark:text-gray-800"
+                className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
               >
                 now
               </Link>
@@ -177,7 +177,7 @@ export default function AuthorLayout({ children, frontMatter }) {
             <p>
               <Link
                 href={'/uses'}
-                className="special-underline no-underline dark:text-gray-100 hover:dark:text-gray-800"
+                className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
               >
                 Here
               </Link>{' '}

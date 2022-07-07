@@ -43,7 +43,7 @@
 }
 
 .prose a {
-  @apply special-underline;
+  text-underline-offset: 3px;
 }
 
 html {

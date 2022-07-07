@@ -67,7 +67,7 @@ export default function Home({ posts }) {
                 thoughts, reflections & everything&nbsp;
               </RoughNotation>
               in between. Have a good read!{' '}
-              <div className="mt-8 text-slate-400 dark:text-slate-400">
+              <div className="mt-8 text-slate-600 dark:text-slate-400">
                 <span className="text-sm">Press</span>{' '}
                 <span className="rounded-md bg-gray-300 p-1 text-sm text-gray-900 dark:bg-gray-400">
                   ⌘
