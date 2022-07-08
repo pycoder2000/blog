@@ -42,7 +42,7 @@ export default function Stats() {
         <h2 className="mb-4 mt-16 text-3xl font-bold tracking-tight text-black dark:text-white">
           Top Tracks
         </h2>
-        <p className="mb-4 text-gray-600 dark:text-gray-400">
+        <p className="text-md mb-4 text-gray-600 dark:text-gray-400">
           Curious what I'm currently jamming to? Here's my top tracks on Spotify updated daily.
         </p>
         <div>

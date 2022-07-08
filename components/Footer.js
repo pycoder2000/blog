@@ -12,13 +12,13 @@ export default function Footer() {
         </div>
         <div className="mb-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
           <div>
-            <Link href="https://parthdesai.vercel.app">Parth</Link>
+            <Link href="https://parthdesai.vercel.app">Parth Desai</Link>
           </div>
           <div>{` • `}</div>
           <div>{`© ${new Date().getFullYear()}`}</div>
-          <div>{` • `}</div>
+          <div className="hidden md:inline">{` • `}</div>
           <div>
-            <Link href="https://qod.shakiltech.com/" className="link-underline">
+            <Link href="https://qod.shakiltech.com/" className="link-underline hidden md:inline">
               Have a good {currentDayName()}!
             </Link>
           </div>
