@@ -25,8 +25,7 @@ export default function Stats() {
             GitHub, and more.
           </p>
         </div>
-        <hr />
-        <div className="pt-12">
+        <div className="pt-2">
           <div className="flex w-full flex-col">
             <GithubPersonal />
             <GitHub />

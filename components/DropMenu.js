@@ -21,7 +21,7 @@ import {
   PersonIcon,
   ArchiveIcon,
   TwitterLogoIcon,
-  DragHandleVerticalIcon,
+  RocketIcon,
 } from '@radix-ui/react-icons'
 
 export default function DropMenu() {
@@ -251,7 +251,7 @@ export default function DropMenu() {
                 </Link>
               )}
             </Menu.Item>
-            {/* <Menu.Item>
+            <Menu.Item>
               {({ active }) => (
                 <Link href="/journey">
                   <a
@@ -263,12 +263,12 @@ export default function DropMenu() {
                     )}
                   >
                     <div className="flex flex-row">
-                      <DragHandleVerticalIcon className="mr-4 mt-0.5" /> Journey
+                      <RocketIcon className="mr-4 mt-0.5" /> Journey
                     </div>
                   </a>
                 </Link>
               )}
-            </Menu.Item> */}
+            </Menu.Item>
             <Menu.Item>
               {({ active }) => (
                 <Link href="/recommends">

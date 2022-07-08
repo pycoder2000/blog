@@ -12,7 +12,7 @@ export const navigation = {
     { name: 'Stats', href: '/stats' },
     { name: 'Activity', href: '/activity' },
     { name: 'Recommends', href: '/recommends' },
-    // { name: 'Journey', href: '/journey' },
+    { name: 'Journey', href: '/journey' },
     { name: 'Quotes', href: '/quotes' },
     { name: 'Tweets', href: '/tweets' },
     { name: 'RSS', href: '/feed.xml' },
