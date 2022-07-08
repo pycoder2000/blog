@@ -12,7 +12,7 @@ export default function Uses() {
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             Uses
           </h1>
-          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
+          <p className="text-md leading-7 text-gray-500 dark:text-gray-400">
             Software and hardware collection of things I'm using daily.
           </p>
           <div className="mt-5 mb-3 text-xs text-gray-500 dark:text-gray-400">
