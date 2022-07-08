@@ -32,19 +32,18 @@ export default function Recommends(reviews) {
             A list of recommended movies, books and more
           </p>
         </div>
-        <hr />
-        <div className="space-y-2 pt-20 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
+        <div className="space-y-2 pt-10 md:space-y-5">
+          <h2 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
             <span role="img" className="mr-4" aria-label="wave">
               📚
             </span>
             Books
-          </h1>
+          </h2>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
             Take a look into my Goodreads library
           </p>
         </div>
-        <div className="container py-12">
+        <div className="container py-6">
           <div className="-m-2">
             {reviewsData1.map((r) => (
               <NowReading
@@ -70,12 +69,12 @@ export default function Recommends(reviews) {
         </div>
         <div className="container py-7">
           <div className="space-y-2 pt-6 pb-8 md:space-y-5 ">
-            <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
+            <h2 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
               <span role="img" className="mr-4" aria-label="wave">
                 🍿
               </span>
               Movies
-            </h1>
+            </h2>
             <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">Life's a Movie.</p>
           </div>
           <div className="container py-4">

@@ -251,7 +251,7 @@ export default function DropMenu() {
                 </Link>
               )}
             </Menu.Item>
-            <Menu.Item>
+            {/* <Menu.Item>
               {({ active }) => (
                 <Link href="/journey">
                   <a
@@ -268,7 +268,7 @@ export default function DropMenu() {
                   </a>
                 </Link>
               )}
-            </Menu.Item>
+            </Menu.Item> */}
             <Menu.Item>
               {({ active }) => (
                 <Link href="/recommends">
