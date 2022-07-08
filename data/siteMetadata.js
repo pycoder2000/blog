@@ -42,10 +42,10 @@ const siteMetadata = {
       metadata: '0',
       // theme example: light, dark, dark_dimmed, dark_high_contrast
       // transparent_dark, preferred_color_scheme, custom
-      theme: 'dark_dimmed',
+      theme: 'light',
       inputPosition: 'bottom',
       lang: 'en',
-      darkTheme: 'dark_dimmed',
+      darkTheme: 'dark',
       themeURL: '',
     },
   },

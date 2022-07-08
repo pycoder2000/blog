@@ -16,7 +16,7 @@ export async function getStaticProps() {
   return { props: { initialDisplayPosts, posts, pagination } }
 }
 
-export default function Blog({ posts, initialDisplayPosts, pagination }) {
+export default function Snippets({ posts, initialDisplayPosts, pagination }) {
   return (
     <>
       <PageSEO

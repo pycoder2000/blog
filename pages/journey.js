@@ -3,7 +3,7 @@ import { PageSEO } from '@/components/SEO'
 import Timeline from '@/components/Timeline'
 import { motion } from 'framer-motion'
 
-export default function QuotesPage() {
+export default function Journey() {
   return (
     <>
       <PageSEO title={`Journey - ${siteMetadata.author}`} description="My journey" />

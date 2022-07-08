@@ -8,7 +8,7 @@ import { PageSEO } from '@/components/SEO'
 import TopTracks from '@/components/TopTracks'
 import NowPlaying from '@/components/NowPlaying'
 
-export default function Dashboard() {
+export default function Stats() {
   return (
     <>
       <PageSEO

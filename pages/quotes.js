@@ -3,7 +3,7 @@ import { PageSEO } from '@/components/SEO'
 import { quotes } from '@/data/quotesData'
 import { motion } from 'framer-motion'
 
-export default function QuotesPage() {
+export default function Quotes() {
   return (
     <>
       <PageSEO title={`Quotes - ${siteMetadata.author}`} description="Some of my favorite quotes" />
@@ -39,7 +39,7 @@ export default function QuotesPage() {
                   {item.quote}
                 </p>
               </blockquote>
-              <p className="ml-auto  font-serif text-sm text-neutral-700 dark:text-neutral-300">
+              <p className="ml-auto font-serif text-sm text-neutral-700 dark:text-neutral-300">
                 - {item.author}
               </p>
             </li>

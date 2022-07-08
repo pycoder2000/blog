@@ -16,10 +16,12 @@ import {
   BarChartIcon,
   DrawingPinIcon,
   Link2Icon,
-  PilcrowIcon,
+  QuoteIcon,
   CalendarIcon,
   PersonIcon,
   ArchiveIcon,
+  TwitterLogoIcon,
+  DragHandleVerticalIcon,
 } from '@radix-ui/react-icons'
 
 export default function DropMenu() {
@@ -251,6 +253,24 @@ export default function DropMenu() {
             </Menu.Item>
             <Menu.Item>
               {({ active }) => (
+                <Link href="/journey">
+                  <a
+                    className={classNames(
+                      active
+                        ? 'bg-green-100 text-red-900 dark:bg-cyan-600 dark:text-gray-300'
+                        : 'bg-white text-zinc-700 hover:bg-gray-300 dark:bg-zinc-800 dark:text-gray-200 dark:hover:bg-zinc-700',
+                      'block px-4 py-2 text-sm'
+                    )}
+                  >
+                    <div className="flex flex-row">
+                      <DragHandleVerticalIcon className="mr-4 mt-0.5" /> Journey
+                    </div>
+                  </a>
+                </Link>
+              )}
+            </Menu.Item>
+            <Menu.Item>
+              {({ active }) => (
                 <Link href="/recommends">
                   <a
                     className={classNames(
@@ -279,7 +299,7 @@ export default function DropMenu() {
                     )}
                   >
                     <div className="flex flex-row">
-                      <PilcrowIcon className="mr-4 mt-0.5" /> Quotes
+                      <QuoteIcon className="mr-4 mt-0.5" /> Quotes
                     </div>
                   </a>
                 </Link>
@@ -298,6 +318,24 @@ export default function DropMenu() {
                   >
                     <div className="flex flex-row">
                       <CalendarIcon className="mr-4 mt-0.5" /> Activity
+                    </div>
+                  </a>
+                </Link>
+              )}
+            </Menu.Item>
+            <Menu.Item>
+              {({ active }) => (
+                <Link href="/tweets">
+                  <a
+                    className={classNames(
+                      active
+                        ? 'bg-green-100 text-red-900 dark:bg-cyan-600 dark:text-gray-300'
+                        : 'bg-white text-zinc-700 hover:bg-gray-300 dark:bg-zinc-800 dark:text-gray-200 dark:hover:bg-zinc-700',
+                      'block px-4 py-2 text-sm'
+                    )}
+                  >
+                    <div className="flex flex-row">
+                      <TwitterLogoIcon className="mr-4 mt-0.5" /> Tweets
                     </div>
                   </a>
                 </Link>
