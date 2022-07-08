@@ -55,12 +55,12 @@ export default function SnippetsLayout({ posts, title, initialDisplayPosts = [],
               <Link
                 key={slug}
                 href={`/snippets/${slug}`}
-                className="bg-day·dark:bg-night·group group relative flex transform cursor-pointer flex-wrap rounded-md border border-gray-200 bg-opacity-50 p-px py-px transition duration-300 hover:scale-105 dark:border-gray-700 dark:bg-opacity-50"
+                className="bg-day·dark:bg-night·group group relative flex transform cursor-pointer flex-wrap border border-gray-200 bg-opacity-50 p-px py-px transition duration-200 hover:scale-105 dark:border-gray-700 dark:bg-opacity-50"
               >
-                <div className="absolute bottom-0 left-0 h-1 w-full origin-left scale-x-0 transform bg-primary-500 duration-300 group-hover:scale-x-100" />
-                <div className="absolute bottom-0 left-0 h-full w-1 origin-bottom scale-y-0 transform bg-primary-500 duration-300 group-hover:scale-y-100" />
-                <div className="absolute top-0 left-0 h-1 w-full origin-right scale-x-0 transform bg-primary-500 duration-300 group-hover:scale-x-100" />
-                <div className="absolute bottom-0 right-0 h-full w-1 origin-top scale-y-0 transform bg-primary-500 duration-300 group-hover:scale-y-100" />
+                <div className="absolute bottom-0 left-0 h-0.5 w-full origin-left scale-x-0 transform bg-primary-500 duration-200 group-hover:scale-x-100" />
+                <div className="absolute bottom-0 left-0 h-full w-0.5 origin-bottom scale-y-0 transform bg-primary-500 duration-200 group-hover:scale-y-100" />
+                <div className="absolute top-0 left-0 h-0.5 w-full origin-right scale-x-0 transform bg-primary-500 duration-200 group-hover:scale-x-100" />
+                <div className="absolute bottom-0 right-0 h-full w-0.5 origin-top scale-y-0 transform bg-primary-500 duration-200 group-hover:scale-y-100" />
                 <div className="bg-day dark:bg-night relative space-y-2 rounded-2xl p-4">
                   <article>
                     <div>

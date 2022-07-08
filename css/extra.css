@@ -107,14 +107,15 @@ input:-webkit-autofill:focus {
   }
 }
 
-.link-underline {
+/* .link-underline {
   border-bottom-width: 0;
   background-image: linear-gradient(transparent, transparent),
     linear-gradient(to right, #d946ef, #ec4899);
   background-size: 0 2px;
   background-position: 0 100%;
   background-repeat: no-repeat;
-  transition: background-size 0.4s ease-in-out;
+  transform-origin: bottom right;
+  transition: background-size 0.2s ease-out;
 }
 
 .link-underline-black {
@@ -125,4 +126,27 @@ input:-webkit-autofill:focus {
 .link-underline:hover {
   background-size: 100% 2px;
   background-position: 0 100%;
+} */
+
+.link-underline {
+  position: relative;
+}
+
+.link-underline:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: linear-gradient(transparent, transparent), linear-gradient(to right, #d946ef, #ec4899);
+  transition: width 0.25s ease;
+  -webkit-transition: width 0.25s ease;
+}
+
+.link-underline:hover:after {
+  width: 100%;
+  left: 0;
+  background: linear-gradient(transparent, transparent), linear-gradient(to right, #d946ef, #ec4899);
 }
