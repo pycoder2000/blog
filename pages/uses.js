@@ -26,7 +26,7 @@ export default function Uses() {
               <Link
                 key={d.href}
                 href={d.href}
-                className="group mb-4 w-full cursor-pointer rounded-xl p-6 backdrop-filter transition duration-200 hover:bg-gray-300 hover:bg-opacity-40 dark:hover:bg-gray-500 dark:hover:bg-opacity-40 md:w-1/2"
+                className="group mb-4 w-full cursor-pointer rounded-xl p-6 backdrop-filter transition duration-100 hover:scale-[1.02] hover:bg-gray-300 hover:bg-opacity-40 dark:hover:bg-gray-500 dark:hover:bg-opacity-40 md:w-1/2"
               >
                 <div className="flex items-center justify-start">
                   <div className="flex-shrink-0 p-3 font-sans text-gray-700 dark:text-gray-50 ">

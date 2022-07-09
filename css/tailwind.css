@@ -43,6 +43,11 @@
 }
 
 .prose a {
+  text-decoration: none;
+}
+
+.prose a:hover {
+  text-decoration: underline;
   text-underline-offset: 3px;
 }
 
