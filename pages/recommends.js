@@ -25,7 +25,7 @@ export default function Recommends(reviews) {
       />
       <div className="mx-auto max-w-3xl">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
             Recommends
           </h1>
           <p className="text-md leading-7 text-gray-500 dark:text-gray-400">
@@ -33,7 +33,7 @@ export default function Recommends(reviews) {
           </p>
         </div>
         <div className="space-y-2 pt-10 md:space-y-5">
-          <h2 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
+          <h2 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-4xl md:leading-14">
             <span role="img" className="mr-4" aria-label="wave">
               📚
             </span>
@@ -69,7 +69,7 @@ export default function Recommends(reviews) {
         </div>
         <div className="container py-7">
           <div className="space-y-2 pt-6 pb-8 md:space-y-5 ">
-            <h2 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
+            <h2 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-4xl md:leading-14">
               <span role="img" className="mr-4" aria-label="wave">
                 🍿
               </span>
