@@ -26,7 +26,7 @@ export default function CommandPalette({ navigation }) {
   return (
     <>
       <button
-        className="ml-2 mr-1 flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-zinc-300 p-1 ring-zinc-400 transition duration-200 ease-in-out hover:bg-zinc-300 hover:ring-1 dark:bg-zinc-700 dark:ring-white dark:hover:bg-zinc-800"
+        className="ml-2 mr-1 flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-zinc-300 p-1 ring-zinc-400 transition-all duration-200 ease-in-out hover:bg-zinc-300 hover:ring-1 dark:bg-zinc-700 dark:ring-white dark:hover:bg-zinc-800"
         type="button"
         aria-label="Command palette"
         onClick={() => setIsOpen(!isOpen)}
@@ -34,10 +34,7 @@ export default function CommandPalette({ navigation }) {
         <FiCommand />
       </button>
       <Transition.Root show={isOpen} as={Fragment} afterLeave={() => setQuery('')}>
-        <Dialog
-          onClose={setIsOpen}
-          className="fixed inset-0 z-20 overflow-y-auto bg-zinc-600 p-12 pt-[20vh]"
-        >
+        <Dialog onClose={setIsOpen} className="fixed inset-0 z-20 overflow-y-auto p-12 pt-[20vh]">
           <Transition.Child
             enter="duration-300 ease-out"
             enterFrom="opacity-0"

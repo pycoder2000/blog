@@ -11,7 +11,7 @@ const ThemeSwitch = () => {
   useEffect(() => setMounted(true), [])
 
   return (
-    <div className="ml-1 cursor-pointer rounded-full bg-zinc-300 ring-zinc-400 hover:bg-zinc-300 hover:ring-1 dark:bg-zinc-700 dark:ring-white dark:hover:bg-zinc-800">
+    <div className="ml-1 cursor-pointer rounded-full bg-zinc-300 ring-zinc-400 transition-all hover:bg-zinc-300 hover:ring-1 dark:bg-zinc-700 dark:ring-white dark:hover:bg-zinc-800">
       <motion.button
         className="flex h-8 w-8 items-center justify-center p-2"
         whileHover={{

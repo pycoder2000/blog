@@ -98,7 +98,7 @@ export default function Guestbook({ fallbackData }) {
           // eslint-disable-next-line @next/next/no-html-link-for-pages
           <a
             href="/api/auth/signin/github"
-            className="my-4 flex h-16 w-full items-center justify-center rounded bg-gray-200 font-bold text-gray-900 hover:border hover:border-gray-400 dark:bg-gray-700 dark:text-gray-100 dark:hover:border-white"
+            className="my-4 flex h-16 w-full items-center justify-center rounded bg-gray-200 font-bold text-gray-900 ring-gray-300 transition-all hover:ring-2 dark:bg-gray-700 dark:text-gray-100"
             onClick={(e) => {
               e.preventDefault()
               signIn('github')
@@ -109,21 +109,28 @@ export default function Guestbook({ fallbackData }) {
           </a>
         )}
         {session?.user && (
-          <form className="relative my-4" onSubmit={leaveEntry}>
-            <input
-              ref={inputEl}
-              aria-label="Your message"
-              placeholder="Your message..."
-              required
-              className="mt-1 block w-full rounded-md border-gray-300 bg-white py-2 pl-4 pr-32 text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-800 dark:text-gray-100"
-            />
-            <button
-              className="absolute right-1 top-1 flex h-8 w-28 items-center justify-center rounded bg-gray-100 px-4 pt-1 font-medium text-gray-900 dark:bg-gray-700 dark:text-gray-100"
-              type="submit"
-            >
-              Submit
-            </button>
-          </form>
+          <div className="flex flex-col ">
+            <form className="mb-2 flex flex-col items-center space-y-4" onSubmit={leaveEntry}>
+              <label htmlFor="message" className="sr-only">
+                Your Message
+              </label>
+              <textarea
+                ref={inputEl}
+                aria-label="Your message"
+                placeholder="Your message..."
+                required
+                rows={3}
+                className="w-full rounded-md border border-gray-300 text-sm shadow-sm focus:border-gray-500 focus:ring-gray-500 dark:border-zinc-600 dark:bg-zinc-700 dark:text-white dark:focus:border-gray-700 dark:focus:ring-neutral-600"
+                maxLength={500}
+              />
+              <button
+                className="w-full rounded bg-gray-200 px-3 py-1 font-medium ring-gray-300 transition-all hover:ring-2 dark:bg-gray-600"
+                type="submit"
+              >
+                Sign
+              </button>
+            </form>
+          </div>
         )}
       </div>
       <div className="w-full">
