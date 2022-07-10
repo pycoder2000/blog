@@ -15,13 +15,13 @@ const ThemeSwitch = () => {
       <motion.button
         className="flex h-8 w-8 items-center justify-center p-2"
         whileHover={{
-          transition: { duration: 0.2 },
+          rotate: 360,
         }}
         whileTap={{
           scale: 0.7,
           rotate: 360,
-          transition: { duration: 0.2 },
         }}
+        transition={{ duration: 0.2, ease: 'easeIn' }}
         aria-label="Toggle Dark Mode"
         type="button"
         onClick={() => setTheme(theme === 'dark' || resolvedTheme === 'dark' ? 'light' : 'dark')}

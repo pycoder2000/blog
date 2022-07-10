@@ -38,13 +38,13 @@ export default function DropMenu() {
           <motion.button
             className="flex h-8 w-8 items-center justify-center p-2"
             whileHover={{
-              transition: { duration: 0.2 },
+              rotate: 360,
             }}
             whileTap={{
-              scale: 0.7,
+              scale: 0.5,
               rotate: 180,
-              transition: { duration: 0.2 },
             }}
+            transition={{ duration: 0.3, ease: 'easeIn' }}
             aria-label="Toggle List Menu"
             type="button"
           >
@@ -76,7 +76,7 @@ export default function DropMenu() {
                   <a
                     className={classNames(
                       active
-                        ? 'bg-green-100 text-red-900 dark:bg-cyan-600 dark:text-gray-300'
+                        ? 'bg-green-100 text-red-900 dark:bg-zinc-700 dark:text-gray-300'
                         : 'bg-white text-zinc-700 hover:bg-gray-300 dark:bg-zinc-800 dark:text-gray-200 dark:hover:bg-zinc-700',
                       'block px-4 py-2 text-sm'
                     )}
@@ -94,7 +94,7 @@ export default function DropMenu() {
                   <a
                     className={classNames(
                       active
-                        ? 'bg-gray-200 text-red-900 dark:bg-cyan-600 dark:text-gray-300'
+                        ? 'bg-gray-200 text-red-900 dark:bg-zinc-700 dark:text-gray-300'
                         : 'bg-white text-zinc-700 hover:bg-gray-300 dark:bg-zinc-800 dark:text-gray-200 dark:hover:bg-zinc-700',
                       'block px-4 py-2 text-sm'
                     )}
@@ -112,7 +112,7 @@ export default function DropMenu() {
                   <a
                     className={classNames(
                       active
-                        ? 'bg-green-100 text-red-900 dark:bg-cyan-600 dark:text-gray-300'
+                        ? 'bg-green-100 text-red-900 dark:bg-zinc-700 dark:text-gray-300'
                         : 'bg-white text-zinc-700 hover:bg-gray-300 dark:bg-zinc-800 dark:text-gray-200 dark:hover:bg-zinc-700',
                       'block px-4 py-2 text-sm'
                     )}
@@ -130,7 +130,7 @@ export default function DropMenu() {
                   <a
                     className={classNames(
                       active
-                        ? 'bg-green-100 text-red-900 dark:bg-cyan-600 dark:text-gray-300'
+                        ? 'bg-green-100 text-red-900 dark:bg-zinc-700 dark:text-gray-300'
                         : 'bg-white text-zinc-700 hover:bg-gray-300 dark:bg-zinc-800 dark:text-gray-200 dark:hover:bg-zinc-700',
                       'block px-4 py-2 text-sm'
                     )}
@@ -148,7 +148,7 @@ export default function DropMenu() {
                   <a
                     className={classNames(
                       active
-                        ? 'bg-green-100 text-red-900 dark:bg-cyan-600 dark:text-gray-300'
+                        ? 'bg-green-100 text-red-900 dark:bg-zinc-700 dark:text-gray-300'
                         : 'bg-white text-zinc-700 hover:bg-gray-300 dark:bg-zinc-800 dark:text-gray-200 dark:hover:bg-zinc-700',
                       'block px-4 py-2 text-sm'
                     )}
@@ -168,7 +168,7 @@ export default function DropMenu() {
                   <a
                     className={classNames(
                       active
-                        ? 'bg-green-100 text-red-900 dark:bg-cyan-600 dark:text-gray-300'
+                        ? 'bg-green-100 text-red-900 dark:bg-zinc-700 dark:text-gray-300'
                         : 'bg-white text-zinc-700 hover:bg-gray-300 dark:bg-zinc-800 dark:text-gray-200 dark:hover:bg-zinc-700',
                       'block px-4 py-2 text-sm'
                     )}
@@ -186,7 +186,7 @@ export default function DropMenu() {
                   <a
                     className={classNames(
                       active
-                        ? 'bg-green-100 text-red-900 dark:bg-cyan-600 dark:text-gray-300'
+                        ? 'bg-green-100 text-red-900 dark:bg-zinc-700 dark:text-gray-300'
                         : 'bg-white text-zinc-700 hover:bg-gray-300 dark:bg-zinc-800 dark:text-gray-200 dark:hover:bg-zinc-700',
                       'block px-4 py-2 text-sm'
                     )}
@@ -204,7 +204,7 @@ export default function DropMenu() {
                   <a
                     className={classNames(
                       active
-                        ? 'bg-green-100 text-red-900 dark:bg-cyan-600 dark:text-gray-300'
+                        ? 'bg-green-100 text-red-900 dark:bg-zinc-700 dark:text-gray-300'
                         : 'bg-white text-zinc-700 hover:bg-gray-300 dark:bg-zinc-800 dark:text-gray-200 dark:hover:bg-zinc-700',
                       'block px-4 py-2 text-sm'
                     )}
@@ -222,7 +222,7 @@ export default function DropMenu() {
                   <a
                     className={classNames(
                       active
-                        ? 'bg-green-100 text-red-900 dark:bg-cyan-600 dark:text-gray-300'
+                        ? 'bg-green-100 text-red-900 dark:bg-zinc-700 dark:text-gray-300'
                         : 'bg-white text-zinc-700 hover:bg-gray-300 dark:bg-zinc-800 dark:text-gray-200 dark:hover:bg-zinc-700',
                       'block px-4 py-2 text-sm'
                     )}
@@ -240,7 +240,7 @@ export default function DropMenu() {
                   <a
                     className={classNames(
                       active
-                        ? 'bg-green-100 text-red-900 dark:bg-cyan-600 dark:text-gray-300'
+                        ? 'bg-green-100 text-red-900 dark:bg-zinc-700 dark:text-gray-300'
                         : 'bg-white text-zinc-700 hover:bg-gray-300 dark:bg-zinc-800 dark:text-gray-200 dark:hover:bg-zinc-700',
                       'block px-4 py-2 text-sm'
                     )}
@@ -258,7 +258,7 @@ export default function DropMenu() {
                   <a
                     className={classNames(
                       active
-                        ? 'bg-green-100 text-red-900 dark:bg-cyan-600 dark:text-gray-300'
+                        ? 'bg-green-100 text-red-900 dark:bg-zinc-700 dark:text-gray-300'
                         : 'bg-white text-zinc-700 hover:bg-gray-300 dark:bg-zinc-800 dark:text-gray-200 dark:hover:bg-zinc-700',
                       'block px-4 py-2 text-sm'
                     )}
@@ -276,7 +276,7 @@ export default function DropMenu() {
                   <a
                     className={classNames(
                       active
-                        ? 'bg-green-100 text-red-900 dark:bg-cyan-600 dark:text-gray-300'
+                        ? 'bg-green-100 text-red-900 dark:bg-zinc-700 dark:text-gray-300'
                         : 'bg-white text-zinc-700 hover:bg-gray-300 dark:bg-zinc-800 dark:text-gray-200 dark:hover:bg-zinc-700',
                       'block px-4 py-2 text-sm'
                     )}
@@ -294,7 +294,7 @@ export default function DropMenu() {
                   <a
                     className={classNames(
                       active
-                        ? 'bg-green-100 text-red-900 dark:bg-cyan-600 dark:text-gray-300'
+                        ? 'bg-green-100 text-red-900 dark:bg-zinc-700 dark:text-gray-300'
                         : 'bg-white text-zinc-700 hover:bg-gray-300 dark:bg-zinc-800 dark:text-gray-200 dark:hover:bg-zinc-700',
                       'block px-4 py-2 text-sm'
                     )}
@@ -312,7 +312,7 @@ export default function DropMenu() {
                   <a
                     className={classNames(
                       active
-                        ? 'bg-green-100 text-red-900 dark:bg-cyan-600 dark:text-gray-300'
+                        ? 'bg-green-100 text-red-900 dark:bg-zinc-700 dark:text-gray-300'
                         : 'bg-white text-zinc-700 hover:bg-gray-300 dark:bg-zinc-800 dark:text-gray-200 dark:hover:bg-zinc-700',
                       'block px-4 py-2 text-sm'
                     )}
@@ -330,7 +330,7 @@ export default function DropMenu() {
                   <a
                     className={classNames(
                       active
-                        ? 'bg-green-100 text-red-900 dark:bg-cyan-600 dark:text-gray-300'
+                        ? 'bg-green-100 text-red-900 dark:bg-zinc-700 dark:text-gray-300'
                         : 'bg-white text-zinc-700 hover:bg-gray-300 dark:bg-zinc-800 dark:text-gray-200 dark:hover:bg-zinc-700',
                       'block px-4 py-2 text-sm'
                     )}
@@ -348,7 +348,7 @@ export default function DropMenu() {
                   <a
                     className={classNames(
                       active
-                        ? 'bg-green-100 text-red-900 dark:bg-cyan-600 dark:text-gray-300'
+                        ? 'bg-green-100 text-red-900 dark:bg-zinc-700 dark:text-gray-300'
                         : 'bg-white text-zinc-700 hover:bg-gray-300 dark:bg-zinc-800 dark:text-gray-200 dark:hover:bg-zinc-700',
                       'block px-4 py-2 text-sm'
                     )}
@@ -366,7 +366,7 @@ export default function DropMenu() {
                   <a
                     className={classNames(
                       active
-                        ? 'bg-green-100 text-red-900 dark:bg-cyan-600 dark:text-gray-300'
+                        ? 'bg-green-100 text-red-900 dark:bg-zinc-700 dark:text-gray-300'
                         : 'bg-white text-zinc-700 hover:bg-gray-300 dark:bg-zinc-800 dark:text-gray-200 dark:hover:bg-zinc-700',
                       'block px-4 py-2 text-sm'
                     )}
@@ -384,7 +384,7 @@ export default function DropMenu() {
                   <a
                     className={classNames(
                       active
-                        ? 'bg-green-100 text-red-900 dark:bg-cyan-600 dark:text-gray-300'
+                        ? 'bg-green-100 text-red-900 dark:bg-zinc-700 dark:text-gray-300'
                         : 'bg-white text-zinc-700 hover:bg-gray-300 dark:bg-zinc-800 dark:text-gray-200 dark:hover:bg-zinc-700',
                       'block px-4 py-2 text-sm'
                     )}

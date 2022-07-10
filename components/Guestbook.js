@@ -61,6 +61,7 @@ export default function Guestbook({ fallbackData }) {
 
   const leaveEntry = async (e) => {
     e.preventDefault()
+    setForm({ state: 'loading' })
     const res = await fetch('/api/guestbook', {
       body: JSON.stringify({
         body: inputEl.current.value,
@@ -74,7 +75,7 @@ export default function Guestbook({ fallbackData }) {
     const { error } = await res.json()
     if (error) {
       setForm({
-        state: false,
+        state: 'error',
         message: error,
       })
       return
@@ -83,7 +84,7 @@ export default function Guestbook({ fallbackData }) {
     inputEl.current.value = ''
     mutate('/api/guestbook')
     setForm({
-      state: true,
+      state: 'success',
       message: `Hooray! Thanks for signing my Guestbook.`,
     })
   }
@@ -124,13 +125,20 @@ export default function Guestbook({ fallbackData }) {
                 maxLength={500}
               />
               <button
-                className="w-full rounded bg-gray-200 px-3 py-1 font-medium ring-gray-300 transition-all hover:ring-2 dark:bg-gray-600"
+                className="grid w-full place-items-center rounded bg-gray-200 px-3 py-1 font-medium ring-gray-300 transition-all hover:ring-2 dark:bg-gray-600"
                 type="submit"
               >
-                Sign
+                {form.state === 'loading' ? <LoadingSpinner /> : 'Sign'}
               </button>
             </form>
           </div>
+        )}
+        {form.state === 'error' ? (
+          <ErrorMessage>{form.message}</ErrorMessage>
+        ) : form.state === 'success' ? (
+          <SuccessMessage>{form.message}</SuccessMessage>
+        ) : (
+          <p className="text-xs text-gray-800 dark:text-gray-500"></p>
         )}
       </div>
       <div className="w-full">

@@ -32,7 +32,7 @@ export default function Recommends(reviews) {
             A list of recommended movies, books and more
           </p>
         </div>
-        <div className="space-y-2 pt-10 md:space-y-5">
+        <div className="space-y-2 pt-3 md:space-y-5">
           <h2 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-4xl md:leading-14">
             <span role="img" className="mr-4" aria-label="wave">
               📚
