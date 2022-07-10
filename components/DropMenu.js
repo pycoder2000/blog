@@ -23,6 +23,7 @@ import {
   TwitterLogoIcon,
   RocketIcon,
   ChatBubbleIcon,
+  EnterIcon,
 } from '@radix-ui/react-icons'
 
 export default function DropMenu() {
@@ -160,43 +161,45 @@ export default function DropMenu() {
             <Menu.Item>
               {({ active }) => (
                 <>
-                  <a
-                    className={classNames(
-                      active
-                        ? 'cursor-pointer bg-green-100 text-red-900 dark:bg-zinc-700 dark:text-gray-300'
-                        : 'bg-white text-zinc-700 hover:bg-gray-300 dark:bg-zinc-800 dark:text-gray-200 dark:hover:bg-zinc-700',
-                      'block cursor-pointer px-4 py-2 text-sm'
-                    )}
-                  >
-                    <div className="flex flex-row">
-                      {session ? (
-                        <>
-                          <div className="mr-2 flex flex-row items-center">
-                            {session.user?.image ? (
-                              // eslint-disable-next-line @next/next/no-img-element
-                              <img
-                                className="h-6 w-6 cursor-pointer rounded-full"
-                                src={session.user.image}
-                                alt="User Profile Icon"
-                              />
-                            ) : (
-                              ''
-                            )}
-                          </div>
-                          <div className="" onClick={() => signOut()}>
-                            Sign Out
-                          </div>
-                        </>
-                      ) : (
-                        <>
-                          <PersonIcon />
-                          <div className="ml-4" onClick={() => signIn()}>
-                            Sign In
-                          </div>
-                        </>
+                  <Link>
+                    <a
+                      className={classNames(
+                        active
+                          ? 'cursor-pointer bg-green-100 text-red-900 dark:bg-zinc-700 dark:text-gray-300'
+                          : 'bg-white text-zinc-700 hover:bg-gray-300 dark:bg-zinc-800 dark:text-gray-200 dark:hover:bg-zinc-700',
+                        'block cursor-pointer px-4 py-2 text-sm'
                       )}
-                    </div>
-                  </a>
+                    >
+                      <div className="flex flex-row">
+                        {session ? (
+                          <>
+                            <div className="mr-2 flex flex-row items-center">
+                              {session.user?.image ? (
+                                // eslint-disable-next-line @next/next/no-img-element
+                                <img
+                                  className="h-6 w-6 cursor-pointer rounded-full"
+                                  src={session.user.image}
+                                  alt="User Profile Icon"
+                                />
+                              ) : (
+                                ''
+                              )}
+                            </div>
+                            <div className="" onClick={() => signOut()}>
+                              Sign Out
+                            </div>
+                          </>
+                        ) : (
+                          <>
+                            <EnterIcon />
+                            <div className="ml-4" onClick={() => signIn()}>
+                              Sign In
+                            </div>
+                          </>
+                        )}
+                      </div>
+                    </a>
+                  </Link>
                 </>
               )}
             </Menu.Item>
