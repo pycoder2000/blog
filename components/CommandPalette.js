@@ -30,9 +30,6 @@ export default function CommandPalette({ navigation }) {
         className="ml-2 mr-1 flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-zinc-300 p-1 ring-zinc-400 transition-all duration-200 ease-in-out hover:bg-zinc-300 hover:ring-1 dark:bg-zinc-700 dark:ring-white dark:hover:bg-zinc-800"
         type="button"
         aria-label="Command palette"
-        whileHover={{
-          rotate: 360,
-        }}
         animate={{
           rotate: isOpen ? 360 : 0,
         }}

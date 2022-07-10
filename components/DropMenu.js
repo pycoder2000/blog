@@ -37,14 +37,11 @@ export default function DropMenu() {
         <Menu.Button className=" ml-2 cursor-pointer rounded-full bg-zinc-300 ring-zinc-400 transition-all hover:bg-zinc-300 hover:ring-1 dark:bg-zinc-700 dark:ring-white dark:hover:bg-zinc-800">
           <motion.button
             className="flex h-8 w-8 items-center justify-center p-2"
-            whileHover={{
-              rotate: 360,
-            }}
             whileTap={{
               scale: 0.5,
-              rotate: 180,
+              rotate: 360,
             }}
-            transition={{ duration: 0.3, ease: 'easeIn' }}
+            transition={{ duration: 0.2, ease: 'easeIn' }}
             aria-label="Toggle List Menu"
             type="button"
           >
@@ -166,9 +163,9 @@ export default function DropMenu() {
                   <a
                     className={classNames(
                       active
-                        ? 'bg-green-100 text-red-900 dark:bg-zinc-700 dark:text-gray-300'
+                        ? 'cursor-pointer bg-green-100 text-red-900 dark:bg-zinc-700 dark:text-gray-300'
                         : 'bg-white text-zinc-700 hover:bg-gray-300 dark:bg-zinc-800 dark:text-gray-200 dark:hover:bg-zinc-700',
-                      'block px-4 py-2 text-sm'
+                      'block cursor-pointer px-4 py-2 text-sm'
                     )}
                   >
                     <div className="flex flex-row">
@@ -178,7 +175,7 @@ export default function DropMenu() {
                             {session.user?.image ? (
                               // eslint-disable-next-line @next/next/no-img-element
                               <img
-                                className="h-6 w-6 rounded-full"
+                                className="h-6 w-6 cursor-pointer rounded-full"
                                 src={session.user.image}
                                 alt="User Profile Icon"
                               />
