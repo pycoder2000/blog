@@ -4,7 +4,6 @@ import { motion } from 'framer-motion'
 import classNames from 'classnames'
 import { useSession, signIn, signOut } from 'next-auth/react'
 import Link from './Link'
-import Image from './Image'
 import {
   CodeIcon,
   HomeIcon,
@@ -177,10 +176,11 @@ export default function DropMenu() {
                         <>
                           <div className="mr-2 flex flex-row items-center">
                             {session.user?.image ? (
-                              <Image
+                              // eslint-disable-next-line @next/next/no-img-element
+                              <img
                                 className="h-6 w-6 rounded-full"
                                 src={session.user.image}
-                                alt=""
+                                alt="User Profile Icon"
                               />
                             ) : (
                               ''
