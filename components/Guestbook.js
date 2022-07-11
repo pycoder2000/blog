@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 import { useState, useRef, Suspense } from 'react'
 import { format } from 'date-fns'
 import { signIn, useSession } from 'next-auth/react'
@@ -7,7 +8,7 @@ import fetcher from '@/lib/fetcher'
 import SuccessMessage from '@/components/SuccessMessage'
 import ErrorMessage from '@/components/ErrorMessage'
 import LoadingSpinner from '@/components/LoadingSpinner'
-import { AiFillGithub } from 'react-icons/ai'
+import { FaGoogle, FaGithub } from 'react-icons/fa'
 
 function GuestbookEntry({ entry, user }) {
   const { mutate } = useSWRConfig()
@@ -92,22 +93,40 @@ export default function Guestbook({ fallbackData }) {
   return (
     <>
       <div className="my-2 w-full rounded-md border border-gray-200 bg-white px-6 py-2 shadow-xl shadow-gray-400 dark:border-zinc-900 dark:bg-zinc-900 dark:shadow-none">
-        <h5 className="mt-2 text-lg font-bold text-gray-900 dark:text-gray-100 md:text-xl">
-          Sign the Guestbook
-        </h5>
+        <div className="grid items-center justify-center">
+          <h5 className="mt-2 text-lg font-normal text-gray-900 dark:text-gray-100 md:text-lg">
+            Sign the Guestbook
+          </h5>
+        </div>
         {!session && (
-          // eslint-disable-next-line @next/next/no-html-link-for-pages
-          <a
-            href="/api/auth/signin/github"
-            className="my-4 flex h-16 w-full items-center justify-center rounded bg-gray-200 font-bold text-gray-900 ring-gray-300 transition-all hover:ring-2 dark:bg-gray-700 dark:text-gray-100"
-            onClick={(e) => {
-              e.preventDefault()
-              signIn('github')
-            }}
-          >
-            <AiFillGithub className="mr-2 h-6 w-6" />
-            <div className="dark:text-neutral-300">Login with Github</div>
-          </a>
+          <div className="flex flex-row">
+            <a
+              href="/api/auth/signin/github"
+              className="my-4 mx-2 flex h-20 w-1/2 items-center justify-center rounded bg-neutral-100 font-light text-gray-900 ring-gray-300 transition-all hover:ring-2 dark:bg-zinc-800 dark:text-gray-100"
+              onClick={(e) => {
+                e.preventDefault()
+                signIn('github')
+              }}
+            >
+              <div className="flex flex-col items-center justify-center">
+                <FaGithub className="mb-1 mt-3 h-6 w-6" />
+                <div className="mb-2 dark:text-neutral-300">Github</div>
+              </div>
+            </a>
+            <a
+              href="/api/auth/signin/google"
+              className="my-4 mx-2 flex h-20 w-1/2 items-center justify-center rounded bg-neutral-100 font-light text-gray-900 ring-gray-300 transition-all hover:ring-2 dark:bg-zinc-800 dark:text-gray-100"
+              onClick={(e) => {
+                e.preventDefault()
+                signIn('google')
+              }}
+            >
+              <div className="flex flex-col items-center justify-center">
+                <FaGoogle className="mb-1 mt-3 h-6 w-6" />
+                <div className="mb-2 dark:text-neutral-300">Google</div>
+              </div>
+            </a>
+          </div>
         )}
         {session?.user && (
           <div className="flex flex-col ">
@@ -125,7 +144,7 @@ export default function Guestbook({ fallbackData }) {
                 maxLength={500}
               />
               <button
-                className="grid w-full place-items-center rounded bg-gray-200 px-3 py-1 font-medium ring-gray-300 transition-all hover:ring-2 dark:bg-gray-600"
+                className="grid w-full place-items-center rounded bg-neutral-100 px-3 py-1 font-medium ring-gray-300 transition-all hover:ring-2 dark:bg-gray-600"
                 type="submit"
               >
                 {form.state === 'loading' ? <LoadingSpinner /> : 'Sign'}
