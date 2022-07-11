@@ -38,6 +38,7 @@ const siteMetadata = require('../data/siteMetadata')
                 const path = page
                   .replace('pages/', '/')
                   .replace('data/blog', '/blog')
+                  .replace('data/snippets', '/snippets')
                   .replace('public/', '/')
                   .replace('.js', '')
                   .replace('.tsx', '')
