@@ -123,36 +123,31 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
             </dl>
             <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0">
               <div className="prose max-w-none pt-10 pb-8 dark:prose-dark">{children}</div>
-              <div className="pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300">
-                {/* <Link href={discussUrl(slug)} rel="nofollow">
-                  {'Discuss on Twitter'}
-                </Link>
-                {` • `}
-                <Link href={editUrl(fileName)}>{'View on GitHub'}</Link> */}
-                <div className="flex items-center">
+              <div className="grid place-items-center pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300">
+                <div className="flex items-center space-x-4">
                   <TwitterShareButton
                     url={postUrl}
                     title={title}
                     via={siteMetadata.socialAccount.twitter}
-                    className="mr-2 flex items-center overflow-hidden rounded-full !bg-[#1da1f2] !p-1.5 hover:scale-110"
+                    className="flex items-center overflow-hidden rounded-full !bg-[#1da1f2] hover:scale-110"
                   >
                     <SocialIcon
                       network="twitter"
-                      style={{ height: 25, width: 25 }}
-                      fgColor="#1da1f2"
-                      bgColor="#fff"
+                      style={{ height: 35, width: 35 }}
+                      fgColor="#fff"
+                      bgColor="#1da1f2"
                     />
                   </TwitterShareButton>
                   <FacebookShareButton
                     url={postUrl}
                     quote={title}
-                    className="mr-2 flex items-center overflow-hidden rounded-full !bg-[#1877f2] !p-1.5 hover:scale-110"
+                    className="flex items-center overflow-hidden rounded-full !bg-[#1877f2] hover:scale-110"
                   >
                     <SocialIcon
                       network="facebook"
-                      style={{ height: 25, width: 25 }}
-                      fgColor="#1877f2"
-                      bgColor="#fff"
+                      style={{ height: 35, width: 35 }}
+                      fgColor="#fff"
+                      bgColor="#1877f2"
                     />
                   </FacebookShareButton>
                   <EmailShareButton
@@ -160,13 +155,13 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                     subject={title}
                     separator=" : "
                     url={postUrl}
-                    className="mr-2 flex items-center overflow-hidden rounded-full !bg-[#7f7f7f] !p-1.5 hover:scale-110"
+                    className="flex items-center overflow-hidden rounded-full !bg-[#B61AC1] hover:scale-110"
                   >
                     <SocialIcon
                       network="email"
-                      style={{ height: 25, width: 25 }}
-                      fgColor="#7f7f7f"
-                      bgColor="#fff"
+                      style={{ height: 35, width: 35 }}
+                      fgColor="#fff"
+                      bgColor="#B61AC1"
                     />
                   </EmailShareButton>
                   <LinkedinShareButton
@@ -174,49 +169,49 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                     title={title}
                     source={siteMetadata.siteUrl}
                     url={postUrl}
-                    className="mr-2 flex items-center overflow-hidden rounded-full !bg-[#027fb1] !p-1.5 hover:scale-110"
+                    className="flex items-center overflow-hidden rounded-full !bg-[#0072b1] hover:scale-110"
                   >
                     <SocialIcon
                       network="linkedin"
-                      style={{ height: 25, width: 25 }}
-                      fgColor="#027fb1"
-                      bgColor="#fff"
+                      style={{ height: 35, width: 35 }}
+                      fgColor="#fff"
+                      bgColor="#0072b1"
                     />
                   </LinkedinShareButton>
                   <RedditShareButton
                     title={title}
                     url={postUrl}
-                    className="mr-2 flex items-center overflow-hidden rounded-full !bg-[#ff4500] !p-1.5 hover:scale-110"
+                    className="flex items-center overflow-hidden rounded-full !bg-[#ff4500] hover:scale-110"
                   >
                     <SocialIcon
                       network="reddit"
-                      style={{ height: 25, width: 25 }}
-                      fgColor="#ff4500"
-                      bgColor="#fff"
+                      style={{ height: 35, width: 35 }}
+                      fgColor="#fff"
+                      bgColor="#ff4500"
                     />
                   </RedditShareButton>
                   <WhatsappShareButton
                     title={title}
                     separator={' : '}
                     url={postUrl}
-                    className="mr-2 flex items-center overflow-hidden rounded-full !bg-[#25D366] !p-1.5 hover:scale-110"
+                    className="flex items-center overflow-hidden rounded-full !bg-[#25D366] hover:scale-110"
                   >
                     <SocialIcon
                       network="whatsapp"
-                      style={{ height: 25, width: 25 }}
-                      fgColor="#25D366"
-                      bgColor="#fff"
+                      style={{ height: 35, width: 35 }}
+                      fgColor="#fff"
+                      bgColor="#25D366"
                     />
                   </WhatsappShareButton>
                   <Link
                     href={editUrl(fileName)}
-                    className="mr-2 flex items-center overflow-hidden rounded-full !bg-[#24292e] !p-1.5 hover:scale-110"
+                    className="flex items-center overflow-hidden rounded-full !bg-[#5A6272] hover:scale-110"
                   >
                     <SocialIcon
                       network="github"
-                      style={{ height: 25, width: 25 }}
-                      fgColor="#24292e"
-                      bgColor="#fff"
+                      style={{ height: 35, width: 35 }}
+                      fgColor="#fff"
+                      bgColor="#5A6272"
                     />
                   </Link>
                 </div>
