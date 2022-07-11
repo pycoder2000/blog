@@ -4,6 +4,7 @@ import { HiSearch } from 'react-icons/hi'
 import { useRouter } from 'next/router'
 import { FiCommand } from 'react-icons/fi'
 import { motion } from 'framer-motion'
+import useSound from 'use-sound'
 
 export default function CommandPalette({ navigation }) {
   const router = useRouter()
@@ -21,6 +22,12 @@ export default function CommandPalette({ navigation }) {
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [isOpen])
 
+  const toggleIcon = () => {
+    setIsOpen(!isOpen)
+  }
+
+  const [ThemeSound] = useSound('/static/sounds/open.mp3')
+
   const filterednavigation = query
     ? navigation.pages.filter((page) => page.name.toLowerCase().includes(query.toLocaleLowerCase()))
     : navigation.pages
@@ -34,7 +41,10 @@ export default function CommandPalette({ navigation }) {
           rotate: isOpen ? 360 : 0,
         }}
         transition={{ duration: 0.1, ease: 'easeIn' }}
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={() => {
+          toggleIcon()
+          ThemeSound()
+        }}
       >
         <FiCommand />
       </motion.button>
