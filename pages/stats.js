@@ -49,6 +49,20 @@ export default function Stats() {
           <NowPlaying />
         </div>
         <TopTracks />
+        <div className="flex flex-col pl-4 pt-10">
+          <p className="text-md text-gray-600 dark:text-gray-400">
+            Do you know a good song I should listen to?
+          </p>
+          <a
+            className="text-md mt-4 rounded-full border px-8 py-2 text-center font-normal text-gray-800 transition-colors hover:border-green-600 hover:bg-green-600 hover:text-white dark:text-gray-200"
+            href="https://twitter.com/messages/compose?recipient_id=4302974298&text=Hey Parth, you should listen to:"
+            data-screen-name="@lone_Musk"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            Parth you should listen to...
+          </a>
+        </div>
       </div>
     </>
   )

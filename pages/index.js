@@ -29,14 +29,7 @@ export default function Home({ posts }) {
             </h1>
             <h2 className="prose pt-5 text-lg text-gray-600 dark:text-gray-300">
               {`Welcome to ${siteMetadata.description}. I am a Data Engineer who is passionate about Data Science and Automation. In my free time, I like developing `}
-              <Link href="/projects" className="company font-normal">
-                side projects
-              </Link>
-              {' and '}
-              <Link href="/blog" className="company font-normal">
-                blogging
-              </Link>
-              {' about them.'}
+              side projects and learning new technologies.
             </h2>
             <p className="pt-5 text-lg leading-7 text-slate-600 dark:text-slate-300 sm:block md:hidden lg:hidden">
               This is my place for{' '}
@@ -46,7 +39,7 @@ export default function Home({ posts }) {
                 show={true}
                 color="#DE1D8D"
                 animationDelay={1000}
-                animationDuration={4000}
+                animationDuration={2500}
                 className="text-slate-200"
               >
                 thoughts, reflections & everything&nbsp;
@@ -60,8 +53,8 @@ export default function Home({ posts }) {
                 type="highlight"
                 show={true}
                 color="#DE1D8D"
-                animationDelay={1500}
-                animationDuration={4000}
+                animationDelay={1000}
+                animationDuration={2500}
                 className="text-slate-200"
               >
                 thoughts, reflections & everything&nbsp;
