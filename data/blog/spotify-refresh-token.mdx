@@ -1,0 +1,117 @@
+---
+title: How to get the Spotify Refresh Token
+date: '2022-07-12'
+tags: [spotify, hacks]
+draft: false
+summary: Getting the Spotify Refresh Token doesn't need to be a hassle any longer.
+---
+
+<img
+  className="inline rounded-lg"
+  src="/static/images/Blog/spotify-refresh-token.jpg"
+  alt="Spotify Logo"
+/>
+
+In this blog, I'll show you 2 approaches to generate the Spotify Refresh Token and then use that to programmatically create an access token when needed.
+
+I needed the Spotify Refresh Token for my blog site in which I could display my [Top 10 Tracks](https://musing.vercel.app/stats) as well as display the currently playing track in the footer section.
+
+# First Approach
+
+<hr />
+
+## Step 1: Generate your Spotify `client_id` and `client_secret`
+
+- Go to [Spotify developers dashboard](https://developer.spotify.com/dashboard/).
+
+- Then select or create your app.
+
+- Note down your Client ID and Client Secret in a convenient location to use in Step 3.
+
+<br />
+
+## Step 2: Add `Redirect URIs` to your Spotify app
+
+- Open settings for your app.
+
+- Add `https://getyourspotifyrefreshtoken.herokuapp.com/callback` to your `Redirect URIs` as
+  shown in the image.
+
+- Click on save
+
+<div className="grid place-items-center">
+  <img
+    className="inline rounded-lg"
+    src="/static/images/Blog/Spotify-Callback-URL.png"
+    alt="Spotify Settings"
+    width="400"
+    height="400"
+  />
+</div>
+
+<br />
+
+## Step 3: Get your Spotify refresh Token
+
+- Go to [this site](https://getyourspotifyrefreshtoken.herokuapp.com/) made by [Alec Chen](https://alecchendev.medium.com/get-your-spotify-refresh-token-with-this-simple-web-app-d942dad05847)
+
+- Add your `Client ID` and `Client Secret` to the form and select the `scope` for your project. More information about the scope can be found in the [documentation](https://developer.spotify.com/documentation/general/guides/authorization/scopes/)
+
+- Click on Submit to get your refresh token.
+
+<br />
+<br />
+
+# Second Approach (Longer)
+
+---
+
+# Step 1: Generate your Spotify `client_id` and `client_secret`
+
+- Follow the steps from Approach 1 till step 2 and add `<website>/callback` to your `Redirect URIs`. Eg. `http://musing.vercel.app/callback`
+
+<br />
+
+# Step 2: Create URI for access code
+
+- In the URL below, replace `$CLIENT_ID`, `$SCOPE`, and `$REDIRECT_URI` with the information you noted in Step 1. **Make sure the `$REDIRECT_URI` is [URL encoded](https://meyerweb.com/eric/tools/dencoder/).**
+
+  ```bash
+  https://accounts.spotify.com/authorize?response_type=code&client_id=$CLIENT_ID&scope=$SCOPE&redirect_uri=$REDIRECT_URI
+  ```
+
+- This is how mine looked like.
+
+  ```bash
+  https://accounts.spotify.com/authorize?response_type=code&client_id=CLIENT_ID&scope=SCOPE&redirect_uri=https%3A%2F%2Fmusing.vercel.app%2Fcallback
+  ```
+
+# Step 3: Get access code from the redirect URI
+
+- You will be redirected to your redirect URI which in my case was set to *https://musing.vercel.app/callback*.
+
+- In the address bar you will find a huge URL string similar to the one below. In place of `$ACCESSCODE` there will be a long string of characters. Note down that string for the next step.
+
+  ```bash
+  https://musing.vercel.app/callback?code=$ACCESSCODE
+  ```
+
+# Step 4: Get the refresh token
+
+- Type the following CURL command in your terminal and replaces all the variables with the information you noted in Step 1 and Step 3 : `$CILENT_ID`, `$CLIENT_SECRET`, `$CODE`, and `$REDIRECT_URI`.
+
+  ```bash
+  curl -d client_id=$CLIENT_ID -d client_secret=$CLIENT_SECRET -d grant_type=authorization_code -d code=$CODE -d redirect_uri=$REDIRECT_URI https://accounts.spotify.com/api/token
+  ```
+
+- The resulting JSON string will look something like this. Note down the `refresh_token`. This token will last for a very long time and can be used to generate a fresh `access_token` whenever it is needed.
+
+  ```json
+  {
+    "access_token": "ACCESS_TOKEN",
+    "token_type": "Bearer",
+    "expires_in": 3600,
+    "refresh_token": "REFRESH_TOKEN",
+    "scope": "playlist-modify-private"
+  }
+  ```
