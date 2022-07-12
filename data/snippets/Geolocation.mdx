@@ -1,0 +1,21 @@
+---
+title: Geolocation
+date: '2022-06-20'
+tags: [javascript, react]
+draft: false
+summary: Check if geolocation is supported by your browser
+images: []
+layout: PostSimple
+---
+
+```js showLineNumbers
+if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(function (position) {
+    var lat = position.coords.latitude,
+      lon = position.coords.longitude
+    console.log('Geolocation - Latitude: ' + lat + ', Longitude: ' + lon)
+  })
+} else {
+  console.log('Geolocation is not supported for this Browser/OS version yet.')
+}
+```
