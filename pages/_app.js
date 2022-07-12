@@ -15,6 +15,7 @@ import ProgressBar from 'react-scroll-progress-bar'
 import ScrollTop from '@/components/ScrollTop'
 import { SessionProvider } from 'next-auth/react'
 import { Provider } from '@lyket/react'
+import Script from 'next/script'
 
 const isDevelopment = process.env.NODE_ENV === 'development'
 const isSocket = process.env.SOCKET
@@ -52,21 +53,37 @@ const defaultTheme = {
 
 export default function App({ Component, pageProps: { session, ...pageProps } }) {
   return (
-    <SessionProvider session={session}>
-      <Provider apiKey="pt_7c8b6840f5ba39cd3b2b471cd8efc2" theme={defaultTheme}>
-        <ThemeProvider attribute="class" defaultTheme={siteMetadata.theme}>
-          <ProgressBar bgcolor="#DE1D8D" />
-          <ScrollTop />
-          <Head>
-            <meta content="width=device-width, initial-scale=1" name="viewport" />
-          </Head>
-          {isDevelopment && isSocket && <ClientReload />}
-          <Analytics />
-          <LayoutWrapper>
-            <Component {...pageProps} />
-          </LayoutWrapper>
-        </ThemeProvider>
-      </Provider>
-    </SessionProvider>
+    <>
+      <SessionProvider session={session}>
+        <Provider apiKey="pt_7c8b6840f5ba39cd3b2b471cd8efc2" theme={defaultTheme}>
+          <ThemeProvider attribute="class" defaultTheme={siteMetadata.theme}>
+            <ProgressBar bgcolor="#DE1D8D" />
+            <ScrollTop />
+            <Head>
+              <meta content="width=device-width, initial-scale=1" name="viewport" />
+            </Head>
+            {isDevelopment && isSocket && <ClientReload />}
+            <Analytics />
+            <LayoutWrapper>
+              <Component {...pageProps} />
+            </LayoutWrapper>
+          </ThemeProvider>
+        </Provider>
+      </SessionProvider>
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-F6V2QTJ628" />
+      <Script
+        id="gtag"
+        dangerouslySetInnerHTML={{
+          __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', 'G-F6V2QTJ628', {
+                    page_path: window.location.pathname,
+                  });
+                `,
+        }}
+      />
+    </>
   )
 }
