@@ -57,17 +57,19 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
                 key={slug}
                 className="group flex bg-transparent bg-opacity-20 px-2 transition duration-100 hover:scale-105 hover:rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800"
               >
-                <li key={slug} className="py-6 px-4">
-                  <article className="space-y-2 bg-transparent bg-opacity-20 p-2 transition duration-200 hover:rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
+                <li key={slug} className="py-6">
+                  <article className="space-y-2 bg-transparent bg-opacity-20 p-2 transition duration-200 hover:rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-3">
                     <dl>
-                      <dt className="sr-only">Published on</dt>
-                      <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                      <dd className="text-sm font-normal leading-6 text-gray-500 dark:text-gray-400">
                         <time dateTime={date}>{formatDate(date)}</time>
+                        {' • '}
+                        <ViewCounter className="mx-1" slug={slug} />
+                        views
                       </dd>
                     </dl>
-                    <div className="space-y-5 xl:col-span-3">
+                    <div className="space-y-5 xl:col-span-4">
                       <div className="space-y-1">
-                        <div className="flex flex-col justify-between md:flex-row">
+                        <div>
                           <h2 className="text-2xl font-bold leading-8 tracking-tight">
                             <Link
                               href={`/blog/${slug}`}
@@ -76,9 +78,6 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
                               {title}
                             </Link>
                           </h2>
-                          <p className="mt-1 mb-4 w-32 text-left text-gray-500 md:mb-0 md:text-right">
-                            <ViewCounter slug={slug} blogPage={false} />
-                          </p>
                         </div>
                         <div className="flex flex-wrap">
                           {tags.map((tag) => (
