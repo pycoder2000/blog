@@ -1,8 +1,20 @@
 import Link from '@/components/Link'
 import { PageSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
+import { getCurrentlyReading } from '@/lib/goodreads'
+import fetcher from 'lib/fetcher'
+import useSWR from 'swr'
 
-export default function Now() {
+export async function getStaticProps() {
+  const currentlyReading = await getCurrentlyReading({ limit: 1 })
+
+  return { props: { currentlyReading } }
+}
+
+export default function Now(currentlyReading) {
+  const { data } = useSWR('/api/now-playing', fetcher)
+  let currentlyReadingData = currentlyReading['currentlyReading']
+
   var year = new Date().getFullYear()
   var month = new Date().getMonth()
   var date = new Date().getDate()
@@ -13,9 +25,50 @@ export default function Now() {
 
   var ParthBirthDate = '2000-04-16'
   var birthDate = new Date(ParthBirthDate)
+
   var ParthAge = year - birthDate.getFullYear()
-  var ParthMonth = Math.abs(birthDate.getMonth() - month)
-  var ParthDay = Math.abs(birthDate.getDate() - date)
+
+  var ParthMonth = 0
+  if (month >= birthDate.getMonth()) ParthMonth = month - birthDate.getMonth()
+  else {
+    ParthAge--
+    ParthMonth = 12 + month - birthDate.getMonth()
+  }
+
+  var ParthDay = 0
+  if (date >= birthDate.getDate()) ParthDay = date - birthDate.getDate()
+  else {
+    ParthMonth--
+    ParthDay = 31 + date - birthDate.getDate()
+    if (ParthMonth < 0) {
+      ParthMonth = 11
+      ParthAge--
+    }
+  }
+
+  var age = {}
+  age = {
+    years: ParthAge,
+    months: ParthMonth,
+    days: ParthDay,
+  }
+
+  var ageString = ''
+  if (age.years > 0 && age.months > 0 && age.days > 0)
+    ageString = age.years + ' years, ' + age.months + ' months, and ' + age.days + ' days old.'
+  else if (age.years == 0 && age.months == 0 && age.days > 0)
+    ageString = 'Only ' + age.days + ' days old!'
+  else if (age.years > 0 && age.months == 0 && age.days == 0)
+    ageString = age.years + ' years old. Happy Birthday!!'
+  else if (age.years > 0 && age.months > 0 && age.days == 0)
+    ageString = age.years + ' years and ' + age.months + ' months old.'
+  else if (age.years == 0 && age.months > 0 && age.days > 0)
+    ageString = age.months + ' months and ' + age.days + ' days old.'
+  else if (age.years > 0 && age.months == 0 && age.days > 0)
+    ageString = age.years + ' years, and' + age.days + ' days old.'
+  else if (age.years == 0 && age.months > 0 && age.days == 0)
+    ageString = age.months + ' months old.'
+  else ageString = "Welcome to Earth! <br> It's first day on Earth!"
 
   return (
     <>
@@ -41,51 +94,74 @@ export default function Now() {
 
           <div className="mt-2 mb-10 w-2/5 rounded-md border border-gray-600 p-1 text-sm dark:border-gray-200">
             <span className="ml-2 font-semibold">Reading:</span>{' '}
-            <span>Tools & Weapons - Brad Smith</span>
+            <a
+              href={currentlyReadingData[0].url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline"
+            >
+              <span>{currentlyReadingData[0].title}</span> by{' '}
+              <span>{currentlyReadingData[0].author}</span>
+            </a>
             <br />
-            <span className="ml-2 font-semibold">Age:</span>{' '}
-            <span>
-              {ParthAge} years, {ParthMonth} months and {ParthDay} days
-            </span>
+            <span className="ml-2 font-semibold">Age:</span> <span>{ageString}</span>
           </div>
 
           <div className="mt-2 mb-10 w-1/4 rounded-md border border-gray-600 p-1 text-sm dark:border-gray-200">
-            <span className="ml-2 font-semibold">Eating:</span> <span>N/A</span>
+            <span className="ml-2 font-semibold">Listening:</span>{' '}
+            <span>
+              {data?.songUrl ? (
+                <a
+                  href={data.songUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
+                >
+                  <span>{data.title}</span>
+                </a>
+              ) : (
+                <span>Not Playing</span>
+              )}
+            </span>
             <br />
-            <span className="ml-2 font-semibold">Drinking:</span> <span>Coffee</span>
+            <span className="ml-2 font-semibold">Drinking:</span> <span>Mango Milkshake</span>
           </div>
         </div>
         {/* Work */}
         <div className="pb-4">
-          <span>
-            I work as a software developer at{' '}
+          <p>
+            I work as a Data Engineer at{' '}
             <Link
-              href={'https://maul.is'}
+              href={'https://www.accenture.com/'}
               className="special-underline no-underline dark:text-gray-100 hover:dark:text-gray-100"
             >
-              Maul{' '}
+              Accenture{' '}
             </Link>
-            <br />
-          </span>
-          <p>We deliver various and delicous lunch to workplaces in Reykjavík.</p>
-          <br />
-          <p>
-            We at Maul strive to improve the quality of your lunch by offering courses from multiple
-            restaurants and saving you from the constant "what should I have for lunch" conundrum.
           </p>
           <br />
           <p>
-            At this moment I'm mostly using technology such as React, Tailwind, AWS lambda, S3, and
-            more.
+            I work on building pipelines and automating the entire process using Scala and Gcloud.
           </p>
           <br />
           <p>
-            I'm always trying to learn more, and at the moment I'm doing execute program{' '}
+            I have been trying to shift my field from Data Engineering to Data Science. I have been
+            constantly applying for the same as well.
+          </p>
+          <br />
+          <p>
+            My location preference is Bangalore but I am open to shift to another place for a better
+            oppurtnity.
+          </p>
+          <br />
+          <p>
+            I'm always trying to learn more, and at the moment I'm trying to follow this{' '}
             <Link
-              href={'https://www.executeprogram.com/courses'}
+              href={
+                'https://www.youtube.com/watch?v=_u-PaJCpwiU&list=PLu0W_9lII9ai6fAMHp-acBmJONT7Y4BSG'
+              }
               className="special-underline no-underline dark:text-gray-100 hover:dark:text-gray-100"
             >
-              TypeScript courses.
+              Machine Learning tutorial
             </Link>
           </p>
         </div>
@@ -107,17 +183,10 @@ export default function Now() {
             article is a great reason to start your blog.
           </p>
           <br />
-          <p>I recently started to quantify my life. Collect various data about my daily life.</p>
           <p>
-            I published a short e-book about how to make LaTeX templates for your homework, aimed
-            towards beginners. It's only availabe in Icelandic -&gt;{' '}
-            <Link
-              href={'https://einargudni.gumroad.com/l/ufidy'}
-              className="special-underline no-underline dark:text-gray-100 hover:dark:text-gray-100"
-            >
-              here
-            </Link>
-            . But I want to translate it to english as well.
+            I am also going to start applying for Masters in Data Science in August 2022 for intake
+            of Fall 2023. I hope to get a good university near the West Coast. I'll update this page
+            after I get my admits.
           </p>
           <br />
           <p>
