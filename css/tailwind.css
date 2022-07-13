@@ -26,9 +26,21 @@
       hover:text-white hover:[background-size:100%_100%]
       focus:[background-size:100%_100%]
       motion-safe:transition-all
-      motion-safe:duration-200
+      motion-safe:duration-300
       dark:from-primary-color-dark-500 dark:to-primary-color-dark-500 dark:hover:text-white;
   }
+
+  .special-underline-new {
+    @apply bg-gradient-to-r from-primary-color-500 to-primary-color-500 bg-no-repeat pb-1
+      font-normal [background-position:0_100%]
+      [background-size:100%_0.1em]
+      hover:text-white hover:[background-size:100%_100%]
+      focus:[background-size:100%_100%]
+      motion-safe:transition-all
+      motion-safe:duration-300
+      dark:from-primary-color-dark-500 dark:to-primary-color-dark-500 dark:hover:text-white;
+  }
+
   .company {
     box-shadow: inset 0 0 0 0 #de1d8d;
     color: #de1d8d;
@@ -40,15 +52,6 @@
     box-shadow: inset 200px 0 0 0 #de1d8d;
     color: white;
   }
-}
-
-.prose a {
-  text-decoration: none;
-}
-
-.prose a:hover {
-  text-decoration: underline;
-  text-underline-offset: 3px;
 }
 
 html {
