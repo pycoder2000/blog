@@ -24,6 +24,7 @@ const ThemeSwitch = () => {
           scale: 0.7,
           rotate: 360,
         }}
+        whileHover={mounted ? { scale: 1.1 } : {}}
         transition={{ duration: 0.2, ease: 'easeIn' }}
         aria-label="Toggle Dark Mode"
         type="button"
@@ -33,9 +34,9 @@ const ThemeSwitch = () => {
         }}
       >
         {mounted && (theme === 'dark' || resolvedTheme === 'dark') ? (
-          <HiSun className="h-4 w-4" />
+          <HiSun className="h-4 w-4 hover:animate-spin" />
         ) : (
-          <HiMoon className="h-4 w-4" />
+          <HiMoon className="h-4 w-4 hover:animate-spin" />
         )}
       </motion.button>
     </div>
