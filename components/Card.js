@@ -1,5 +1,3 @@
-import Image from './Image'
-import Link from './Link'
 import SocialIcon from './social-icons'
 import FolderIcon from './icon'
 

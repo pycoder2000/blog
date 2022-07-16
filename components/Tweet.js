@@ -35,6 +35,8 @@ export default function Tweet({
             height={48}
             width={48}
             src={author.profile_image_url}
+            placeholder="blur"
+            blurDataURL="/static/images/SVG-placeholder.png"
             className="rounded-full"
           />
         </a>
@@ -93,6 +95,8 @@ export default function Tweet({
               width={m.width}
               src={m.url}
               className="rounded"
+              placeholder="blur"
+              blurDataURL="/static/images/SVG-placeholder.png"
             />
           ))}
         </div>
