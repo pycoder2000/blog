@@ -107,27 +107,6 @@ input:-webkit-autofill:focus {
   }
 }
 
-/* .link-underline {
-  border-bottom-width: 0;
-  background-image: linear-gradient(transparent, transparent),
-    linear-gradient(to right, #d946ef, #ec4899);
-  background-size: 0 2px;
-  background-position: 0 100%;
-  background-repeat: no-repeat;
-  transform-origin: bottom right;
-  transition: background-size 0.2s ease-out;
-}
-
-.link-underline-black {
-  background-image: linear-gradient(transparent, transparent),
-    linear-gradient(to right, #d946ef, #ec4899);
-}
-
-.link-underline:hover {
-  background-size: 100% 2px;
-  background-position: 0 100%;
-} */
-
 .link-underline {
   position: relative;
 }
