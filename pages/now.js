@@ -218,8 +218,9 @@ export default function Now(currentlyReading) {
               href={'https://www.accenture.com/'}
               className="special-underline no-underline dark:text-gray-100 hover:dark:text-gray-100"
             >
-              Accenture{' '}
+              Accenture
             </Link>
+            .
           </p>
           <br />
           <p>
@@ -233,7 +234,7 @@ export default function Now(currentlyReading) {
           <br />
           <p>
             My location preference is Bangalore but I am open to shift to another place for a better
-            oppurtnity.
+            opportunity.
           </p>
           <br />
           <p>
@@ -246,6 +247,7 @@ export default function Now(currentlyReading) {
             >
               Machine Learning tutorial
             </Link>
+            .
           </p>
         </div>
         <div className="justify-center text-center text-2xl font-medium text-gray-200 dark:text-gray-600">
@@ -285,6 +287,7 @@ export default function Now(currentlyReading) {
           >
             nownownow.com
           </Link>
+          .
         </div>
       </div>
     </>
