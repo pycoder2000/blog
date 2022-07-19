@@ -53,6 +53,8 @@ function GuestbookEntry({ entry, user }) {
 
 export default function Guestbook({ fallbackData }) {
   const { data: session } = useSession()
+  const [isLoadingGoogle, setIsLoadingGoogle] = useState()
+  const [isLoadingGithub, setIsLoadingGithub] = useState()
   const { mutate } = useSWRConfig()
   const [form, setForm] = useState(false)
   const inputEl = useRef(null)
@@ -106,12 +108,19 @@ export default function Guestbook({ fallbackData }) {
               onClick={(e) => {
                 e.preventDefault()
                 signIn('github')
+                setIsLoadingGithub(true)
               }}
             >
-              <div className="flex flex-col items-center justify-center">
-                <FaGithub className="mb-1 mt-3 h-6 w-6" />
-                <div className="mb-2 dark:text-neutral-300">Github</div>
-              </div>
+              {isLoadingGithub ? (
+                <>
+                  Loading <LoadingSpinner className="ml-2" />
+                </>
+              ) : (
+                <div className="flex flex-col items-center justify-center">
+                  <FaGithub className="mb-1 mt-3 h-6 w-6" />
+                  <div className="mb-2 dark:text-neutral-300">Github</div>
+                </div>
+              )}
             </a>
             <a
               href="/api/auth/signin/google"
@@ -119,12 +128,19 @@ export default function Guestbook({ fallbackData }) {
               onClick={(e) => {
                 e.preventDefault()
                 signIn('google')
+                setIsLoadingGoogle(true)
               }}
             >
-              <div className="flex flex-col items-center justify-center">
-                <FaGoogle className="mb-1 mt-3 h-6 w-6" />
-                <div className="mb-2 dark:text-neutral-300">Google</div>
-              </div>
+              {isLoadingGoogle ? (
+                <>
+                  Loading <LoadingSpinner className="ml-2" />
+                </>
+              ) : (
+                <div className="flex flex-col items-center justify-center">
+                  <FaGoogle className="mb-1 mt-3 h-6 w-6" />
+                  <div className="mb-2 dark:text-neutral-300">Google</div>
+                </div>
+              )}
             </a>
           </div>
         )}
