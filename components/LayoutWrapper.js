@@ -4,12 +4,11 @@ import Link from './Link'
 import SectionContainer from './SectionContainer'
 import Footer from './Footer'
 import { navigation } from '@/data/nav'
-import CommandPalette from './CommandPalette'
 import ThemeSwitch from './ThemeSwitch'
 import Typewriter from 'typewriter-effect'
 import { useRouter } from 'next/router'
 import DropMenu from './DropMenu.js'
-// import Logo from '@/data/logo.svg'
+import Logo from '@/data/logo.svg'
 // import MobileNav from './MobileNav'
 
 const LayoutWrapper = ({ children }) => {
@@ -21,7 +20,8 @@ const LayoutWrapper = ({ children }) => {
         <header className="flex items-center justify-between py-10">
           <div>
             <Link href="/" aria-label={siteMetadata.headerTitle}>
-              {/* <div className="flex items-center justify-between">
+              <div className="text-primary-color dark:text-primary-color-dark flex items-center justify-between text-xl font-semibold">
+              <div className="flex items-center justify-between">
                 <div className="mr-1">
                   <Logo />
                 </div>
@@ -32,8 +32,7 @@ const LayoutWrapper = ({ children }) => {
                 ) : (
                   siteMetadata.headerTitle
                 )}
-              </div> */}
-              <div className="text-primary-color dark:text-primary-color-dark flex items-center justify-between text-xl font-semibold">
+              </div>
                 {`~${router.asPath}`}{' '}
                 <Typewriter
                   options={{
@@ -57,7 +56,6 @@ const LayoutWrapper = ({ children }) => {
                 </Link>
               ))}
             </div>
-            <CommandPalette navigation={navigation} />
             <ThemeSwitch />
             <DropMenu />
             {/* <MobileNav /> */}

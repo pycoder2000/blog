@@ -51,20 +51,20 @@
 .token.comment,
 .token.prolog,
 .token.cdata {
-  color: rgb(99, 119, 119);
+  color: rgb(71, 143, 143);
   font-style: italic;
 }
 
 .token.punctuation {
-  color: rgb(199, 146, 234);
+  color: rgb(146, 172, 234);
 }
 
 .namespace {
-  color: rgb(178, 204, 214);
+  color: rgb(178, 207, 214);
 }
 
 .token.deleted {
-  color: rgba(239, 83, 80, 0.56);
+  color: rgba(80, 239, 170, 0.56);
   font-style: italic;
 }
 
@@ -80,29 +80,29 @@
 }
 
 .token.boolean {
-  color: rgb(255, 88, 116);
+  color: rgb(88, 255, 113);
 }
 
 .token.number {
-  color: rgb(247, 140, 108);
+  color: rgb(187, 247, 108);
 }
 
 .token.constant,
 .token.function,
 .token.builtin,
 .token.char {
-  color: rgb(130, 170, 255);
+  color: rgb(251, 255, 130);
 }
 
 .token.selector,
 .token.doctype {
-  color: rgb(199, 146, 234);
+  color: rgb(234, 221, 146);
   font-style: italic;
 }
 
 .token.attr-name,
 .token.inserted {
-  color: rgb(173, 219, 103);
+  color: rgb(219, 192, 103);
   font-style: italic;
 }
 

@@ -42,14 +42,14 @@
   }
 
   .company {
-    box-shadow: inset 0 0 0 0 #de1d8d;
-    color: #de1d8d;
+    box-shadow: inset 0 0 0 0 #55F8B8;
+    color: #55F8B8;
     margin: 0 -0.25rem;
     padding: 0 0.25rem;
     transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   }
   .company:hover {
-    box-shadow: inset 200px 0 0 0 #de1d8d;
+    box-shadow: inset 200px 0 0 0 #55F8B8;
     color: white;
   }
 }
@@ -65,11 +65,11 @@ input:-webkit-autofill:focus {
 }
 
 ::-moz-selection {
-  background: #de1d8d;
+  background: #55F8B8;
 }
 ::-webkit-selection {
-  background: #de1d8d;
+  background: #55F8B8;
 }
 ::selection {
-  background: #de1d8d;
+  background: #55F8B8;
 }

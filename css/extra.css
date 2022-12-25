@@ -31,7 +31,7 @@ input:-webkit-autofill:focus {
 }
 
 #nprogress .bar {
-  background: #de1d8d;
+  background: #55F8B8;
 
   position: fixed;
   z-index: 1031;
@@ -49,7 +49,7 @@ input:-webkit-autofill:focus {
   right: 0px;
   width: 100px;
   height: 100%;
-  box-shadow: 0 0 10px #de1d8d, 0 0 5px #de1d8d;
+  box-shadow: 0 0 10px #55F8B8, 0 0 5px #55F8B8;
   opacity: 1;
 
   -webkit-transform: rotate(3deg) translate(0px, -4px);
@@ -72,8 +72,8 @@ input:-webkit-autofill:focus {
   box-sizing: border-box;
 
   border: solid 2px transparent;
-  border-top-color: #de1d8d;
-  border-left-color: #de1d8d;
+  border-top-color: #55F8B8;
+  border-left-color: #55F8B8;
   border-radius: 50%;
 
   -webkit-animation: nprogress-spinner 400ms linear infinite;
@@ -115,11 +115,11 @@ input:-webkit-autofill:focus {
   content: '';
   position: absolute;
   width: 0;
-  height: 2px;
+  height: 4px;
   display: block;
   margin-top: 5px;
   right: 0;
-  background: linear-gradient(transparent, transparent), linear-gradient(to right, #d946ef, #ec4899);
+  background: linear-gradient(transparent, transparent), linear-gradient(to right, #81fff4, #55F8B8);
   transition: width 0.25s ease;
   -webkit-transition: width 0.25s ease;
 }
@@ -127,7 +127,7 @@ input:-webkit-autofill:focus {
 .link-underline:hover:after {
   width: 100%;
   left: 0;
-  background: linear-gradient(transparent, transparent), linear-gradient(to right, #d946ef, #ec4899);
+  background: linear-gradient(transparent, transparent), linear-gradient(to right, #81fff4, #55F8B8);
 }
 
 .pushable {

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { ClapButton } from '@lyket/react'
+import { Provider, ClapButton } from "@lyket/react";
 import ScrollTop from '@/components/ScrollTop'
 
 const ScrollTopAndComment = () => {
@@ -21,7 +21,12 @@ const ScrollTopAndComment = () => {
         className={`fixed right-8 bottom-9 hidden flex-col gap-6 ${show ? 'md:flex' : 'md:hidden'}`}
       >
         <button className="mb-16">
-          <ClapButton id="diy-fish-holder" namespace="post" hideCounterIfLessThan={1} />
+        <Provider apiKey="pt_61d6e5f0af64c3fe0202c68a646d71">
+  <ClapButton
+    namespace="testing-react"
+    id="everybody-clap-now"
+  />
+</Provider>
         </button>
       </div>
       <ScrollTop />
