@@ -1,18 +1,18 @@
-import siteMetadata from '@/data/siteMetadata'
-import headerNavLinks from '@/data/headerNavLinks'
-import Link from './Link'
-import SectionContainer from './SectionContainer'
-import Footer from './Footer'
-import { navigation } from '@/data/nav'
-import ThemeSwitch from './ThemeSwitch'
-import Typewriter from 'typewriter-effect'
-import { useRouter } from 'next/router'
-import DropMenu from './DropMenu.js'
-import Logo from '@/data/logo.svg'
+import siteMetadata from "@/data/siteMetadata";
+import headerNavLinks from "@/data/headerNavLinks";
+import Link from "./Link";
+import SectionContainer from "./SectionContainer";
+import Footer from "./Footer";
+import { navigation } from "@/data/nav";
+import ThemeSwitch from "./ThemeSwitch";
+import Typewriter from "typewriter-effect";
+import { useRouter } from "next/router";
+import DropMenu from "./DropMenu.js";
+import Logo from "@/data/logo.svg";
 // import MobileNav from './MobileNav'
 
 const LayoutWrapper = ({ children }) => {
-  const router = useRouter()
+  const router = useRouter();
 
   return (
     <SectionContainer>
@@ -21,19 +21,19 @@ const LayoutWrapper = ({ children }) => {
           <div>
             <Link href="/" aria-label={siteMetadata.headerTitle}>
               <div className="text-primary-color dark:text-primary-color-dark flex items-center justify-between text-xl font-semibold">
-              <div className="flex items-center justify-between">
-                <div className="mr-1">
-                  <Logo />
-                </div>
-                {typeof siteMetadata.headerTitle === 'string' ? (
-                  <div className="hidden h-6 text-2xl font-semibold sm:block">
-                    {siteMetadata.headerTitle}
+                <div className="flex items-center justify-between">
+                  <div className="mr-1">
+                    <Logo />
                   </div>
-                ) : (
-                  siteMetadata.headerTitle
-                )}
-              </div>
-                {`~${router.asPath}`}{' '}
+                  {typeof siteMetadata.headerTitle === "string" ? (
+                    <div className="hidden h-6 text-2xl font-semibold sm:block">
+                      {siteMetadata.headerTitle}
+                    </div>
+                  ) : (
+                    siteMetadata.headerTitle
+                  )}
+                </div>
+                {`~${router.asPath}`}{" "}
                 <Typewriter
                   options={{
                     strings: [],
@@ -65,7 +65,7 @@ const LayoutWrapper = ({ children }) => {
         <Footer />
       </div>
     </SectionContainer>
-  )
-}
+  );
+};
 
-export default LayoutWrapper
+export default LayoutWrapper;

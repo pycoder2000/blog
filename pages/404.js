@@ -1,6 +1,6 @@
-import Link from '@/components/Link'
-import { PageSEO } from '@/components/SEO'
-import siteMetadata from '@/data/siteMetadata'
+import Link from "@/components/Link";
+import { PageSEO } from "@/components/SEO";
+import siteMetadata from "@/data/siteMetadata";
 
 export default function FourZeroFour() {
   return (
@@ -15,13 +15,15 @@ export default function FourZeroFour() {
         <div className="mx-auto max-w-2xl">
           <div className="md:border-l-2 md:px-6">
             <p className="mb-4 text-xl font-bold leading-normal md:text-2xl">
-            Whoopsie daisy! Looks like we can't find that page.
+              Whoopsie daisy! Looks like we can't find that page.
             </p>
             <p className="mb-4">
-            Uh oh, it looks like you've stumbled upon a page that doesn't exist. 
-            Don't worry, it happens to the best of us. To make it up to you, how about checking out some of our latest and greatest content instead? 
-            Or, if you're feeling brave, you can use the search bar to try and find what you're looking for. 
-            If all else fails, you can always reach out to us for help.
+              Uh oh, it looks like you've stumbled upon a page that doesn't
+              exist. Don't worry, it happens to the best of us. To make it up to
+              you, how about checking out some of our latest and greatest
+              content instead? Or, if you're feeling brave, you can use the
+              search bar to try and find what you're looking for. If all else
+              fails, you can always reach out to us for help.
             </p>
             <p>Thanks for stopping by!</p>
           </div>
@@ -37,5 +39,5 @@ export default function FourZeroFour() {
         </Link>
       </div>
     </>
-  )
+  );
 }
