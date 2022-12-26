@@ -1,0 +1,3 @@
+{
+    "ignore": ["@/css/tailwind.css", "@/css/prism.css", "@/css/extra.css", "katex/dist/katex.css", "@fontsource/inter/variable-full.css", "next-themes", "next/head", "next/router", "nprogress", "@/data/siteMetadata", "@/components/*", "@/components/ClientReload", "react-scroll-progress-bar", "@/components/ScrollTop", "next-auth/react", "@lyket/react", "development"]
+  }

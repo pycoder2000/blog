@@ -47,8 +47,8 @@ export default function AuthorLayout({ children, frontMatter }) {
             <div className="flex flex-col pt-3">
               <a
                 className="rounded-full border px-8 py-2 text-center text-sm font-light text-gray-700 transition-colors hover:border-[#1DA1F2] hover:bg-[#1DA1F2] hover:text-white hover:shadow dark:text-white"
-                href="https://twitter.com/messages/compose?recipient_id=4302974298&text=Hey Parth"
-                data-screen-name="@lone_Musk"
+                href="https://twitter.com/messages/compose?recipient_id=804558941862563840&text=Hey Pramit"
+                data-screen-name="@pramit_armpit"
                 target="_blank"
                 rel="noreferrer noopener"
               >
@@ -63,28 +63,18 @@ export default function AuthorLayout({ children, frontMatter }) {
                 type="bracket"
                 brackets={['left', 'right']}
                 show={true}
-                color="#FF0000"
+                color="#f8793f"
                 animationDelay={300}
                 animationDuration={3000}
               >
-                {text1} Currently, I am focused on building data pipelines and automating them at{' '}
+                {text1} Currently, I am a{' '}
                 <Link
-                  href={'https://www.accenture.com/in-en'}
+                  href={''}
                   className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
                 >
-                  Accenture
+                  Technical Content Lead
                 </Link>
               </RoughNotation>
-            </p>
-            <br />
-            <p>
-              This is what I am doing right{' '}
-              <Link
-                href={'/now'}
-                className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
-              >
-                now
-              </Link>
             </p>
             <br />
             <p className="sm:block md:hidden lg:hidden">

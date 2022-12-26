@@ -3,7 +3,7 @@ export const navigation = {
     { name: 'Home', href: '/' },
     { name: 'Blog', href: '/blog' },
     { name: 'Tags', href: '/tags' },
-    { name: 'Snippets', href: '/snippets' },
+    { name: 'Notes', href: '/snippets' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
     { name: 'RSS', href: '/feed.xml' },
