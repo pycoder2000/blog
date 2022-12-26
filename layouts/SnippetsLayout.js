@@ -25,7 +25,7 @@ export default function SnippetsLayout({ posts, title, initialDisplayPosts = [],
           </h1>
           <div className="relative max-w-lg">
             <input
-              aria-label="Search snippets"
+              aria-label="Search notes"
               type="text"
               onChange={(e) => setSearchValue(e.target.value)}
               placeholder="Search snippets"

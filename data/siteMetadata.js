@@ -46,7 +46,7 @@ const siteMetadata = {
     },
   },
   socialAccount: {
-    twitter: 'lone_Musk',
+    twitter: 'pramit_armpit',
   },
 }
 
