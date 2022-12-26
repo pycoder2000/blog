@@ -67,12 +67,12 @@ export default function AuthorLayout({ children, frontMatter }) {
                 animationDelay={300}
                 animationDuration={3000}
               >
-                {text1} Currently, I am a{' '}
+                {text1}. Currently, I am a{' '}
                 <Link
                   href={''}
                   className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
                 >
-                  Technical Content Lead
+                  Technical Content Lead.
                 </Link>
               </RoughNotation>
             </p>
