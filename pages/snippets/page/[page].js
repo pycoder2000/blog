@@ -44,12 +44,12 @@ export async function getStaticProps(context) {
 export default function PostPage({ posts, initialDisplayPosts, pagination }) {
   return (
     <>
-      <PageSEO title={`Snippets - ${siteMetadata.author}`} description={siteMetadata.snippets} />
+      <PageSEO title={`Notes - ${siteMetadata.author}`} description={siteMetadata.snippets} />
       <SnippetsLayout
         posts={posts}
         initialDisplayPosts={initialDisplayPosts}
         pagination={pagination}
-        title="All Snippets"
+        title="All Notes"
       />
     </>
   )
