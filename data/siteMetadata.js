@@ -6,10 +6,10 @@ const siteMetadata = {
   snippets: 'Reuseable code snippets collected by Henok',
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://musing.vercel.app',
+  siteUrl: 'https://henoks-xyz.vercel.app',
   siteRepo: 'https://github.com/hshiferaw/henoks.xyz',
   siteLogo: '/static/images/logo.png',
-  image: '/static/images/avator.jpg',
+  image: '/static/images/avator.jpeg',
   socialBanner: '/static/images/twitter-card.png',
   email: 'henok@henoks.xyz',
   github: 'https://github.com/hshiferaw',

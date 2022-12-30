@@ -1,13 +1,13 @@
 ---
-name: Parth Desai
-avatar: /static/images/avatar.png
-occupation: Data Engineer
-company: Accenture
-email: desaiparth2000@gmail.com
-twitter: https://twitter.com/lone_Musk
-linkedin: https://www.linkedin.com/in/parth-desai-2bb1b0160/
-github: https://github.com/pycoder2000
-text1: I am an India based Data Engineer with a bachelors in Computer Science. I am passionate about Data Science and Automation. I am also fascinated with Mathematics and wish to make a career out of it someday.
-text2:
+name: Henok Shiferaw
+avatar: /static/images/avator.jpeg
+occupation: Primary Patent Examiner
+company: USPTO
+email: henok@henoks.xyz
+twitter: https://twitter.com/meaty_pirate
+linkedin: https://www.linkedin.com/in/hshiferaw/
+github: https://github.com/hshiferaw
+text1: I graduated with a Bachelors Science in Manufacturing Engineering/System, a Masters in Computational Science and Engineering from North Carolina A&T State University in 2012 and PhD candidate in Computational Science and Engineering in North Carolina A&T State University.
+text2: as a Primary Patent Examiner in Electrical and Computer Engineering to evaluate patent applications in the Network Printing, Scanning, Color, Halftone, Image Analysis, Data Compression, Data Analysis, Data Encryption, Barcode Symbology, FAX/PRINTER/SCANNER Technology and Display System arts for compliance with federal patent laws and regulations
 text3:
 ---
