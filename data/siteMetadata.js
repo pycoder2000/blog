@@ -11,7 +11,7 @@ const siteMetadata = {
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avator.jpeg',
   socialBanner: '/static/images/twitter-card.png',
-  email: 'henok@henoks.xyz',
+  email: 'henok@hshiferaw.com',
   github: 'https://github.com/hshiferaw',
   twitter: 'https://twitter.com/meaty_pirate',
   linkedin: 'https://www.linkedin.com/in/hshiferaw/',

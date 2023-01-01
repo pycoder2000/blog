@@ -3,10 +3,8 @@ export const config = {
 }
 
 export default async function handler(req, res) {
-  const userResponse = await fetch('https://api.github.com/users/pycoder2000')
-  const userReposResponse = await fetch(
-    'https://api.github.com/users/pycoder2000/repos?per_page=100'
-  )
+  const userResponse = await fetch('https://api.github.com/users/hshiferaw')
+  const userReposResponse = await fetch('https://api.github.com/users/hshiferaw/repos?per_page=100')
 
   const user = await userResponse.json()
   const repositories = await userReposResponse.json()
