@@ -60,7 +60,7 @@ export default function Stats() {
             target="_blank"
             rel="noreferrer noopener"
           >
-            Parth you should listen to...
+            Henok you should listen to...
           </a>
         </div>
       </div>

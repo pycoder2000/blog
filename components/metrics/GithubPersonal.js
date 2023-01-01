@@ -7,8 +7,8 @@ export default function GithubPersonalCard() {
 
   const repos = new Number(data?.repos)
   const gists = new Number(data?.gists)
-  const link1 = 'https://github.com/pycoder2000?tab=repositories'
-  const link2 = 'https://gist.github.com/pycoder2000'
+  const link1 = 'https://github.com/hshiferaw?tab=repositories'
+  const link2 = 'https://gist.github.com/hshiferaw'
 
   return (
     <div className="my-2 grid w-full grid-cols-1 gap-4 sm:grid-cols-2">
