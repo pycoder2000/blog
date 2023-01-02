@@ -2,7 +2,7 @@ const projectsData = [
   {
     title:
       'Statistical Analysis of Uncertainties in Deterministic Computational Modeling - Application to Composite Process Resin Infusion Flow Model.',
-    description: `Deterministic physics-based flow modeling provides an effective way to simulate and understand the resin flow infusion process in liquid composite molding processes and its variants.`,
+    description: `Deterministic physics-based flow modeling provides an effective way to simulate and understand the resin flow infusion process in liquid composite molding processes and its variants. These are effective to provide optimal injection time and locations prior to gelation for given process parameters of resin viscosity and preform permeability.`,
     imgSrc: '',
     href: 'https://www.tandfonline.com/doi/full/10.1080/03610918.2013.815775',
     writer1: 'V. A. Kelkar',
