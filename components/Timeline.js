@@ -156,7 +156,7 @@ export default function Timeline() {
                       2003
                     </time>
                     <p className="mt-1 text-sm font-normal text-gray-500 dark:text-gray-400">
-                      Introduced to Computer Science by my father
+                      Introduced to Computer Science
                     </p>
                   </li>
                   <li className="mb-4 ml-8 rounded-md border border-gray-100 bg-white  px-4  py-4 shadow-sm shadow-gray-300 dark:border-zinc-900 dark:bg-zinc-900 dark:shadow-none">
@@ -168,7 +168,7 @@ export default function Timeline() {
                       90's kid
                     </time>
                     <p className="mt-1 text-sm font-normal text-gray-500 dark:text-gray-400">
-                      Connected to the internet
+                      Connected to the world
                     </p>
                   </li>
                 </Disclosure.Panel>
