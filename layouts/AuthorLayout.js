@@ -120,7 +120,7 @@ export default function AuthorLayout({ children, frontMatter }) {
                 show={true}
               >
                 <span className="text-black dark:text-white">
-                  Natural Language Processing and Machine Learning.{' '}
+                  Image Processing and Machine Learning.{' '}
                 </span>
               </RoughNotation>
               At the same time I am{' '}
@@ -132,8 +132,7 @@ export default function AuthorLayout({ children, frontMatter }) {
                 animationDuration={3000}
                 multiline={true}
               >
-                actively on the lookout for remote internships which I can pursue in field of Data
-                Science
+                actively on the lookout for new opportunities and challenges that come my way
               </RoughNotation>
             </p>
             <br />
@@ -160,8 +159,8 @@ export default function AuthorLayout({ children, frontMatter }) {
                   </g>
                 </svg>
               </Link>{' '}
-              or{' '}
-              {/* <Link
+              {/*or{' '}
+               <Link
                 href={'https://api.whatsapp.com/send?phone=916358190818&text=hi'}
                 className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
               >
