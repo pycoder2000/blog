@@ -13,7 +13,7 @@ const projectsData = [
   {
     title:
       'Probabilistic Analysis of Property Uncertainties Using Resin Infusion Flow Modeling and Simulations – Resin Viscosity And Preform Permeability',
-    description: `For LCM processes modeling and optimization substantial amount of research and work has been done. Several researches have been done based one-dimensional mold filling models, thin-shell molds, and three-dimensional models that simulate the mold filling, and heat transfer and curing stages. The objective of this work is to study the two key parameters: preform permeability and resin viscosity in liquid composite molding.`,
+    description: `For LCM processes modeling and optimization substantial amount of research and work has been done. Several researches have been done based one-dimensional mold filling models, thin-shell molds, and three-dimensional models that simulate the mold filling, and heat transfer and curing stages.`,
     imgSrc: '',
     href: 'https://digital.library.ncat.edu/do/search/?q=Henok%20Shiferaw&start=0&context=15883623&facet=',
     writer3: 'H. Shiferaw',
