@@ -1,7 +1,7 @@
 const projectsData = [
   {
     title: 'Statistical Analysis of Uncertainties in Deterministic Computational Modeling - Application to Composite Process Resin Infusion Flow Model.',
-    description: `Instant MD is an Investigation, Medication and Chief complaint recognition application using Natural Language Processing. 🏆 Winner of the HealthCare Track at the MINeD Hackathon.`,
+    description: `Deterministic physics-based flow modeling provides an effective way to simulate and understand the resin flow infusion process in liquid composite molding processes and its variants. These are effective to provide optimal injection time and locations prior to gelation for given process parameters of resin viscosity and preform permeability.`,
     imgSrc: '',
     href: 'https://www.tandfonline.com/doi/full/10.1080/03610918.2013.815775',
     tech1: 'V. A. Kelkar',
