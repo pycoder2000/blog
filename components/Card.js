@@ -13,7 +13,7 @@ const Card = ({ title, description, imgSrc, href, github, tech1, tech2, tech3 })
             <div className="mx-1.5">
               <a className="text-2xl">
                 Full Paper
-              {href ? <SocialIcon kind="external" href={href} size="3" /> : null}
+              ..{href ? <SocialIcon kind="external" href={href} size="3" /> : null}
               </a>
             </div>
             <div className="mx-1.5">
