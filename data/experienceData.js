@@ -10,7 +10,7 @@ const experienceData = [
     text3: 'Write legal office actions on patentability and respond to patent applicants.',
   },
   {
-    title: 'TECHNOLOGY CENTER QUALITY ASSURANCE SPECIALIST (TQAS - DETAIL)',
+    title: 'Technology Center QA Specialist',
     company: 'USPTO',
     //location: 'Ahmedabad, India',
     range: 'November 2021 - March 2022',
