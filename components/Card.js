@@ -1,7 +1,18 @@
 import SocialIcon from './social-icons'
 import FolderIcon from './icon'
 
-const Card = ({ title, description, imgSrc, href, github, tech1, tech2, tech3 }) => (
+const Card = ({
+  title,
+  description,
+  imgSrc,
+  href,
+  github,
+  writer1,
+  writer2,
+  writer3,
+  writer4,
+  writer5,
+}) => (
   <div className="md p-4 md:w-1/2" style={{ maxWidth: '544px' }}>
     <div className="h-full transform overflow-hidden rounded-md border-2 border-solid border-gray-200 bg-transparent bg-opacity-20 transition duration-500 hover:scale-105 hover:rounded-md hover:border-primary-500 hover:bg-gray-300 dark:border-gray-700 dark:hover:border-primary-500 dark:hover:bg-gray-800">
       <div className="p-6">
@@ -11,7 +22,7 @@ const Card = ({ title, description, imgSrc, href, github, tech1, tech2, tech3 })
           </div>
           <div className="flex flex-row justify-between">
             <div className="mx-1.5">
-              {href ? <SocialIcon kind="external" href={href} size="3" /> : null}
+              {href ? <SocialIcon kind="external" href={href} size="6" /> : null}
             </div>
             <div className="mx-1.5">
               {github ? <SocialIcon kind="github" href={github} size="6" /> : null}
@@ -23,7 +34,7 @@ const Card = ({ title, description, imgSrc, href, github, tech1, tech2, tech3 })
         <p className="prose mb-3 max-w-none text-gray-500 dark:text-gray-400">{description}</p>
         <div className="flex flex-row justify-between">
           <div className="text-sm text-gray-400">
-            {tech1} &#8226; {tech2} &#8226; {tech3}
+            {writer1} &#8226; {writer2} &#8226; {writer3} &#8226; {writer4} &#8226; {writer5}
           </div>
         </div>
       </div>
