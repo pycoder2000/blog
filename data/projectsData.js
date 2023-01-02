@@ -6,8 +6,7 @@ const projectsData = [
     href: 'https://www.tandfonline.com/doi/full/10.1080/03610918.2013.815775',
     tech1: 'V. A. Kelkar',
     tech2: 'R. V. Mohan',
-    tech3: 'H. Shiferaw',
-    tech4: '& A. D. Kelkar',
+    tech3: 'H. Shiferaw & A. D. Kelkar',
   },
   {
     title: 'Car Price Predictor',
