@@ -1,0 +1,31 @@
+---
+title: Convert LATEX to HTML
+date: '2019-03-22'
+tags: [Tech, Education, LaTex, HTML, PDF]
+draft: false
+summary: Getting the Spotify Refresh Token doesn't need to be a hassle any longer.
+---
+
+<img
+  className="inline rounded-lg"
+  src="/static/images/Blog/blog_post_3.jpg"
+  alt="Spotify Logo"
+/>
+
+I have tried several services that convert .tex file to PDF and then html, but the LaTeX diagrams and some of the Math’s equations and tables output is allover the place (most of the time not readable format). In general using PDF as an intermediate format when converting from LaTeX to HTML is not a good idea. Since LaTeX and HTML are both mostly structural markup languages, which means in most cases they are used to describe the document structure (sections, emphasize, formulas etc.), whereas PDF is mostly about representation of the document on the screen/paper. When converting LaTeX to PDF, you loose much of the structural information, and it cannot be successfully recovered by conversion from PDF to HTML. Converting the .tex file directly to HTML is the much better approach by using ‘htlatex’. htlatex is probably already part of your TeX distribution (specially if you are on a linux based OS), very powerful and flexible, and it's use can be as simple as running:
+
+> **htlatex mydocument.tex.**
+
+Further, there are many scripts available on GitHub that coverts the .tex file directly to HTML, and creates associated CSS file(s). lets look at latex-simple-css forked from [huyng](https://github.com/focus85/latex-simple-css). The script comes with a custom CSS, that describes how the generated HTML is to be displayed on screen, and can be edited based on user preference.
+
+**Demos:**
+- TEX : [example .tex format](https://www.hshiferaw.xyz/latex-simple-css/example.tex)
+- HTML : [example html format](https://www.hshiferaw.xyz/latex-simple-css/example.html)
+- PDF : '[example PDF format](https://www.hshiferaw.xyz/latex-simple-css/example.pdf)
+
+
+**Requirements:**
+- pdflatex (xelatex) - for converting LaTex to PDF
+- htlatex - for converting LaTex to HTML
+
+> 🧑‍💻Henok Shiferaw | ⏲️22 March, 2019
