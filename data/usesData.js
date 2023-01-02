@@ -1,8 +1,8 @@
 const usesData = [
   {
-    title: 'Macbook Pro 13"',
-    description: `M1 - 8 core CPU, 8 core GPU, 16 GB RAM`,
-    href: 'https://www.amazon.in/Apple-MacBook-Chip-13-inch-256GB/dp/B08N5VSQNG',
+    title: 'Macbook Pro 14"',
+    description: `M1 Pro - 8 core CPU, 14 core GPU, 16 GB RAM`,
+    href: 'https://www.apple.com/shop/buy-mac/macbook-pro/14-inch',
   },
   {
     title: 'Alfred',

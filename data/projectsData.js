@@ -16,7 +16,7 @@ const projectsData = [
     description: `For LCM processes modeling and optimization substantial amount of research and work has been done. Several researches have been done based one-dimensional mold filling models, thin-shell molds, and three-dimensional models that simulate the mold filling, and heat transfer and curing stages.`,
     imgSrc: '',
     href: 'https://digital.library.ncat.edu/do/search/?q=Henok%20Shiferaw&start=0&context=15883623&facet=',
-    writer3: 'H. Shiferaw',
+    writer1: 'H. Shiferaw',
   },
 ]
 
