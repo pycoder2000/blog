@@ -11,6 +11,7 @@ const Card = ({ title, description, imgSrc, href, github, tech1, tech2, tech3 })
           </div>
           <div className="flex flex-row justify-between">
             <div className="mx-1.5">
+              <h4 className="text-2xl">Full Paper</h4>
               {href ? <SocialIcon kind="external" href={href} size="6" /> : null}
             </div>
             <div className="mx-1.5">
