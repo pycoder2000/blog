@@ -13,8 +13,12 @@ const Contact = () => {
         <div className="pt-10 pb-8">
           <ul className="font-semi-bold flex flex-col space-y-4">
             <ContactLink href="mailto:henok@hshiferaw.com" title="E-mail" icon="henok" />
-            <ContactLink href="https://github.com/pycoder2000" title="github" icon="hshiferaw" />
-            <ContactLink href="https://twitter.com/lone_Musk" title="twitter" icon="meaty_pirate" />
+            <ContactLink href="https://github.com/hshiferaw" title="github" icon="hshiferaw" />
+            <ContactLink
+              href="https://twitter.com/meaty_pirate"
+              title="twitter"
+              icon="meaty_pirate"
+            />
             <ContactLink
               href="https://www.linkedin.com/in/hshiferaw/"
               title="linkedin"
