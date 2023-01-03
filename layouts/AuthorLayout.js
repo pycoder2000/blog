@@ -91,10 +91,7 @@ export default function AuthorLayout({ children, frontMatter }) {
             <p className="sm:block md:hidden lg:hidden">
               I am always looking to learn new things. I am currently working on a few projects
               related to
-              <span className="font-semibold">
-                {' '}
-                Natural Language Processing and Machine Learning.{' '}
-              </span>
+              <span className="font-semibold"> Image Processing and Machine Learning. </span>
               At the same time I am{' '}
               <RoughNotation
                 type="underline"
@@ -104,8 +101,7 @@ export default function AuthorLayout({ children, frontMatter }) {
                 animationDuration={3000}
                 multiline={true}
               >
-                actively on the lookout for remote internships which I can pursue in field of Data
-                Science.
+                actively on the lookout for new opportunities and challenges that come my way.
               </RoughNotation>
             </p>
             <p className="hidden md:block">
@@ -132,7 +128,7 @@ export default function AuthorLayout({ children, frontMatter }) {
                 animationDuration={3000}
                 multiline={true}
               >
-                actively on the lookout for new opportunities and challenges that come my way
+                actively on the lookout for new opportunities and challenges that come my way.
               </RoughNotation>
             </p>
             <br />
