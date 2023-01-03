@@ -6,7 +6,7 @@ const siteMetadata = {
   snippets: 'Reuseable code snippets collected by Henok',
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://henoks.vercel.app',
+  siteUrl: 'https://hshiferaw.com',
   siteRepo: 'https://github.com/hshiferaw/henoks.xyz',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avator.jpeg',
@@ -15,7 +15,7 @@ const siteMetadata = {
   github: 'https://github.com/hshiferaw',
   twitter: 'https://twitter.com/meaty_pirate',
   linkedin: 'https://www.linkedin.com/in/hshiferaw/',
-  website: 'https://henoks.vercel.app',
+  website: 'https://hshiferaw.com',
   locale: 'en-US',
   analytics: {
     plausibleDataDomain: '', // e.g. tailwind-nextjs-starter-blog.vercel.app

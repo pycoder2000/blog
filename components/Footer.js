@@ -11,7 +11,7 @@ export default function Footer() {
         </div>
         <div className="mb-2 hidden text-sm text-gray-500 dark:text-gray-400 md:flex">
           <div className="mx-1">
-            <Link href="https://henoks.vercel.app" className="link-underline">
+            <Link href="https://hshiferaw.com" className="link-underline">
               Henok Shiferaw{` © ${new Date().getFullYear()}`}
             </Link>
           </div>
@@ -30,7 +30,7 @@ export default function Footer() {
         </div>
         <div className="mb-2 text-sm text-gray-500 dark:text-gray-400 sm:block md:hidden lg:hidden">
           <div className="mx-1">
-            <Link href="https://parthdesai.vercel.app" className="link-underline">
+            <Link href="https://hshiferaw.com" className="link-underline">
               Henok{` © ${new Date().getFullYear()}`}
             </Link>
           </div>
