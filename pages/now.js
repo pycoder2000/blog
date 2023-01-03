@@ -224,28 +224,21 @@ export default function Now(currentlyReading) {
           </p>
           <br />
           <p>
-            I work on building pipelines and automating the entire process using Scala and Gcloud.
+            May 21, 2022 - Recognized for Ten Years of Service in the Government of the United
+            States of America.
           </p>
           <br />
-          <p>
-            I have been trying to shift my field from Data Engineering to Data Science. I have been
-            constantly applying for the same as well.
-          </p>
+          <p>Sep 30, 2018 Received U.S. Patent and Trademark Office Bronze Medal Award.</p>
           <br />
           <p>
-            My location preference is Bangalore but I am open to shift to another place for a better
-            opportunity.
-          </p>
-          <br />
-          <p>
-            I'm always trying to learn more, and at the moment I'm trying to follow this{' '}
+            I'm always trying to learn more, and at the moment I'm studying for my{' '}
             <Link
               href={
-                'https://www.youtube.com/watch?v=_u-PaJCpwiU&list=PLu0W_9lII9ai6fAMHp-acBmJONT7Y4BSG'
+                'https://learn.microsoft.com/en-us/training/paths/az-104-administrator-prerequisites/'
               }
               className="special-underline no-underline dark:text-gray-100 hover:dark:text-gray-100"
             >
-              Machine Learning tutorial
+              AZ-104 exam
             </Link>
             .
           </p>
@@ -266,12 +259,6 @@ export default function Now(currentlyReading) {
               This
             </Link>{' '}
             article is a great reason to start your blog.
-          </p>
-          <br />
-          <p>
-            I am also going to start applying for Masters in Data Science in August 2022 for intake
-            of Fall 2023. I hope to get a good university near the West Coast. I'll update this page
-            after I get my admits.
           </p>
           <br />
           <p>
