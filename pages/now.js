@@ -23,7 +23,7 @@ import {
 
 export const getServerSideProps = async () => {
   const response = await fetch(
-    'https://api.openweathermap.org/data/2.5/weather?lat=23.014770&lon=72.526330&appid=1b3c10c18e894eaf1fd63eedde53fa54&units=metric'
+    'https://api.openweathermap.org/data/2.5/weather?lat=35.227085&lon=-80.843124&appid=b203b84de01e3d03951df05cadfbea05&units=standard'
   )
   const data = await response.json()
 
@@ -170,7 +170,7 @@ export default function Now(currentlyReading) {
                 <span>{currentlyReadingData[0].author}</span>
               </a>
               <br />
-              <span className="ml-2 font-semibold">Age:</span> <span>{ageString}</span>
+              <span className="ml-2 font-semibold">Mood:</span> <span>contented</span>
             </div>
           </div>
 
@@ -215,7 +215,7 @@ export default function Now(currentlyReading) {
           <p>
             I work as a Patent Examiner at{' '}
             <Link
-              href={'https://www.accenture.com/'}
+              href={'https://www.uspto.gov/'}
               className="special-underline no-underline dark:text-gray-100 hover:dark:text-gray-100"
             >
               USPTO
