@@ -10,7 +10,7 @@ const siteMetadata = {
   siteRepo: 'https://github.com/hshiferaw/henoks.xyz',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avator.jpeg',
-  socialBanner: '/static/images/twitter-card.png',
+  socialBanner: '/static/images/twitter1-card.png',
   email: 'henok@hshiferaw.com',
   github: 'https://github.com/hshiferaw',
   twitter: 'https://twitter.com/meaty_pirate',
