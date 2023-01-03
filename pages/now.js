@@ -134,7 +134,7 @@ export default function Now(currentlyReading) {
         <div className="my-2">
           <h3>Where am I and what am I doing?</h3>
           <div className=" mt-4 mb-6 text-xs text-neutral-700 dark:text-neutral-400">
-            This page was automatically updated @ {date}-{month}-{year} {hour}:{minute}:{second}
+            This page was automatically updated @ {month}-{date}-{year} {hour}:{minute}:{second}
           </div>
         </div>
         {/* Misc */}
@@ -177,7 +177,7 @@ export default function Now(currentlyReading) {
           <div className="-my-6 flex justify-between gap-5">
             <div className="mt-2 mb-10 w-1/2 rounded-md border border-gray-600 p-1 text-sm dark:border-gray-200">
               <span className="ml-2 font-semibold">Date:</span>{' '}
-              <span>{TodayDate.format('DD/MM/YYYY')}</span>
+              <span>{TodayDate.format('MM/DD/YYYY')}</span>
               <br />
               <span className="ml-2 font-semibold">Time:</span>{' '}
               <span>
