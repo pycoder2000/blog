@@ -228,7 +228,7 @@ export default function Now(currentlyReading) {
             States of America.
           </p>
           <br />
-          <p>Sep 30, 2018 Received U.S. Patent and Trademark Office Bronze Medal Award.</p>
+          <p>Sep 30, 2018 - Received U.S. Patent and Trademark Office Bronze Medal Award.</p>
           <br />
           <p>
             I'm always trying to learn more, and at the moment I'm studying for my{' '}
