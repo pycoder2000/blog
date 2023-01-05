@@ -5,7 +5,7 @@ import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import formatDate from '@/lib/utils/formatDate'
 import { RoughNotation } from 'react-rough-notation'
-import BlogNewsletterForm from '@/components/NewsletterForm'
+import { BlogNewsletterForm } from '@/components/NewsletterForm'
 import ViewCounter from '@/components/ViewCounter'
 
 const MAX_DISPLAY = 3
