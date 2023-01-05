@@ -15,7 +15,8 @@ export default function Footer() {
           <SocialIcon kind="twitter" href={siteMetadata.twitter} size="5" />
         </div>
         <div className="mb-3 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
-          {siteMetadata.author} | Have a good {currentDayName()}!
+          {siteMetadata.author}
+          {` © ${new Date().getFullYear()}`} | Have a good {currentDayName()}!
         </div>
       </div>
     </footer>
