@@ -58,12 +58,12 @@ export default function Uses() {
             ))}
           </div>
         </div>
-        <div className="pt-10">
+        {/*<div className="pt-10">
           <span className="text-base text-gray-500 dark:text-gray-400">
             P.S. I am planning on remaking this site in the future, so stay around to see what I
             come up with ;)
           </span>
-        </div>
+        </div> */}
       </div>
     </>
   )
