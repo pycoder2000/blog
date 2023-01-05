@@ -15,7 +15,6 @@ const siteMetadata = {
   github: 'https://github.com/hshiferaw',
   twitter: 'https://twitter.com/meaty_pirate',
   linkedin: 'https://www.linkedin.com/in/hshiferaw/',
-  instagram: 'https://instagram.com/class_ick/',
   website: 'https://hshiferaw.com',
   locale: 'en-US',
   analytics: {
