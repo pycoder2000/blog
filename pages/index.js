@@ -5,7 +5,7 @@ import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import formatDate from '@/lib/utils/formatDate'
 import { RoughNotation } from 'react-rough-notation'
-import { BlogNewsletterForm } from '@/components/NewsletterForm'
+import NewsletterForm from '@/components/NewsletterForm'
 import ViewCounter from '@/components/ViewCounter'
 
 const MAX_DISPLAY = 3
@@ -265,9 +265,7 @@ export default function Home({ posts }) {
         </div>
       )}
       {siteMetadata.newsletter.provider !== '' && (
-        <div className="flex items-center justify-center pt-4">
-          <BlogNewsletterForm />
-        </div>
+        <div className="flex items-center justify-center pt-4">{<NewsletterForm />}</div>
       )}
     </>
   )
