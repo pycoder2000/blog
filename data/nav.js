@@ -12,7 +12,6 @@ export const navigation = {
     { name: 'Stats', href: '/stats' },
     { name: 'Activity', href: '/activity' },
     { name: 'Guestbook', href: '/guestbook' },
-    { name: 'Recommends', href: '/recommends' },
     { name: 'Journey', href: '/journey' },
     { name: 'Quotes', href: '/quotes' },
     { name: 'Tweets', href: '/tweets' },
@@ -22,5 +21,6 @@ export const navigation = {
     // { name: 'Todo', href: '/todo' },
     // { name: 'Music', href: '/music' },
     // { name: 'Movies', href: '/movies' },
+    // { name: 'Recommends', href: '/recommends' },
   ],
 }
