@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="Logo" src="https://github.com/hshiferaw/blog/raw/master/public/static/images/logo.png" width="100" />
+  <img alt="Logo" src="https://github.com/hshiferaw/henoks.xyz/raw/master/public/static/images/logo.png" width="100" />
 </div>
 
 <h1 align="center">
@@ -15,7 +15,7 @@
 </p>
 
 
-![demo](https://github.com/hshiferaw/blog/raw/master/public/static/images/demo.png)
+![demo](https://github.com/hshiferaw/henoks.xyz/raw/master/public/static/images/demo.png)
 
 <div align="center">
 
