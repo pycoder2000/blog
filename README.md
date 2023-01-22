@@ -195,30 +195,4 @@ The easiest way to deploy the template is to use the [Vercel Platform](https://v
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/timlrx/tailwind-nextjs-starter-blog)
 
-## 🍰 Contributing
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Commit your Changes
-
-   ```bash
-   git commit -m 'Add some Feature'
-   ```
-
-3. Push to the Branch
-
-   ```bash
-   git push origin main
-   ```
-
-4. Open a Pull Request
-
-<div align="center">
-
-<a href="https://makeapullrequest.com" target="blank" >![PRs Welcome](https://img.shields.io/badge/PR-Welcome-brightgreen?style=for-the-badge)</a>
-
-</div>
