@@ -70,7 +70,7 @@ export default function AuthorLayout({ children, frontMatter }) {
                 {text1} I now work at{' '}
                 <Link
                   href={'https://www.uspto.gov/'}
-                  className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
+                  className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-900"
                 >
                   USPTO{' '}
                 </Link>
@@ -82,7 +82,7 @@ export default function AuthorLayout({ children, frontMatter }) {
               This is what I am doing right{' '}
               <Link
                 href={'/now'}
-                className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
+                className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-900"
               >
                 now
               </Link>
@@ -138,7 +138,7 @@ export default function AuthorLayout({ children, frontMatter }) {
               you can reach me through{' '}
               <Link
                 href={'mailto:henok@hshiferaw.com'}
-                className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
+                className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-900"
               >
                 Mail
                 <svg
@@ -180,7 +180,7 @@ export default function AuthorLayout({ children, frontMatter }) {
             <p>
               <Link
                 href={'/uses'}
-                className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
+                className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-900"
               >
                 Here
               </Link>{' '}
@@ -198,7 +198,7 @@ export default function AuthorLayout({ children, frontMatter }) {
                 <li>
                   <Link
                     href={'https://github.com/timlrx/tailwind-nextjs-starter-blog'}
-                    className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
+                    className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-900"
                   >
                     Timothy's Next.js and Tailwind CSS template
                     <svg
@@ -220,7 +220,7 @@ export default function AuthorLayout({ children, frontMatter }) {
                 <li>
                   <Link
                     href={'https://www.einargudni.com/'}
-                    className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-100"
+                    className="special-underline no-underline hover:text-gray-100 dark:text-gray-100 hover:dark:text-gray-900"
                   >
                     Einar Guðjónsson
                     <svg

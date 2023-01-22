@@ -14,7 +14,7 @@ const Card = ({
   writer5,
 }) => (
   <div className="md p-4 md:w-1/2" style={{ maxWidth: '544px' }}>
-    <div className="h-full transform overflow-hidden rounded-md border-2 border-solid border-gray-200 bg-transparent bg-opacity-20 transition duration-500 hover:scale-105 hover:rounded-md hover:border-primary-500 hover:bg-gray-300 dark:border-gray-700 dark:hover:border-primary-500 dark:hover:bg-gray-800">
+    <div className="h-full transform overflow-hidden rounded-md border-2 border-solid border-gray-200 bg-transparent bg-opacity-20 transition duration-500 hover:scale-105 hover:rounded-md hover:border-primary-500 hover:bg-gray-300 dark:border-gray-700 dark:hover:border-primary-color-dark-500 dark:hover:bg-gray-800">
       <div className="p-6">
         <div className="flex flex-row items-center justify-between">
           <div className="my-2">

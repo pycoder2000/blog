@@ -19,7 +19,7 @@ const CustomLink = ({ href, ...rest }) => {
 
   return (
     <a
-      className="special-underline-new no-underline hover:text-gray-100 dark:hover:text-gray-100"
+      className="special-underline-new no-underline hover:text-gray-100 dark:hover:text-gray-900"
       target="_blank"
       rel="noopener noreferrer"
       href={href}
