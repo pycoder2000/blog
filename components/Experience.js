@@ -30,7 +30,7 @@ const Experience = ({ title, company, location, range, url, text1, text2, text3 
         </div>
       </div>
       <div className="justify-center text-center text-2xl font-medium text-gray-200  dark:text-gray-600">
-        &#126;&#126;&#126;
+        &#x2d;&#x2d;&#x2d;
       </div>
     </div>
   )
