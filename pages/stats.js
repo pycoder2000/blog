@@ -56,7 +56,7 @@ export default function Stats() {
           <a
             className="text-md mt-4 rounded-full border px-8 py-2 text-center font-normal text-gray-800 transition-colors hover:border-green-600 hover:bg-green-600 hover:text-white dark:text-gray-200"
             href="https://twitter.com/messages/compose?recipient_id=4302974298&text=Hey Parth, you should listen to:"
-            data-screen-name="@lone_Musk"
+            data-screen-name="@_ParthDesai_"
             target="_blank"
             rel="noreferrer noopener"
           >

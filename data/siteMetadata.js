@@ -13,7 +13,7 @@ const siteMetadata = {
   socialBanner: '/static/images/twitter-card.png',
   email: 'desaiparth2000@gmail.com',
   github: 'https://github.com/pycoder2000',
-  twitter: 'https://twitter.com/lone_Musk',
+  twitter: 'https://twitter.com/_ParthDesai_',
   linkedin: 'https://www.linkedin.com/in/parth-desai-2bb1b0160/',
   website: 'https://parthdesai.vercel.app',
   locale: 'en-US',
@@ -46,7 +46,7 @@ const siteMetadata = {
     },
   },
   socialAccount: {
-    twitter: 'lone_Musk',
+    twitter: '_ParthDesai_',
   },
 }
 

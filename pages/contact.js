@@ -18,7 +18,11 @@ const Contact = () => {
               icon="desaiparth2000"
             />
             <ContactLink href="https://github.com/pycoder2000" title="github" icon="pycoder2000" />
-            <ContactLink href="https://twitter.com/lone_Musk" title="twitter" icon="lone_Musk" />
+            <ContactLink
+              href="https://twitter.com/_ParthDesai_"
+              title="twitter"
+              icon="_ParthDesai_"
+            />
             <ContactLink
               href="https://www.linkedin.com/in/parth-desai-2bb1b0160/"
               title="linkedin"
