@@ -1,0 +1,102 @@
+---
+title: Setting up Jupyter Lab environment in a VPS
+date: '2023-03-19'
+tags: ['Jupyter', 'Python', 'Code', 'Linux', 'VPS', 'Server', 'Web', 'Ubuntu', 'Debian']
+draft: false
+summary: In this blog post, we will discuss how to set up a JupyterLab environment on a VPS (Virtual Private Server) with Nginx, a high-performance web server that can act as a reverse proxy for JupyterLab
+images: []
+layout: PostLayout
+canonicalUrl:
+---
+
+<img className="inline" src="/static/images/Blog/jupyter.png" alt="Big Data" />
+
+## Introduction
+
+[JupyterLab](https://jupyter.org/) is a powerful development environment that provides a modern user interface for working with data science, machine learning and other scientific computing workflows. It is a popular choice among researchers, scientists, engineers and data enthusiasts. In this blog post, we will discuss how to set up a JupyterLab environment on a VPS (Virtual Private Server) with Nginx, a high-performance web server that can act as a reverse proxy for JupyterLab.
+
+Jupyter Lab environment is an open-source web application that allows you to create and share documents containing live code, equations, visualizations, and narrative text. JupyterLab is a great tool for data scientists that want to work with data in a collaborative environment. You can use it to create interactive notebooks, which can be shared with other users or published as a public resource.
+
+## Prerequisites
+
+Before you begin, you should:
+
+- Deploy a VPS (For this tutorial, we are using Debian 10 hosted on [Vultr](https://vultr.com).
+- Create a non-root sudo user.
+- Point a subdomain to your server using an `A` record. This article uses [notebook.example.com](https://notebook.hshiferaw.xyz) for demonstration.
+
+## Installing JupyterLab
+
+Before setting up the JupyterLab environment, you need to install it on your VPS. You can do this easily using pip, the Python package manager. First, you need to update your system and install pip. Then, you can install JupyterLab using the following command:
+
+```
+sudo apt-get update && sudo apt-get upgrade
+sudo apt-get install python3-pip
+pip3 install jupyterlab
+
+```
+
+After the installation is complete, you can start JupyterLab using the following command:
+
+```
+jupyter lab --ip=0.0.0.0 --port=8888 --no-browser
+
+```
+
+## Setting up Nginx as a reverse proxy
+
+Now that you have JupyterLab installed, you need to set up Nginx as a reverse proxy to route incoming traffic to your JupyterLab server. First, you need to install Nginx using the following command:
+
+```
+sudo apt-get install nginx
+
+```
+
+After the installation is complete, you need to create a new server block in the Nginx configuration file. You can do this by creating a new file in the /etc/nginx/sites-available/ directory. For example, you can name the file jupyter and add the following content:
+
+```
+server {
+    listen 80;
+    server_name notebook.example.com; # Replace with your domain name
+    location / {
+        proxy_pass <http://localhost:8888>; # Replace with your JupyterLab server's URL
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+}
+
+```
+
+After creating the file, you need to create a symbolic link to it in the /etc/nginx/sites-enabled/ directory using the following command:
+
+```
+sudo ln -s /etc/nginx/sites-available/jupyterlab /etc/nginx/sites-enabled/
+
+```
+
+Finally, you need to test the Nginx configuration using the following command:
+
+```
+sudo nginx -t
+
+```
+
+If the test is successful, you can restart Nginx using the following command:
+
+```
+sudo systemctl restart nginx
+
+```
+
+## Accessing JupyterLab
+
+After completing the above steps, you should be able to access your JupyterLab environment by navigating to your domain name in a web browser. For example, if your domain name is [example.com](http://example.com/), you can access JupyterLab by navigating to [notebook.example.com](http://notebook.hshiferaw.xyz). You should see the JupyterLab interface in your web browser.
+
+## Conclusion
+
+In this blog post, we discussed how to set up a JupyterLab environment on a VPS with Nginx as a reverse proxy. By following these steps, you can create a powerful development environment for data science and machine learning workflows that can be accessed from anywhere in the world. This is particularly useful for teams or individuals that work remotely and need to access a centralized environment.
+
+JupyterLab is a very versatile tool that can be used for a wide range of applications. You can use it to create interactive notebooks, data visualizations, and even deploy machine learning models. The ability to work collaboratively on projects is a key feature of JupyterLab, and it is especially useful for data science workflows. By setting up a JupyterLab environment on a VPS with Nginx, you can create a powerful development environment that is accessible from anywhere in the world.
+
+We hope you found this guide helpful and easy to follow. Happy coding!
