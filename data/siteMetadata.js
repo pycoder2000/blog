@@ -24,7 +24,7 @@ const siteMetadata = {
     googleAnalyticsId: 'G-MB6NWDGBDE', // e.g. UA-000000-2 or G-XXXXXXX
   },
   newsletter: {
-    provider: 'emailOctopus',
+    provider: 'emailoctopus',
   },
   comment: {
     provider: 'giscus',
