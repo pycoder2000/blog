@@ -257,7 +257,7 @@ export default function Home({ posts }) {
         <div className="flex justify-end pt-5 text-lg font-normal leading-6">
           <Link
             href="/blog"
-            className=" special-underline-new text-primary-500 hover:text-gray-100 hover:no-underline dark:text-primary-500 hover:dark:text-gray-100"
+            className=" special-underline-new text-primary-500 hover:text-gray-100 hover:no-underline dark:text-primary-color-dark-500 hover:dark:text-gray-100"
             aria-label="all posts"
           >
             All Posts &rarr;
