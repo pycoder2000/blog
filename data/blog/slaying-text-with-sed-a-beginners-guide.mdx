@@ -1,0 +1,83 @@
+---
+title: Slaying Text with SED - A Beginner's Guide
+date: '2023-05-02'
+tags: ['Linux', 'SED', 'Text-Search', 'Terminal', 'Command']
+draft: false
+summary: As a Linux user, you're probably familiar with the command line and various tools to manipulate text. One such tool is SED (Stream Editor), a powerful utility for searching, replacing, and transforming text in a file or stream.
+images: []
+layout: PostLayout
+canonicalUrl:
+---
+
+<img className="inline" src="/static/images/Blog/SED.png" alt="Big Data" />
+
+As a Linux user, you're probably familiar with the command line and various tools to manipulate text. One such tool is SED (Stream Editor), a powerful utility for searching, replacing, and transforming text in a file or stream.
+
+## What is SED?
+
+SED is a command-line utility that is used to perform basic text transformations on an input stream (a file or input from a pipeline). It edits the file in place (i.e., it modifies the original file) or can output the modified text to the standard output stream (stdout).
+
+SED provides a simple yet powerful way to perform text manipulation tasks like searching, replacing, filtering, and transforming text. It is a versatile tool that can handle large files and complex text processing tasks with ease.
+
+## The Basics
+
+The basic syntax for SED is as follows:
+
+```
+sed [options] 'command' filename
+
+```
+
+Where `options` are any additional flags you want to pass to SED, `command` is the action you want to perform, and `filename` is the name of the file you want to modify.
+
+SED commands consist of an address (optional), a command, and its arguments. The address specifies the line or range of lines that the command will apply to. If no address is specified, SED applies the command to all lines of the input stream.
+
+## SED Commands
+
+SED provides a wide range of commands that can be used to perform various text manipulation tasks. Here are some commonly used commands:
+
+1. Substitute command (s): The substitute command is used to search for a pattern in the input stream and replace it with another string. The syntax for the substitute command is `s/pattern/replacement/`. For example, to replace all occurrences of the word "Hello" with "Hi" in a file called `example.txt`, you can use the following command:
+
+   ```
+   sed 's/Hello/Hi/' example.txt
+
+   ```
+
+2. Print command (p): The print command is used to print the specified lines to the standard output stream. The syntax for the print command is `p`. For example, to print all lines containing the word "Linux" in a file called `example.txt`, you can use the following command:
+
+   ```
+   sed -n '/Linux/p' example.txt
+
+   ```
+
+3. Delete command (d): The delete command is used to delete the specified lines from the input stream. The syntax for the delete command is `d`. For example, to delete all lines containing the word "Windows" in a file called `example.txt`, you can use the following command:
+
+   ```
+   sed '/Windows/d' example.txt
+
+   ```
+
+4. Append command (a): The append command is used to append text after the specified line. The syntax for the append command is `a`. For example, to append the text "This is a new line" after the first line of a file called `example.txt`, you can use the following command:
+
+   ```
+   sed '1a This is a new line' example.txt
+
+   ```
+
+5. Change command (c): The change command is used to replace the specified line with new text. The syntax for the change command is `c`. For example, to replace the first line of a file called `example.txt` with the text "This is a new line", you can use the following command:
+
+   ```
+   sed '1c This is a new line' example.txt
+
+   ```
+
+6. Transform command (y): The transform command is used to perform character transliteration. The syntax for the transform command is `y`. For example, to replace all occurrences of the letter "a" with the letter "b" in a file called `example.txt`, you can use the following command:
+
+   ```
+   sed 'y/a/b/' example.txt
+
+   ```
+
+## Conclusion
+
+SED is a powerful tool for manipulating text in Linux. Whether you're searching for a specific pattern, replacing text, or transforming data, SED can help you get the job done quickly and efficiently. With a little practice, you'll be slaying text with SED in no time!
