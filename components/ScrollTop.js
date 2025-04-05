@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { TbArrowBigTop } from 'react-icons/tb'
+import { TbArrowBigUp } from 'react-icons/tb'
 
 const ScrollTop = () => {
   const [show, setShow] = useState(false)
@@ -31,7 +31,7 @@ const ScrollTop = () => {
         <span className="shadow"></span>
         <span className="edge"></span>
         <span className="front">
-          <TbArrowBigTop className="h-5 w-5" />
+          <TbArrowBigUp className="h-5 w-5" />
         </span>
       </button>
     </div>
