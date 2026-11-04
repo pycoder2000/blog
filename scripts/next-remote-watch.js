@@ -38,6 +38,13 @@ const app = next({ dev: true, dir: program.root || process.cwd() })
 const port = parseInt(process.env.PORT, 10) || 3000
 const handle = app.getRequestHandler()
 
+// Escape a value so the shell treats it as a single literal argument.
+// This prevents shell metacharacters (& | ; $ > < ` etc.) present in file paths
+// or event names from being interpreted as command syntax by the shell.
+function shellQuote(value) {
+  return "'" + String(value).replace(/'/g, "'\\''") + "'"
+}
+
 app.prepare().then(() => {
   // if directories are provided, watch them for changes and trigger reload
   if (program.args.length > 0) {
@@ -50,13 +57,14 @@ app.prepare().then(() => {
 
         if (program.command) {
           // Use spawn here so that we can pipe stdio from the command without buffering
+          // Interpolated values are shell-escaped so they cannot inject commands.
           spawn(
             shell,
             [
               '-c',
               program.command
-                .replace(/\{event\}/gi, filePathContext)
-                .replace(/\{path\}/gi, eventContext),
+                .replace(/\{event\}/gi, shellQuote(filePathContext))
+                .replace(/\{path\}/gi, shellQuote(eventContext)),
             ],
             {
               stdio: 'inherit',
